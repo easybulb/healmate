@@ -134,12 +134,19 @@ Wireframes were created for the following key pages to ensure an intuitive user 
 ![Homepage Wireframe](docs/wireframe/homepage-large-screen.png)
 
 ![Homepage Wireframe](docs/wireframe/homepage-mobile.png)
+
 - **Specialist Search Results**
 
 ![Homepage Wireframe](docs/wireframe/search-result-large-screen.png)
 
 ![Homepage Wireframe](docs/wireframe/search-result-mobile.png)
+
 - **Appointment Booking**
+
+![Homepage Wireframe](docs/wireframe/booking-page-large-screen.png)
+
+![Homepage Wireframe](docs/wireframe/booking-page-mobile.png)
+
 - **User Dashboards** (Patient and Specialist)
 - **Admin Panel**
 
