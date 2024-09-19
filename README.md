@@ -130,6 +130,8 @@ The site is structured around an easy-to-use interface. The primary menu include
 ### Wireframes
 Wireframes were created for the following key pages to ensure an intuitive user journey:
 - **Home Page**
+
+![Homepage Wireframe](docs/wireframe/homepage-large-screen.png)
 - **Specialist Search Results**
 - **Appointment Booking**
 - **User Dashboards** (Patient and Specialist)
