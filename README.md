@@ -1,131 +1,276 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **HealMate**
 
-Welcome USER_NAME,
+**HealMate** is an online platform designed to bridge the gap between patients and medical specialists. It allows users to easily find, book, and consult with professionals from various medical fields such as dermatology, psychology, and optometry. The project is part of the Code Institute's Full-Stack Developer course and focuses on Django framework, database manipulation, and CRUD functionality.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Live Site Here: HealMate](#) <!-- To be added -->
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+For **Admin access** with relevant sign-in information, click [here](#). <!-- To be added-->
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Overview](#overview)
+3. [UX - User Experience](#ux---user-experience)
+    - [Design Inspiration](#design-inspiration)
+    - [Colour Scheme](#colour-scheme)
+    - [Font](#font)
+4. [Project Planning](#project-planning)
+    - [Strategy Plane](#strategy-plane)
+    - [Site Goals](#site-goals)
+    - [Agile Methodologies - Project Management](#agile-methodologies---project-management)
+    - [MoSCoW Prioritization](#moscow-prioritization)
+    - [Sprints](#sprints)
+    - [User Stories](#user-stories)
+5. [Scope Plane](#scope-plane)
+6. [Structural Plane](#structural-plane)
+7. [Skeleton & Surface Planes](#skeleton--surface-planes)
+    - [Wireframes](#wireframes)
+8. [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+9. [Security](#security)
+10. [Features](#features)
+    - [User View - Registered/Unregistered](#user-view---registeredunregistered)
+    - [CRUD Functionality](#crud-functionality)
+    - [Feature Showcase](#feature-showcase)
+11. [Future Features](#future-features)
+12. [Technologies & Languages Used](#technologies--languages-used)
+13. [Libraries & Frameworks](#libraries--frameworks)
+14. [Tools & Programs](#tools--programs)
+15. [Testing](#testing)
+  - [Validation Testing](#validation-testing)
+  - [User Testing](#user-testing)
+  - [Bugs](#bugs)
+16. [Deployment](#deployment)
+    - [Connecting to GitHub](#connecting-to-github)
+    - [Django Project Setup](#django-project-setup)
+    - [Cloudinary API](#cloudinary-api)
+    - [PostgreSQL](#postgresql)
+    - [Heroku deployment](#heroku-deployment)
+    - [Clone project](#clone-project)
+    - [Fork Project](#fork-project)
+17. [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
+    - [Additional reading/tutorials/books/blogs](#additional-readingtutorialsbooksblogs)
+18. [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## Overview
+HealMate is an online platform that allows users to:
+- Register and create a profile
+- Search for healthcare specialists by specialty
+- Schedule appointments with the desired healthcare provider
+- View profiles of registered specialists
+- Access a secure dashboard based on user roles (patients, doctors, admins)
+- Seamlessly manage medical appointments.
 
-A blue button should appear to click: _Make Public_,
+The platform ensures accessibility across all devices and browsers, and its goal is to streamline the process of finding and scheduling medical consultations. In future iterations, HealMate will add functionality for healthcare providers to manage their schedules, send reminders to patients, and offer tools for patient-doctor communication.
 
-Another blue button should appear to click: _Open Browser_.
+## UX - User Experience
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### Design Inspiration
+My inspiration for HealMate came from a personal experience during a routine visit to my GP. I thought about how many medical consultations, especially those that don’t require physical examinations, could easily be handled online. This thought extended to pregnant women, who often need guidance and reassurance from their midwives or doctors but don’t necessarily need an in-person visit. The convenience of a digital platform for such consultations became clear. The name HealMate reflects the idea of a supportive, reliable partner in managing one's health—much like popular health apps such as ClueMate, where ‘Mate’ signifies companionship and guidance in managing health.
 
-A blue button should appear to click: _Make Public_,
+### Colour Scheme
+In line with the healthcare theme, I chose a neutral, clean palette:
+- **Primary Color:** #6C757D (Muted Blue-Grey)
+- **Secondary Color:** #28A745 (Hospital Green)
+- **Accent Color:** #17A2B8 (Light Teal)
+- **Background:** #FFFFFF (White)
+This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
 
-Another blue button should appear to click: _Open Browser_.
+### Font
+- For the logo and headers, I will be using **Playfair Display**.
+- The rest of the body text and interactive elements will use **Catamaran** for its readability and clean look.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Project Planning
 
-To log into the Heroku toolbelt CLI:
+### Strategy Plane
+The primary objective of HealMate is to bridge the gap between patients and healthcare providers. By offering an intuitive interface, users can easily search for medical professionals, book appointments, and receive necessary care without hassle.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Site Goals
+- Provide patients with a user-friendly platform to book appointments with various specialists.
+- Allow doctors to manage their appointments and patient information.
+- Offer an intuitive interface with role-based dashboards for admins, specialists, and patients.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Agile Methodologies - Project Management
+I used an agile approach to project management. The HealMate development process was broken into sprints, and tasks were added to the GitHub project board to be tracked and managed through issues.
 
-### Connecting your Mongo database
+### MoSCoW Prioritization
+- **Must-Haves:** User registration and login, specialist search, appointment booking, role-based dashboards.
+- **Should-Haves:** Feedback system, health tools, advanced filtering options.
+- **Could-Haves:** Profile pictures for users and specialists, messaging system.
+- **Won’t-Haves:** Full payment integration, doctor-patient messaging for now.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Sprints
+- **Sprint 1:** Initial Setup - Project, repository, environment setup.
+- **Sprint 2:** User Authentication & Role-Based Dashboards.
+- **Sprint 3:** Specialist Search & Appointment Booking System.
+- **Sprint 4:** Static Pages & UI/UX Improvements.
+- **Sprint 5:** Deployment & Testing.
 
-------
+## User Stories
+- As a user (patient/specialist/admin), I want to register and log in securely so that I can access my dashboard and manage my activities.
+- As a user, I want a personalized dashboard based on my role (patient, doctor, admin) so that I can access the features relevant to me.
+- As a visitor, I want to see a well-designed home page that introduces HealMate so that I understand the platform's purpose and value.
+- As a patient, I want to search for specialists by category (e.g., Dermatologist, Psychologist) so that I can find a doctor that meets my needs.
+- As a patient, I want to view available time slots for a specialist and book an appointment, so that I can get medical advice and treatment.
+- As a patient, I want to message my doctor before or after a consultation so that I can ask follow-up questions or clarify doubts.
 
-## Release History
+## Scope Plane
+The HealMate platform will include the following MVP functionalities:
+- User registration and role-based dashboards.
+- Search and filtering system for specialists.
+- Appointment scheduling with available specialists.
+- Specialist profiles showcasing specialty, experience, and availability.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Structural Plane
+The site is structured around an easy-to-use interface. The primary menu includes links to specialist searches, appointment bookings, and user profile management.
 
-**June 18, 2024,** Add Mongo back into template
+## Skeleton & Surface Planes
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Wireframes
+Wireframes were created for the following key pages to ensure an intuitive user journey:
+- **Home Page**
+- **Specialist Search Results**
+- **Appointment Booking**
+- **User Dashboards** (Patient and Specialist)
+- **Admin Panel**
 
-**May 28 2024:** Fix Mongo and Links installs
+Wireframes were designed using [Balsamiq](https://balsamiq.com/), ensuring responsiveness across devices.
 
-**April 26 2024:** Update node version to 16
+## Database Schema - Entity Relationship Diagram
+The ERD for HealMate illustrates the relationships between the users, specialists, appointments, and more. This is essential to demonstrate the relationships between the different models in the PostgreSQL database.
 
-**September 20 2023:** Update Python version to 3.9.17.
+## Security
+All data is securely handled with Django’s security features, including:
+- CSRF protection for form submissions.
+- Data encryption for sensitive information like passwords using Django's built-in authentication.
+- Role-based access control to restrict sensitive data to authorized users.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Features
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### User View - Registered/Unregistered
+HealMate offers distinct user views. Unregistered users can search for specialists, but registered users have full access to the appointment system and dashboard functionalities.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### CRUD Functionality
+The following CRUD functionalities are implemented:
+- **Users:** Create an account, read profile information, update details, and delete the account.
+- **Specialists:** Search and view specialists, book appointments.
+- **Appointments:** Create, read, update, and delete appointments.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Future Features
+I plan to implement the following in future iterations:
+- Push notifications for upcoming appointments.
+- Integrate payment system for paid consultations.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Technologies & Languages Used
+- HTML5 - Markup language for structuring the website
+- CSS3 - Styling language for designing the layout and visual aesthetics
+- JavaScript - For interactivity and DOM manipulation on the frontend
+- Python (Django) - Backend web framework for server-side logic and management
+- PostgreSQL - Database management system for storing data
+- Cloudinary - Cloud-based image storage solution
+- Whitenoise - For serving static files directly from Django
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Libraries & Frameworks
+- **Django** - Backend framework
+- **Django Crispy Forms** - For elegant form rendering
+- **Cloudinary** - Media storage
+- **Whitenoise** - For serving static files
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Tools & Programs
+- **GitHub Projects** - Project management and tracking
+- **Heroku** - Deployment and hosting
+- **Balsamiq** - Wireframes and design prototypes
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## **Testing**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### **Validation Testing**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+All code has been validated through:
+- **HTML**: [W3C Markup Validator](https://validator.w3.org/).
+- **CSS**: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+- **Python**: PEP8 validation to ensure code quality.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+*(I will add validation and other tests when site is ready)*
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### **User Testing**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- **Browser Compatibility**: The website has been tested on Chrome, Firefox, Safari, and Edge.
+- **Responsiveness**: The platform has been tested on mobile, tablet, and desktop devices to ensure optimal performance.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### **Bugs**
+- Bug 1: **To be further filled**.
+- Bug 2: **To be further filled**.
 
-------
+*(I will list any bugs encountered and how they were resolved.)*
 
-## FAQ about the uptime script
+## Deployment
 
-**Why have you added this script?**
+All code for this project was written in Visual Studio/Gitpod as the integrated development environment. GitHub was used for version control, and the application was deployed to Heroku from GitHub.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Pre-Deployment
 
-**How will this affect me?**
+To ensure a successful deployment to Heroku, the following practices are to be followed (Experience from previous Django projects):
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- **Requirements File:** The `requirements.txt` file must be kept up to date to ensure all imported Python modules are configured correctly for Heroku.
+- **Procfile:** A `Procfile` was added to configure the application as a Gunicorn web app on Heroku.
+- **Allowed Hosts:** In `settings.py`, the `ALLOWED_HOSTS` list was configured to include the Heroku app name and `localhost`. Example format:
+    ```python
+    ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
+    ```
+- **Environment Variables:** All sensitive data such as the `DATABASE_URL`, `CLOUDINARY_URL`, and `SECRET_KEY` were added to the `.env` file, which is ignored by Git using `.gitignore`. These variables are added to Heroku manually through the Config Vars section.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Deploying with Heroku
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The steps for deploying to Heroku are as follows (Experience from previous Django projects):
 
-**So….?**
+1. **Create New App:** Log in to your Heroku account and click on the "Create New App" button.
+2. **App Name:** Choose a unique name for your app.
+3. **Select Region:** Choose the appropriate region (Europe was selected for this project).
+4. **Create App:** Click the "Create App" button to proceed.
+5. **Deployment Method:** In the "Deploy" tab, select GitHub as the deployment method.
+6. **Connect to GitHub:** Search for the repository name and click "Connect".
+7. **Manual or Automatic Deployment:** Select either manual or automatic deployment. Ensure the main branch is selected for deployment.
+8. **Config Vars:** In the "Settings" tab, click "Reveal Config Vars" and input the required environment variables.
+9. **Buildpack:** Select Node.js and Python as the buildpacks for your project.
+10. **Deploy:** Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The live link for this project can be found here: [HealMate Live Site](#)
 
-**Can I opt out?**
+### Fork this Repository
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+1. Go to the GitHub repository.
+2. Click the "Fork" button in the upper right-hand corner.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Clone this Repository
 
-**Anything more?**
+1. Go to the GitHub repository.
+2. Click the "Code" button at the top of the page.
+3. Choose between 'HTTPS', 'SSH', or 'GitHub CLI' depending on your preference.
+4. Click the copy button to copy the URL.
+5. Open Git Bash.
+6. Change the working directory to where you want to clone the directory.
+7. Type:
+    ```bash
+    git clone https://github.com/easybulb/healmate
+    ```
+8. Press Enter to create the local clone.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+**Note:** The difference between a clone and a fork is that with a clone, you need permission to push changes to the original repository, whereas a fork creates an entirely new project under your GitHub account.
 
----
+## Credits
 
-Happy coding!
+### Code
+- **Django Documentation**: The official docs were invaluable in setting up the project structure and solving specific issues.
+- **Django Crispy Forms Documentation**: Used to streamline form rendering.
+(more credits to come)
+
+### Media
+- Icons and images sourced from **Canva** and **ChatGPT**.
+
+### Additional reading/tutorials/books/blogs
+- **Django for Beginners** by William S. Vincent.
+
+## Acknowledgements
+- A special thanks to.... to complete soon.
+
