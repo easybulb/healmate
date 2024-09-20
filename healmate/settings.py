@@ -34,7 +34,7 @@ if os.path.isfile("env.py"):
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['8000-easybulb-healmate-8b8jtucddwa.ws.codeinstitute-ide.net', 'healmate-378e458234ec.herokuapp.com']
+ALLOWED_HOSTS = ['8000-easybulb-healmate-8b8jtucddwa.ws.codeinstitute-ide.net','.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 
