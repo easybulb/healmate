@@ -157,7 +157,7 @@ The ERD for HealMate illustrates the relationships between the users, specialist
 
 ![ERD Illustration](docs/erd/erd-healmate.png)
 
-This above ERD was generated using Python Extension - pygraphviz and pydotplus. Documentation at https://django-extensions.readthedocs.io/en/latest/graph_models.html.
+The above ERD was generated using Python Extension - pygraphviz and pydotplus. Documentation at https://django-extensions.readthedocs.io/en/latest/graph_models.html.
 
 ## Security
 All data is securely handled with Django’s security features, including:
