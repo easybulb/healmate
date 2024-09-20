@@ -286,7 +286,7 @@ The live link for this project can be found here: [HealMate Live Site](#)
 
 ### Media
 - Icons and images sourced from **Canva** and **ChatGPT**.
-- ERD illustration was generated from **pygrahiz** - A django extension.
+- ERD illustration was generated from **pygraphiz** - A django extension.
 
 ### Additional reading/tutorials/books/blogs
 - **Django for Beginners** by William S. Vincent.
