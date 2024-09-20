@@ -155,6 +155,10 @@ Wireframes were designed using [Balsamiq](https://balsamiq.com/), ensuring respo
 ## Database Schema - Entity Relationship Diagram
 The ERD for HealMate illustrates the relationships between the users, specialists, appointments, and more. This is essential to demonstrate the relationships between the different models in the PostgreSQL database.
 
+![ERD Illustration](docs/erd/erd-healmate.png)
+
+This above ERD was generated using Python Extension - pygraphviz and pydotplus. Documentation at https://django-extensions.readthedocs.io/en/latest/graph_models.html.
+
 ## Security
 All data is securely handled with Django’s security features, including:
 - CSRF protection for form submissions.
@@ -282,6 +286,7 @@ The live link for this project can be found here: [HealMate Live Site](#)
 
 ### Media
 - Icons and images sourced from **Canva** and **ChatGPT**.
+- ERD illustration was generated from **pygrahiz** - A django extension.
 
 ### Additional reading/tutorials/books/blogs
 - **Django for Beginners** by William S. Vincent.
