@@ -2,9 +2,11 @@
 
 **HealMate** is an online platform designed to bridge the gap between patients and medical specialists. It allows users to easily find, book, and consult with professionals from various medical fields such as dermatology, psychology, and optometry. The project is part of the Code Institute's Full-Stack Developer course and focuses on Django framework, database manipulation, and CRUD functionality.
 
-[Live Site Here: HealMate](#) <!-- To be added -->
+Live site: [HealMate](https://healmate-378e458234ec.herokuapp.com/)
 
-For **Admin access** with relevant sign-in information, click [here](#). <!-- To be added-->
+For **Admin access** with relevant sign-in information, click [here](https://healmate-378e458234ec.herokuapp.com/admin/login/?next=/admin/).
+
+Github repository, click [here](https://github.com/easybulb/healmate)
 
 
 ## Table of Contents
@@ -218,10 +220,25 @@ All code has been validated through:
 - **Responsiveness**: The platform has been tested on mobile, tablet, and desktop devices to ensure optimal performance.
 
 ### **Bugs**
-- Bug 1: **To be further filled**.
-- Bug 2: **To be further filled**.
+- ### Bug Fix: `DISABLE_COLLECTSTATIC` Setting Causing Heroku Deployment Failure
 
-*(I will list any bugs encountered and how they were resolved.)*
+**Issue:**  
+During the deployment to Heroku, the following error occurred:
+
+The error was caused by the absence of proper static file handling and a misconfiguration in the `INSTALLED_APPS` list in `settings.py`.
+
+**Cause:**  
+- The `DISABLE_COLLECTSTATIC=1` config variable was used in Heroku to prevent collectstatic from running during the initial setup.
+- There was a duplicate entry for `django.contrib.staticfiles` in `INSTALLED_APPS`, which caused an error when trying to collect static files.
+
+**Steps Taken to Fix:**
+1. Fixed the duplicate `django.contrib.staticfiles` entry in `INSTALLED_APPS`.
+2. Ensured the static and media handling was properly set up with Cloudinary and Whitenoise.
+3. Deleted the `DISABLE_COLLECTSTATIC=1` from Heroku's Config Vars.
+4. Deployed again, which successfully collected static files and completed the deployment.
+
+
+- Bug 2: **To be further filled**.
 
 ## Deployment
 
@@ -254,7 +271,7 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 9. **Buildpack:** Select Node.js and Python as the buildpacks for your project.
 10. **Deploy:** Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
 
-The live link for this project can be found here: [HealMate Live Site](#)
+The live link for this project can be found here: [HealMate Live Site](https://healmate-378e458234ec.herokuapp.com/)
 
 ### Fork this Repository
 
