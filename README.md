@@ -2,11 +2,13 @@
 
 **HealMate** is an online platform designed to bridge the gap between patients and medical specialists. It allows users to easily find, book, and consult with professionals from various medical fields such as dermatology, psychology, and optometry. The project is part of the Code Institute's Full-Stack Developer course and focuses on Django framework, database manipulation, and CRUD functionality.
 
-Live site: [HealMate](https://healmate-378e458234ec.herokuapp.com/)
+Live site: <a href="https://healmate-378e458234ec.herokuapp.com/" target="_blank">HealMate</a>
 
-For **Admin access** with relevant sign-in information, click [here](https://healmate-378e458234ec.herokuapp.com/admin/login/?next=/admin/).
+For **Admin access** with relevant sign-in information, click <a href="https://healmate-378e458234ec.herokuapp.com/admin/login/?next=/admin/" target="_blank">here</a>.
 
-Github repository, click [here](https://github.com/easybulb/healmate)
+
+Github repository, click <a href="https://github.com/easybulb/healmate" target="_blank">here</a>.
+
 
 
 ## Table of Contents
@@ -271,7 +273,7 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 9. **Buildpack:** Select Node.js and Python as the buildpacks for your project.
 10. **Deploy:** Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
 
-The live link for this project can be found here: [HealMate Live Site](https://healmate-378e458234ec.herokuapp.com/)
+The live link for this project can be found here: <a href="https://healmate-378e458234ec.herokuapp.com/" target="_blank">HealMate</a>
 
 ### Fork this Repository
 
