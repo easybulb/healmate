@@ -1,10 +1,17 @@
 {% load i18n %}
+
+{% load static %}
+
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block head_title %}{% endblock head_title %}</title>
+    <title>{% block head_title %}Healmate{% endblock head_title %}</title>
     {% block extra_head %}
     {% endblock extra_head %}
   </head>
