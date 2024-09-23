@@ -50,14 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'core',
+    'dashboard',
     'cloudinary_storage',
     'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'core',
-    'dashboard',
 ]
 
 # Custom allauth settings
