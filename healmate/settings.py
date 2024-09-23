@@ -14,8 +14,11 @@ from pathlib import Path
 import os
 import dj_database_url
 
+# SECURITY WARNING: don't run with debug turned on in production!
 if os.path.isfile("env.py"):
-    import env
+    DEBUG = True
+else:
+    DEBUG = False
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,12 +32,6 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
-# SECURITY WARNING: don't run with debug turned on in production!
-if os.path.isfile("env.py"):
-    DEBUG = True
-else:
-    DEBUG = False
 
 ALLOWED_HOSTS = ['8000-easybulb-healmate-8b8jtucddwa.ws.codeinstitute-ide.net', 'healmate-378e458234ec.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
