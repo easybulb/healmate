@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf.urls import handler404, handler500
 from django.shortcuts import render
 
+# Custom error handlers
 def custom_404(request, exception):
     return render(request, 'core/404.html', status=404)
 
@@ -31,3 +32,7 @@ urlpatterns = [
     path('', include('accounts.urls'), name='home'),
     path('', include('core.urls')), 
 ]
+
+# Registering custom error handlers
+handler404 = 'healmate.urls.custom_404'
+handler500 = 'healmate.urls.custom_500'
