@@ -1,14 +1,8 @@
-{% load static %}
+{% extends 'core/base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test html and css</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <h1>HealMate project django from heroku</h1>
-</body>
-</html>
+{% block title %}HealMate Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to HealMate!</h1>
+    <p>This is the homepage content for HealMate.</p>
+{% endblock %}
