@@ -8,7 +8,7 @@ class AboutPage(TemplateView):
     template_name = 'core/about.html'
 
 class ContactPage(TemplateView):
-    template_name = 'core/contact.html'
+    template_name = 'core/contact_us.html'
 
 class JoinUsPage(TemplateView):
     template_name = 'core/join_us.html'
