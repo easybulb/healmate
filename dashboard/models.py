@@ -8,6 +8,8 @@ class PatientProfile(models.Model):
     def __str__(self):
         return f"{self.user.username}'s Patient Profile"
 
+
+
 class Specialty(models.Model):
     name = models.CharField(max_length=50)
 
@@ -22,6 +24,8 @@ class SpecialistProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.specialty.name}"
+
+
 
 class Appointment(models.Model):
     STATUS_CHOICES = [
@@ -39,3 +43,13 @@ class Appointment(models.Model):
     def __str__(self):
         return f"Appointment with {self.specialist.user.username} on {self.date} at {self.time}"
 
+
+
+class Message(models.Model):
+    sender = models.ForeignKey(User, related_name="sent_messages", on_delete=models.CASCADE)
+    receiver = models.ForeignKey(User, related_name="received_messages", on_delete=models.CASCADE)
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Message from {self.sender.username} to {self.receiver.username} on {self.timestamp}"
