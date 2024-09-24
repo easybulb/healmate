@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.isfile("env.py"):
+    import env 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.path.isfile("env.py"):
     DEBUG = True
