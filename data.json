@@ -1,0 +1,195 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "username": "admin1",
+        "password": "pbkdf2_sha256$320000$admin1pass$samplehashedpassword", 
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "groups": [1],
+        "email": "admin1@healmate.com"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "username": "admin2",
+        "password": "pbkdf2_sha256$320000$admin2pass$samplehashedpassword",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "groups": [1],
+        "email": "admin2@healmate.com"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 3,
+      "fields": {
+        "username": "admin3",
+        "password": "pbkdf2_sha256$320000$admin3pass$samplehashedpassword",
+        "is_superuser": true,
+        "is_staff": true,
+        "is_active": true,
+        "groups": [1],
+        "email": "admin3@healmate.com"
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 1,
+      "fields": {
+        "name": "Admins"
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 2,
+      "fields": {
+        "name": "Specialists"
+      }
+    },
+    {
+      "model": "auth.group",
+      "pk": 3,
+      "fields": {
+        "name": "Patients"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 4,
+      "fields": {
+        "username": "specialist1",
+        "password": "pbkdf2_sha256$320000$specialist1pass$samplehashedpassword",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "groups": [2],
+        "email": "specialist1@healmate.com"
+      }
+    },
+    {
+      "model": "dashboard.specialistprofile",
+      "pk": 1,
+      "fields": {
+        "user": 4,
+        "specialty": 1,
+        "bio": "Experienced dermatologist with 10 years in the field.",
+        "location": "New York"
+      }
+    },
+    {
+      "model": "dashboard.specialty",
+      "pk": 1,
+      "fields": {
+        "name": "Dermatologist"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 5,
+      "fields": {
+        "username": "specialist2",
+        "password": "pbkdf2_sha256$320000$specialist2pass$samplehashedpassword",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "groups": [2],
+        "email": "specialist2@healmate.com"
+      }
+    },
+    {
+      "model": "dashboard.specialistprofile",
+      "pk": 2,
+      "fields": {
+        "user": 5,
+        "specialty": 2,
+        "bio": "Qualified psychologist specializing in cognitive behavioral therapy.",
+        "location": "Los Angeles"
+      }
+    },
+    {
+      "model": "dashboard.specialty",
+      "pk": 2,
+      "fields": {
+        "name": "Psychologist"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 6,
+      "fields": {
+        "username": "specialist3",
+        "password": "pbkdf2_sha256$320000$specialist3pass$samplehashedpassword",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "groups": [2],
+        "email": "specialist3@healmate.com"
+      }
+    },
+    {
+      "model": "dashboard.specialistprofile",
+      "pk": 3,
+      "fields": {
+        "user": 6,
+        "specialty": 3,
+        "bio": "Experienced cardiologist with over 8 years in treating heart diseases.",
+        "location": "Chicago"
+      }
+    },
+    {
+      "model": "dashboard.specialty",
+      "pk": 3,
+      "fields": {
+        "name": "Cardiologist"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 7,
+      "fields": {
+        "username": "patient1",
+        "password": "pbkdf2_sha256$320000$patient1pass$samplehashedpassword",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "groups": [3],
+        "email": "patient1@healmate.com"
+      }
+    },
+    {
+      "model": "dashboard.patientprofile",
+      "pk": 1,
+      "fields": {
+        "user": 7,
+        "contact_number": "1234567890"
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 8,
+      "fields": {
+        "username": "patient2",
+        "password": "pbkdf2_sha256$320000$patient2pass$samplehashedpassword",
+        "is_superuser": false,
+        "is_staff": false,
+        "is_active": true,
+        "groups": [3],
+        "email": "patient2@healmate.com"
+      }
+    },
+    {
+      "model": "dashboard.patientprofile",
+      "pk": 2,
+      "fields": {
+        "user": 8,
+        "contact_number": "0987654321"
+      }
+    }
+  ]
+  
