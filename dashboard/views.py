@@ -5,15 +5,15 @@ from django.utils.decorators import method_decorator
 
 # Function to check if the user is a patient
 def is_patient(user):
-    return user.groups.filter(name='Patients').exists()
+    return user.groups.filter(name='Patient').exists()
 
 # Function to check if the user is a specialist
 def is_specialist(user):
-    return user.groups.filter(name='Specialists').exists()
+    return user.groups.filter(name='Specialist').exists()
 
 # Function to check if the user is an admin
 def is_admin(user):
-    return user.groups.filter(name='Admins').exists()
+    return user.groups.filter(name='Admin').exists()
 
 # Patient Dashboard View
 @method_decorator([login_required, user_passes_test(is_patient)], name='dispatch')
