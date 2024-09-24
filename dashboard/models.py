@@ -22,3 +22,20 @@ class SpecialistProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.specialty.name}"
+
+class Appointment(models.Model):
+    STATUS_CHOICES = [
+        ('Scheduled', 'Scheduled'),
+        ('Completed', 'Completed'),
+        ('Cancelled', 'Cancelled'),
+    ]
+    
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE)
+    specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Scheduled')
+
+    def __str__(self):
+        return f"Appointment with {self.specialist.user.username} on {self.date} at {self.time}"
+
