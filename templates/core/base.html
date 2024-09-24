@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_tags %} <!-- Load the custom template tag -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,13 @@
             <li><a href="{% url 'faq' %}">FAQ</a></li>
 
             {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                    <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+                {% elif user|has_group:"Specialist" %}
+                    <li><a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a></li>
+                {% elif user|has_group:"Patient" %}
+                    <li><a href="{% url 'patient_dashboard' %}">Patient Dashboard</a></li>
+                {% endif %}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'account_login' %}">Login</a></li>
