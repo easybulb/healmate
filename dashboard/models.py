@@ -53,3 +53,15 @@ class Message(models.Model):
 
     def __str__(self):
         return f"Message from {self.sender.username} to {self.receiver.username} on {self.timestamp}"
+
+
+
+class Feedback(models.Model):
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE)
+    specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
+    review = models.TextField()
+    rating = models.PositiveIntegerField()  # Assume rating is from 1 to 5
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Feedback by {self.patient.user.username} for {self.specialist.user.username} - Rating: {self.rating}"
