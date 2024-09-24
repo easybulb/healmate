@@ -1,5 +1,24 @@
 {% extends "core/base.html" %}
+
 {% block content %}
 <h1>Admin Dashboard</h1>
-<p>Manage users, consultants, and feedback here.</p>
+<p>Manage users, consultants, appointments, and feedback here.</p>
+
+<div>
+    <h2>Users</h2>
+    <ul>
+        {% for user in users %}
+        <li>{{ user.username }} ({{ user.email }})</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <h2>Pending Appointments</h2>
+    <ul>
+        {% for appointment in appointments %}
+        <li>{{ appointment.patient }} has an appointment with {{ appointment.specialist }} on {{ appointment.date }}</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
