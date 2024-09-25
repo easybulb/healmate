@@ -1,6 +1,84 @@
 body {
     background-color: #17A2B8;
+    font-family: Arial, sans-serif;
 }
+
+
+/* base.html nav */
+nav {
+    background-color: #2c3e50;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+.user-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c3e50;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-dropdown .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown .dropdown-content a:hover {
+    background-color: #34495e;
+}
+
+/* Show dropdown when hovering over the user link */
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+div {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+
+
 
 /* patient_dashboard page */
 .dashboard-container {
