@@ -19,3 +19,8 @@ def book_appointment(request, specialist_id):
         form = AppointmentForm()
     return render(request, 'appointments/book_appointment.html', {'form': form, 'specialist': specialist})
 
+# Confirmation view
+def appointment_confirmation(request):
+    return render(request, 'appointments/appointment_confirmation.html')
+
+
