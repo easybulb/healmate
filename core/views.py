@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from dashboard.models import Specialty
+
+def home(request):
+    specialties = Specialty.objects.all()
+    return render(request, 'core/index.html', {'specialties': specialties})
 
 class HomePage(TemplateView):
     template_name = 'core/home.html'
