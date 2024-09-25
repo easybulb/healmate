@@ -3,7 +3,7 @@
 {% block content %}
 <h2>Specialist Search Results</h2>
 
-<form method="GET" action="{% url 'search_specialists' %}"></form>
+<form method="GET" action="{% url 'search_specialists' %}">
     <input type="text" name="q" placeholder="Search specialists...">
     <select name="specialty">
         <option value="">All Specialties</option>
