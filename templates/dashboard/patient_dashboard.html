@@ -1,7 +1,7 @@
 {% extends "core/base.html" %}
 {% block content %}
-    <h1>Welcome to Your Patient Dashboard</h1>
-    <p>Manage your appointments, update your profile, and explore health tools.</p>
+    <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
+    <p>Manage your profile, appointments, and access health tools from here.</p>
 
     <!-- Links to Profile and Other Sections -->
     <section>
