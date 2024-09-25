@@ -3,6 +3,9 @@
 {% block content %}
   <h1>Your Profile</h1>
 
+  <h2>Change Password</h2>
+  <a href="{% url 'account_change_password' %}">Change your password</a>
+
   <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -16,6 +19,5 @@
     <li><strong>Contact Number:</strong> {{ profile.contact_number }}</li>
   </ul>
 
-  <h2>Change Password</h2>
-  <a href="{% url 'account_change_password' %}">Change your password</a>
+  
 {% endblock %}
