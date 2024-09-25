@@ -32,7 +32,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #45a049;
+    background-color: #231444;
 }
 
 /* Dropdown styles */
@@ -48,6 +48,10 @@ nav ul li a:hover {
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+}
+
+.dropdown-content.show {
+    display: block;
 }
 
 .dropdown-content a {
