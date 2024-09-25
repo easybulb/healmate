@@ -1,21 +1,93 @@
 {% extends 'core/base.html' %}
 
-{% load i18n %}
-
-{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
+{% block title %}Sign Up{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<h1>Sign Up</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+<!-- Display form errors if any -->
+{% if form.errors %}
+    <div class="form-errors">
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ field.label }}: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <!-- Username -->
+    <div style="margin-bottom: 10px;">
+        <label for="username">Username:</label><br>
+        {{ form.username }}
+    </div>
+    
+    <!-- First Name -->
+    <div style="margin-bottom: 10px;">
+        <label for="first_name">First Name:</label><br>
+        {{ form.first_name }}
+    </div>
+    
+    <!-- Last Name -->
+    <div style="margin-bottom: 10px;">
+        <label for="last_name">Last Name:</label><br>
+        {{ form.last_name }}
+    </div>
+    
+    <!-- Contact Number -->
+    <div style="margin-bottom: 10px;">
+        <label for="contact_number">Contact Number:</label><br>
+        {{ form.contact_number }}
+    </div>
+    
+    <!-- Address -->
+    <div style="margin-bottom: 10px;">
+        <label for="address">Address:</label><br>
+        {{ form.address }}
+    </div>
+
+    <!-- Date of Birth -->
+    <div style="margin-bottom: 10px;">
+        <label for="date_of_birth">Date of Birth:</label><br>
+        {{ form.date_of_birth }}
+    </div>
+
+    <!-- Gender -->
+    <div style="margin-bottom: 10px;">
+        <label for="gender">Gender:</label><br>
+        {{ form.gender }}
+    </div>
+
+    <!-- Email -->
+    <div style="margin-bottom: 10px;">
+        <label for="email">Email:</label><br>
+        {{ form.email }}
+    </div>
+
+    <!-- Password -->
+    <div style="margin-bottom: 10px;">
+        <label for="password1">Password:</label><br>
+        {{ form.password1 }}
+    </div>
+    
+    <!-- Confirm Password -->
+    <div style="margin-bottom: 10px;">
+        <label for="password2">Confirm Password:</label><br>
+        {{ form.password2 }}
+    </div>
+
+    <!-- Submit Button -->
+    <div style="margin-bottom: 10px;">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
 </form>
-
-{% endblock content %}
+{% endblock %}
