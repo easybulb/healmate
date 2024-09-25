@@ -6,6 +6,16 @@
   <h2>Change Password</h2>
   <a href="{% url 'account_change_password' %}">Change your password</a>
 
+  <h1>Your Profile</h1>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
   <!-- Profile Update Form -->
   <h2>Update Your Profile</h2>
   <form method="POST">
