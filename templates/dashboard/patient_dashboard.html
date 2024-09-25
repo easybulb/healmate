@@ -3,16 +3,28 @@
     <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
     <p>Manage your profile, appointments, and access health tools from here.</p>
 
-    <!-- Links to Profile and Other Sections -->
-    <section>
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="{% url 'patient_profile' %}">View & Update Your Profile</a></li>
-            <li><a href="#">Manage Your Appointments</a></li>
-            <li><a href="#">Health Tools</a></li>
-            <li><a href="#">Messages</a></li>
-        </ul>
-    </section>
+        <!-- Quick Links Section -->
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <i class="fa fa-user-circle"></i>
+                    <a href="{% url 'patient_profile' %}">View & Update Your Profile</a>
+                </div>
+                <div class="link-item">
+                    <i class="fa fa-calendar"></i>
+                    <a href="#">Manage Your Appointments</a>
+                </div>
+                <div class="link-item">
+                    <i class="fa fa-heartbeat"></i>
+                    <a href="#">Health Tools</a>
+                </div>
+                <div class="link-item">
+                    <i class="fa fa-envelope"></i>
+                    <a href="#">Messages</a>
+                </div>
+            </div>
+        </section>
 
         <!-- Recent Appointments Section -->
         <section>
