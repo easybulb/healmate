@@ -37,8 +37,8 @@ class Appointment(models.Model):
         ('Cancelled', 'Cancelled'),
     ]
     
-    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE)
-    specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name='dashboard_appointments')
+    specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE, related_name='dashboard_specialist_appointments')
     date = models.DateField()
     time = models.TimeField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Scheduled')
