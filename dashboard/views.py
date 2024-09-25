@@ -41,7 +41,7 @@ def patient_profile(request):
         form = PatientProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')  # Redirect to the profile page after saving
+            return redirect('patient_profile')  # Redirect to the profile page after saving
     else:
         form = PatientProfileForm(instance=profile)
 
