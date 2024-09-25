@@ -5,5 +5,5 @@ urlpatterns = [
     path('admin/', AdminDashboardView.as_view(), name='admin_dashboard'),
     path('specialist/', SpecialistDashboardView.as_view(), name='specialist_dashboard'),
     path('patient/', PatientDashboardView.as_view(), name='patient_dashboard'),
-    path('profile/', patient_profile, name='profile'),
+    path('profile/', patient_profile, name='patient_profile'),
 ]
