@@ -21,14 +21,20 @@
             <li><a href="{% url 'faq' %}">FAQ</a></li>
 
             {% if user.is_authenticated %}
-                {% if user.is_superuser %}
-                    <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
-                {% elif user|has_group:"Specialist" %}
-                    <li><a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a></li>
-                {% elif user|has_group:"Patient" %}
-                    <li><a href="{% url 'patient_dashboard' %}">Patient Dashboard</a></li>
-                {% endif %}
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <li class="user-dropdown">
+                    {% if user.is_superuser %}
+                        <a href="{% url 'admin_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
+                    {% elif user|has_group:"Specialist" %}
+                        <a href="{% url 'specialist_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
+                    {% elif user|has_group:"Patient" %}
+                        <a href="{% url 'patient_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
+                    {% endif %}
+                    <div class="dropdown-content">
+                        <a href="{% url 'patient_profile' %}">Profile</a>
+                        <a href="{% url 'account_change_password' %}">Change Password</a>
+                        <a href="{% url 'account_logout' %}">Logout</a>
+                </div>
+            </li>
             {% else %}
                 <li><a href="{% url 'account_login' %}">Login</a></li>
                 <li><a href="{% url 'account_signup' %}">Register</a></li>
