@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'accounts',
     'core',
     'dashboard',
+    'appointments',
     'cloudinary_storage',
     'cloudinary',
     'django.contrib.sites',
