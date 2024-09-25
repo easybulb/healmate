@@ -1,5 +1,23 @@
 {% extends "core/base.html" %}
 {% block content %}
-<h1>Patient Dashboard</h1>
-<p>Welcome to your dashboard, where you can manage your appointments and view health tools.</p>
+    <h1>Welcome to Your Patient Dashboard</h1>
+    <p>Manage your appointments, update your profile, and explore health tools.</p>
+
+    <!-- Links to Profile and Other Sections -->
+    <section>
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="{% url 'patient_profile' %}">View & Update Your Profile</a></li>
+            <li><a href="#">Manage Your Appointments</a></li>
+            <li><a href="#">Health Tools</a></li>
+            <li><a href="#">Messages</a></li>
+        </ul>
+    </section>
+
+        <!-- Recent Appointments Section -->
+        <section>
+            <h2>Your Recent Appointments</h2>
+            <p>You don’t have any upcoming appointments.</p> <!-- You can replace this with dynamic content -->
+        </section>
+
 {% endblock %}
