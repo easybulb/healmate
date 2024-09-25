@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <h1>Your Profile</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <h2>Your Details</h2>
+  <ul>
+    <li><strong>Username:</strong> {{ profile.user.username }}</li>
+    <li><strong>Email:</strong> {{ profile.user.email }}</li>
+    <li><strong>Contact Number:</strong> {{ profile.contact_number }}</li>
+  </ul>
+
+  <h2>Change Password</h2>
+  <a href="{% url 'account_change_password' %}">Change your password</a>
+{% endblock %}
