@@ -1,3 +1,47 @@
 body {
     background-color: #17A2B8;
 }
+.dashboard-container {
+    padding: 20px;
+}
+
+.quick-links {
+    margin-bottom: 30px;
+}
+
+.links-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    background-color: #f9f9f9;
+}
+
+.link-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.appointments-section,
+.health-tips,
+.notifications {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.notification-message {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+}
