@@ -42,6 +42,14 @@
         </ul>
     </nav>
 
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <!-- Page Content -->
     <div>
         {% block content %}
