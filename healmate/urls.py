@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('dashboard/', include('dashboard.urls')),
+    path('specialists/', include('specialists.urls')),
     path('', include('core.urls')), 
 ]
 
