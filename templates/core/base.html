@@ -22,19 +22,20 @@
 
             {% if user.is_authenticated %}
                 <li class="user-dropdown">
-                    {% if user.is_superuser %}
-                        <a href="{% url 'admin_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
-                    {% elif user|has_group:"Specialist" %}
-                        <a href="{% url 'specialist_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
-                    {% elif user|has_group:"Patient" %}
-                        <a href="{% url 'patient_dashboard' %}">{{ user.username }} (click to visit dashboard)</a>
-                    {% endif %}
+                    <a href="javascript:void(0);" class="dropdown-toggle">{{ user.username }} (click to view options)</a>
                     <div class="dropdown-content">
+                        {% if user.is_superuser %}
+                            <a href="{% url 'admin_dashboard' %}">Admin Dashboard</a>
+                        {% elif user|has_group:"Specialist" %}
+                            <a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a>
+                        {% elif user|has_group:"Patient" %}
+                            <a href="{% url 'patient_dashboard' %}">Patient Dashboard</a>
+                        {% endif %}
                         <a href="{% url 'patient_profile' %}">Profile</a>
                         <a href="{% url 'account_change_password' %}">Change Password</a>
-                        <a href="{% url 'account_logout' %}">Logout</a>
-                </div>
-            </li>
+                    </div>
+                </li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'account_login' %}">Login</a></li>
                 <li><a href="{% url 'account_signup' %}">Register</a></li>
@@ -64,5 +65,8 @@
             <a href="#">Terms of Service</a>
         </p>
     </footer>
+
+    <!-- Link to JS -->
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
