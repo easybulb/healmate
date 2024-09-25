@@ -29,6 +29,7 @@ def custom_500(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('appointments/', include('appointments.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('specialists/', include('specialists.urls')),
     path('', include('core.urls')), 
