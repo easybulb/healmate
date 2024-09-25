@@ -1,7 +1,8 @@
 {% extends "core/base.html" %}
 {% block content %}
-    <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
-    <p>Manage your profile, appointments, and access health tools from here.</p>
+    <div class="dashboard-container">
+        <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
+        <p>Manage your profile, appointments, and access health tools from here.</p>
 
         <!-- Quick Links Section -->
         <section class="quick-links">
@@ -53,5 +54,5 @@
                 <!-- This can be dynamically populated with notifications -->
             </div>
         </section>
-
+    </div>
 {% endblock %}
