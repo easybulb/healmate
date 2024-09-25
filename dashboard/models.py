@@ -16,6 +16,9 @@ class Specialty(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "Specialties"
+
 class SpecialistProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     specialty = models.ForeignKey(Specialty, on_delete=models.SET_NULL, null=True)
