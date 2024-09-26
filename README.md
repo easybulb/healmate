@@ -174,6 +174,8 @@ All data is securely handled with Django’s security features, including:
 - Data encryption for sensitive information like passwords using Django's built-in authentication.
 - Role-based access control to restrict sensitive data to authorized users.
 
+Role-based access control (RBAC) is implemented using Django's Group and Permission systems. Patients, specialists, and admins are grouped based on their role, and their access to features and sensitive information is restricted accordingly. Patients can only access their own medical data and booking history, while specialists can only view data related to their consultations. Admins have the broadest access for system management.
+
 ## Features
 
 ### User View - Registered/Unregistered
