@@ -126,6 +126,8 @@ The HealMate platform will include the following MVP functionalities:
 - Appointment scheduling with available specialists.
 - Specialist profiles showcasing specialty, experience, and availability.
 
+HealMate ensures user privacy through secure communication and encryption practices, particularly when handling sensitive patient information and specialist consultations. All interactions between users and specialists are secured with SSL/TLS protocols. Additionally, role-based access ensures that sensitive data is only visible to authorized users, maintaining the platform's privacy integrity.
+
 ## Structural Plane
 The site is structured around an easy-to-use interface. The primary menu includes links to specialist searches, appointment bookings, and user profile management.
 
