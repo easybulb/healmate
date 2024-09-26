@@ -174,6 +174,11 @@ All data is securely handled with Django’s security features, including:
 ### User View - Registered/Unregistered
 HealMate offers distinct user views. Unregistered users can search for specialists, but registered users have full access to the appointment system and dashboard functionalities.
 
+### User Registration Process
+- When a new user registers, they are automatically assigned to the "Patient" group. This ensures that all users begin with patient privileges and access, allowing them to book appointments and view specialist profiles.
+
+- During the registration process, essential patient profile information is captured (e.g., contact number, address, date of birth, gender). After the registration is complete, a corresponding PatientProfile is automatically created and associated with the user.
+
 ### CRUD Functionality
 The following CRUD functionalities are implemented:
 - **Users:** Create an account, read profile information, update details, and delete the account.
