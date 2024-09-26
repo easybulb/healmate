@@ -245,6 +245,8 @@ All code has been validated through:
 
 - **Browser Compatibility**: The website has been tested on Chrome, Firefox, Safari, and Edge.
 - **Responsiveness**: The platform has been tested on mobile, tablet, and desktop devices to ensure optimal performance.
+- **Role-Based Dashboard Testing:** Each user type (patient, specialist, admin) was tested to ensure they were directed to the correct dashboard after login. Patients were assigned to the correct group during registration, and specialists were manually added by admins. The redirection logic was thoroughly tested by registering new users and ensuring role-based access was properly applied.
+- **Automatic Assignment Testing:** Tests were conducted to verify that newly registered users are automatically assigned to the "Patient" group and that their PatientProfile was successfully created. This was confirmed through both the user interface and the Django admin panel.
 
 ### **Bugs**
 - ### Bug Fix: `DISABLE_COLLECTSTATIC` Setting Causing Heroku Deployment Failure
