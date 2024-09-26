@@ -23,6 +23,14 @@ def is_admin(user):
 class PatientDashboardView(TemplateView):
     template_name = 'dashboard/patient_dashboard.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        profile = PatientProfile.objects.get(user=self.request.user)
+        patient_id = profile.id + 24578  # Generate the patient ID dynamically
+        context['profile'] = profile
+        context['patient_id'] = patient_id
+        return context
+
 # Specialist Dashboard View
 @method_decorator([login_required, user_passes_test(is_specialist)], name='dispatch')
 class SpecialistDashboardView(TemplateView):
@@ -32,17 +40,6 @@ class SpecialistDashboardView(TemplateView):
 @method_decorator([login_required, user_passes_test(is_admin)], name='dispatch')
 class AdminDashboardView(TemplateView):
     template_name = 'dashboard/admin_dashboard.html'
-
-
-@login_required
-def patient_dashboard(request):
-    profile = PatientProfile.objects.get(user=request.user)
-    patient_id = profile.id + 24578  # Generate patient ID dynamically
-    return render(request, 'dashboard/patient_dashboard.html', {
-        'profile': profile,
-        'patient_id': patient_id  # Pass the generated patient ID to the template
-    })
-
 
 
 # Patient Profile View
