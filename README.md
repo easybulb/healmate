@@ -52,11 +52,12 @@ Github repository, click <a href="https://github.com/easybulb/healmate" target="
     - [Heroku deployment](#heroku-deployment)
     - [Clone project](#clone-project)
     - [Fork Project](#fork-project)
-17. [Credits](#credits)
+17. [Privacy Policy](#privacy-policy)
+18. [Credits](#credits)
     - [Code](#code)
     - [Media](#media)
     - [Additional reading/tutorials/books/blogs](#additional-readingtutorialsbooksblogs)
-18. [Acknowledgements](#acknowledgements)
+19. [Acknowledgements](#acknowledgements)
 
 ## Overview
 HealMate is an online platform that allows users to:
@@ -127,8 +128,6 @@ The HealMate platform will include the following MVP functionalities:
 - Search and filtering system for specialists.
 - Appointment scheduling with available specialists.
 - Specialist profiles showcasing specialty, experience, and availability.
-
-HealMate ensures user privacy through secure communication and encryption practices, particularly when handling sensitive patient information and specialist consultations. All interactions between users and specialists are secured with SSL/TLS protocols. Additionally, role-based access ensures that sensitive data is only visible to authorized users, maintaining the platform's privacy integrity.
 
 ## Structural Plane
 The site is structured around an easy-to-use interface. The primary menu includes links to specialist searches, appointment bookings, and user profile management.
@@ -323,6 +322,32 @@ The live link for this project can be found here: <a href="https://healmate-378e
 8. Press Enter to create the local clone.
 
 **Note:** The difference between a clone and a fork is that with a clone, you need permission to push changes to the original repository, whereas a fork creates an entirely new project under your GitHub account.
+
+## Privacy Policy
+
+As part of my **HealMate** project, I am dedicated to ensuring that users’ personal data is handled responsibly. The following privacy practices outline how information is collected, used, and stored within this academic project.
+
+- **Data Collection**: HealMate, as a project, collects personal data during user registration and profile setup. This includes:
+  - First and Last Name
+  - Contact Information (Phone Number, Email)
+  - Date of Birth
+  - Gender
+  - Medical History
+  - Emergency Contact Information
+
+- **Data Usage**: The information gathered is used solely for educational purposes, including:
+  - Managing user profiles.
+  - Facilitating appointment bookings between patients and specialists.
+  - Sending notifications related to appointments or system updates.
+
+- **Data Sharing**: As this is a student project, personal data will not be shared with any third parties. It will only be used for demonstrating the functionality of the project. All information remains confidential and will not be distributed beyond the scope of the HealMate project.
+
+- **Security**: While this project is intended for educational use, I strive to implement best practices for data security using the Django framework’s built-in tools. Personal information is securely stored in the database and protected against unauthorized access.
+
+- **User Rights**: Users of this platform, as part of this project, have the right to request modifications or deletion of their data. For any requests or concerns about personal data usage in this project, please contact the project owner at the provided email address.
+
+Since this is an educational project, the privacy and data handling policies may evolve over time as more features are added and refined.
+
 
 ## Credits
 
