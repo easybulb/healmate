@@ -3,6 +3,7 @@
 {% block content %}
     <div class="dashboard-container">
         <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
+        <p><strong>Patient ID:</strong> {{ patient_id }}</p>
         <p>Manage your profile, appointments, and access health tools from here.</p>
 
         <!-- Quick Links Section -->
