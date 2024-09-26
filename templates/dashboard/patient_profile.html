@@ -16,6 +16,16 @@
     </ul>
   {% endif %}
 
+    <!-- User Details Section -->
+    <h2>Your Details</h2>
+    <ul>
+      
+      <li><strong>Username:</strong> {{ profile.user.username }}</li>
+      <li><strong>Full Name:</strong> {{ user.get_full_name }}</li>
+      <li><strong>Email:</strong> {{ profile.user.email }}</li>
+      <li><strong>Contact Number:</strong> {{ profile.contact_number }}</li>
+    </ul>
+
   <!-- Profile Update Form -->
   <h2>Update Your Profile</h2>
   <form method="POST">
@@ -60,15 +70,6 @@
 
     <button type="submit">Save Changes</button>
   </form>
-
-
-  <!-- User Details Section -->
-  <h2>Your Details</h2>
-  <ul>
-    <li><strong>Username:</strong> {{ profile.user.username }}</li>
-    <li><strong>Email:</strong> {{ profile.user.email }}</li>
-    <li><strong>Contact Number:</strong> {{ profile.contact_number }}</li>
-  </ul>
 
   
 {% endblock %}
