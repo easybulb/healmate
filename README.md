@@ -33,6 +33,7 @@ Github repository, click <a href="https://github.com/easybulb/healmate" target="
 9. [Security](#security)
 10. [Features](#features)
     - [User View - Registered/Unregistered](#user-view---registeredunregistered)
+    - [Role-Based Dashboard Features](#role-based-dashboard-features)
     - [CRUD Functionality](#crud-functionality)
     - [Feature Showcase](#feature-showcase)
 11. [Future Features](#future-features)
