@@ -162,6 +162,8 @@ Wireframes were designed using [Balsamiq](https://balsamiq.com/), ensuring respo
 ## Database Schema - Entity Relationship Diagram
 The ERD for HealMate illustrates the relationships between the users, specialists, appointments, and more. This is essential to demonstrate the relationships between the different models in the PostgreSQL database.
 
+The ERD also demonstrates the platform's role-based structure. Each user is assigned to a specific group (patient, specialist, or admin) that determines their access level. PatientProfile and SpecialistProfile models are linked to the User model, and each profile type has specific fields relevant to their role. Admins have broader access to manage both specialist vetting and platform data.
+
 ![ERD Illustration](docs/erd/erd-healmate.png)
 
 The above ERD was generated using Python Extension - pygraphviz and pydotplus. Documentation at https://django-extensions.readthedocs.io/en/latest/graph_models.html.
