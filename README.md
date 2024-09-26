@@ -118,6 +118,7 @@ I used an agile approach to project management. The HealMate development process
 - As a patient, I want to search for specialists by category (e.g., Dermatologist, Psychologist) so that I can find a doctor that meets my needs.
 - As a patient, I want to view available time slots for a specialist and book an appointment, so that I can get medical advice and treatment.
 - As a patient, I want to message my doctor before or after a consultation so that I can ask follow-up questions or clarify doubts.
+- As a specialist, I want to manage my schedule and view patient appointments so that I can efficiently conduct consultations.
 
 ## Scope Plane
 The HealMate platform will include the following MVP functionalities:
