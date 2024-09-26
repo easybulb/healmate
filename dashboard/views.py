@@ -34,6 +34,17 @@ class AdminDashboardView(TemplateView):
     template_name = 'dashboard/admin_dashboard.html'
 
 
+@login_required
+def patient_dashboard(request):
+    profile = PatientProfile.objects.get(user=request.user)
+    patient_id = profile.id + 24578  # Generate patient ID dynamically
+    return render(request, 'dashboard/patient_dashboard.html', {
+        'profile': profile,
+        'patient_id': patient_id  # Pass the generated patient ID to the template
+    })
+
+
+
 # Patient Profile View
 @login_required
 def patient_profile(request):
