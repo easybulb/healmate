@@ -188,7 +188,14 @@ HealMate offers distinct user views. Unregistered users can search for specialis
 
 This registration flow was chosen to ensure role-based control and security. Patients are the primary users of the platform, and allowing them to register freely makes the service accessible. However, specialists and admins require a higher level of trust and validation, so they undergo a manual vetting process. This ensures that only qualified professionals and authorized admins can manage sensitive tasks such as consultations and platform settings, which helps maintain the integrity and security of the system.
 
+### Role-Based Dashboard Features
 
+**HealMate includes role-based dashboards for different types of users:**
+- **Patient Dashboard:** Allows patients to view their profile, manage appointments, and access medical records.
+
+- **Specialist Dashboard:** Specialists can manage their availability, view and approve appointments, and review patient profiles.
+
+- **Admin Dashboard:** Admins can manage users (patients, specialists) and vet specialist applications. They also have access to system-wide settings.
 
 ### CRUD Functionality
 The following CRUD functionalities are implemented:
