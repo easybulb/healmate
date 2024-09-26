@@ -38,6 +38,8 @@ class AdminDashboardView(TemplateView):
 @login_required
 def patient_profile(request):
     profile, created = PatientProfile.objects.get_or_create(user=request.user)
+    patient_id = profile.id + 24578  # Generates patient ID dynamically
+
     if request.method == 'POST':
         form = PatientProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -47,4 +49,8 @@ def patient_profile(request):
     else:
         form = PatientProfileForm(instance=profile)
 
-    return render(request, 'dashboard/patient_profile.html', {'form': form, 'profile': profile})
+    return render(request, 'dashboard/patient_profile.html', {
+        'form': form,
+        'profile': profile,
+        'patient_id': patient_id # Pass the generated patient ID to the template
+    })
