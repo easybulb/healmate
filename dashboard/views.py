@@ -103,7 +103,7 @@ def request_account_deletion(request):
         if profile:
             profile.is_active = False  # Soft delete by deactivating the profile
             profile.save()
-            messages.success(request, 'Your account has been deactivated. Contact admin for reactivation.')
+            messages.success(request, 'Your account has been deactivated. An admin will review your request. You can log out now.')
             return redirect('home')  # Redirect to the home page after deactivation
 
     return render(request, 'dashboard/request_account_deletion.html')
