@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="specialist-dashboard-container">
-    <h1>Welcome, {{ user.get_full_name }}</h1>
+    <h1>Welcome, {{ user.first_name }}</h1>
 
     <!-- Profile Section -->
     <div class="profile-section">
@@ -12,7 +12,7 @@
         {% else %}
             <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" width="150px" class="profile-img">
         {% endif %}
-        <p>Welcome, {{ user.first_name }}</p>
+        <p>Welcome, {{ user.get_full_name }}</p>
         <a href="{% url 'specialist_profile' %}">See your profile</a>
     </div>
 
