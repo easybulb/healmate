@@ -102,7 +102,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'your_app.middleware.InactiveUserMiddleware',
+    'dashboard.middleware.InactiveUserMiddleware'
 ]
 
 ROOT_URLCONF = 'healmate.urls'
