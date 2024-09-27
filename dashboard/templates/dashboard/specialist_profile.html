@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <h1>Your Specialist Profile</h1>
+
+  <h2>Your Details</h2>
+  <ul>
+    <li><strong>Username:</strong> {{ profile.user.username }}</li>
+    <li><strong>Email:</strong> {{ profile.user.email }}</li>
+    <li><strong>Specialty:</strong> {{ profile.specialty.name }}</li>
+    <li><strong>Location:</strong> {{ profile.location }}</li>
+  </ul>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div>
+      <label for="specialty">Specialty:</label>
+      {{ form.specialty }}
+    </div>
+
+    <div>
+      <label for="bio">Bio:</label>
+      {{ form.bio }}
+    </div>
+
+    <div>
+      <label for="location">Location:</label>
+      {{ form.location }}
+    </div>
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+{% endblock %}
