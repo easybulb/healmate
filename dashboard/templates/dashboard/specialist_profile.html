@@ -21,7 +21,7 @@
     <li><strong>Location:</strong> {{ profile.location }}</li>
   </ul>
 
-  <form method="POST">
+  <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.non_field_errors }}
 
