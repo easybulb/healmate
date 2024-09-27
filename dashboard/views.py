@@ -51,7 +51,7 @@ def specialist_profile(request):
     profile, created = SpecialistProfile.objects.get_or_create(user=request.user)
 
     if request.method == 'POST':
-        form = SpecialistProfileForm(request.POST, instance=profile)
+        form = SpecialistProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your specialist profile has been updated successfully!')
