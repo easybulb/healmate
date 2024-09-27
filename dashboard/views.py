@@ -44,6 +44,28 @@ class AdminDashboardView(TemplateView):
     template_name = 'dashboard/admin_dashboard.html'
 
 
+# Specialist Profile View
+@login_required
+def specialist_profile(request):
+    profile, created = SpecialistProfile.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        form = SpecialistProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your specialist profile has been updated successfully!')
+            return redirect('specialist_profile')  # Redirect after saving
+    else:
+        form = SpecialistProfileForm(instance=profile)
+
+    return render(request, 'dashboard/specialist_profile.html', {
+        'form': form,
+        'profile': profile
+    })
+
+
+
+
 # Patient Profile View
 @login_required
 def patient_profile(request):
