@@ -1,16 +1,59 @@
 {% extends "core/base.html" %}
 {% block content %}
 
-<h1>Welcome, {{ user.username }}</h1>
-<h1>Specialist Dashboard</h1>
-<p>Manage your appointments and view patient details here.</p>
+<div class="specialist-dashboard-container">
+    <h1>Welcome, {{ user.get_full_name }}</h1>
 
-<div>
-    <h2>Your Profile Image:</h2>
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#">Manage Availability</a></li>
+            <li><a href="#">View Patient Profiles</a></li>
+            <li><a href="#">Medical Tools</a></li>
+        </ul>
+    </section>
+
     {% if profile.profile_image %}
-      <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px">
-    {% else %}
-      <p>You have not uploaded a profile image yet.</p>
+    <div class="profile-section">
+        <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px">
+        <p>{{ user.get_full_name }}</p>
+        <p>{{ profile.specialty.name }}</p>
+        <a href="{% url 'specialist_profile' %}">Edit Profile</a>
+    </div>
     {% endif %}
-  </div>
+
+    <section class="dashboard-stats">
+        <div class="stat-item">
+            <h3>Total Appointments</h3>
+            <p>5</p> <!-- With time I will replace with dynamic data -->
+        </div>
+        <div class="stat-item">
+            <h3>Upcoming Appointments</h3>
+            <p>2</p> <!-- With time I will replace with dynamic data -->
+        </div>
+        <div class="stat-item">
+            <h3>Patients Today</h3>
+            <p>3</p> <!-- With time I will replace with dynamic data -->
+        </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section class="appointments-section">
+        <h2>Your Appointments</h2>
+        <div class="appointments-list">
+            <p>No appointments available at the moment.</p> <!-- With time I will replace with dynamic data -->
+        </div>
+        <a href="#">View All Appointments</a>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="notifications">
+        <h2>Notifications</h2>
+        <div class="notification-item">
+            <p>You have no new notifications.</p> <!-- With time I will replace with dynamic data -->
+        </div>
+    </section>
+</div>
+
 {% endblock %}
