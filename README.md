@@ -214,10 +214,19 @@ HealMate includes a soft delete mechanism to ensure data integrity and prevent a
 - **Security:** Only admins have the power to fully manage account reactivations, ensuring oversight and control over patient data.
 
 ### CRUD Functionality
-The following CRUD functionalities are implemented:
-- **Users:** Create an account, read profile information, update details, and delete the account.
-- **Specialists:** Search and view specialists, book appointments.
-- **Appointments:** Create, read, update, and delete appointments.
+
+The following **CRUD** functionalities are implemented within HealMate:
+
+- **Create**: Patients are automatically assigned a profile upon registration. This profile includes key fields such as contact information, address, and medical history.
+  
+- **Read**: Patients can view their profile and associated information, including medical history and emergency contact details, from their dashboard.
+
+- **Update**: Patients have the ability to update their profile information, including personal data (e.g., contact number, address, and medical history), via a dedicated "Edit Profile" page.
+
+- **Delete (Soft Delete)**: Patients can request to deactivate their account through a **soft delete** mechanism. This deactivation preserves the patient’s data within the system while preventing further access until reactivation by an admin. The admin can reactivate the account from the Django admin panel at any time, restoring full access for the patient.
+
+This CRUD cycle is central to the **PatientProfile** model, ensuring that users can fully manage their personal information while providing system integrity with the soft delete functionality.
+
 
 ## Future Features
 I plan to implement the following in future iterations:
