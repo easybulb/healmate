@@ -27,11 +27,14 @@ class PatientDashboardView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # Fetch only active profiles
-        profile = PatientProfile.objects.get(user=self.request.user, is_active=True)
+        profile, created = PatientProfile.objects.get_or_create(user=self.request.user)
         if profile:
             patient_id = profile.id + 24578  # Generate the patient ID dynamically
             context['profile'] = profile
             context['patient_id'] = patient_id
+        else:
+            messages.error(self.request, "Your account is deactivated. Please contact admin for reactivation.")
+            return redirect('home')  # Redirect to home page if account is inactive
         return context
 
 # Specialist Dashboard View
