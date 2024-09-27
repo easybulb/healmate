@@ -1,5 +1,12 @@
 from django.urls import path
-from .views import AdminDashboardView, SpecialistDashboardView, PatientDashboardView, patient_profile, request_account_deletion
+from .views import (
+    AdminDashboardView, 
+    SpecialistDashboardView, 
+    PatientDashboardView, 
+    patient_profile, 
+    request_account_deletion, 
+    specialist_profile
+)
 
 urlpatterns = [
     path('admin/', AdminDashboardView.as_view(), name='admin_dashboard'),
