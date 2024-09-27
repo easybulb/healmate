@@ -39,6 +39,13 @@ class PatientDashboardView(TemplateView):
 class SpecialistDashboardView(TemplateView):
     template_name = 'dashboard/specialist_dashboard.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Fetch the specialist's profile and pass it to the context
+        profile = SpecialistProfile.objects.get(user=self.request.user)
+        context['profile'] = profile
+        return context
+
 # Admin Dashboard View
 @method_decorator([login_required, user_passes_test(is_admin)], name='dispatch')
 class AdminDashboardView(TemplateView):
