@@ -64,3 +64,17 @@ def patient_profile(request):
         'profile': profile,
         'patient_id': patient_id # Pass the generated patient ID to the template
     })
+
+@login_required
+def request_account_deletion(request):
+    profile = PatientProfile.objects.filter(user=request.user).first()
+
+    if request.method == 'POST':
+        if profile:
+            profile.is_active = False  # Soft delete by deactivating the profile
+            profile.save()
+            messages.success(request, 'Your account has been deactivated. Contact admin for reactivation.')
+            return redirect('home')  # Redirect to the home page after deactivation
+
+    return render(request, 'dashboard/request_account_deletion.html')
+
