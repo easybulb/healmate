@@ -34,6 +34,7 @@ Github repository, click <a href="https://github.com/easybulb/healmate" target="
 10. [Features](#features)
     - [User View - Registered/Unregistered](#user-view---registeredunregistered)
     - [Role-Based Dashboard Features](#role-based-dashboard-features)
+    - [Soft Delete/Archiving for Patient Accounts](#soft-deletearchiving-for-patient-accounts)
     - [CRUD Functionality](#crud-functionality)
     - [Feature Showcase](#feature-showcase)
 11. [Future Features](#future-features)
@@ -198,6 +199,19 @@ This registration flow was chosen to ensure role-based control and security. Pat
 - **Specialist Dashboard:** Specialists can manage their availability, view and approve appointments, and review patient profiles.
 
 - **Admin Dashboard:** Admins can manage users (patients, specialists) and vet specialist applications. They also have access to system-wide settings.
+
+### Soft Delete/Archiving for Patient Accounts
+HealMate includes a soft delete mechanism to ensure data integrity and prevent accidental loss of important user information. Instead of permanently deleting accounts, users can request a soft deletion, which deactivates their account while retaining their data in the system.
+
+**How It Works:**
+- **Patient Account Deactivation:** Patients can request to have their account deactivated through a user-friendly option on their dashboard.
+- **Data Preservation:** When a patient requests account deletion, their profile is marked as inactive rather than removed from the database. This means the patient’s information, appointments, and records remain available for future use or audit purposes.
+- **Admin Reactivation:** Admins have the ability to reactivate patient accounts from the Django admin panel. This ensures that patients can return to the platform with all their previous data intact, avoiding any data loss or system disruptions.
+
+**Benefits:**
+- **System Integrity:** Prevents errors that could arise from full account deletions, such as broken relationships with other models (e.g., appointments, messages, feedback).
+- **User Flexibility:** Patients can choose to deactivate their account temporarily and return at a later date without losing their medical history or profile information.
+- **Security:** Only admins have the power to fully manage account reactivations, ensuring oversight and control over patient data.
 
 ### CRUD Functionality
 The following CRUD functionalities are implemented:
