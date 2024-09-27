@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.decorators import method_decorator
 from django.contrib import messages
 from dashboard.models import PatientProfile, SpecialistProfile
-from dashboard.forms import SpecialistProfileForm
-from dashboard.forms import PatientProfileForm
+from dashboard.forms import SpecialistProfileForm, PatientProfileForm
+from django.contrib.auth import logout
 
 # Function to check if the user is a patient
 def is_patient(user):
