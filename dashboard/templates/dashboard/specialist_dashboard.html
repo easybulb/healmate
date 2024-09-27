@@ -1,27 +1,38 @@
 {% extends "core/base.html" %}
+{% load static %}
 {% block content %}
 
 <div class="specialist-dashboard-container">
     <h1>Welcome, {{ user.get_full_name }}</h1>
 
+    <!-- Profile Section -->
+    <div class="profile-section">
+        {% if profile.profile_image %}
+            <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px" class="profile-img">
+        {% else %}
+            <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" width="150px" class="profile-img">
+        {% endif %}
+        <p>Welcome, {{ user.first_name }}</p>
+        <a href="{% url 'specialist_profile' %}">See your profile</a>
+    </div>
+
     <!-- Quick Links Section -->
-    <section class="quick-links">
+    <div class="quick-links">
         <h2>Quick Links</h2>
         <ul>
-            <li><a href="#">Manage Availability</a></li>
-            <li><a href="#">View Patient Profiles</a></li>
-            <li><a href="#">Medical Tools</a></li>
+            <li><a href="#">Manage Appointments</a></li>
+            <li><a href="#">View Patient Details</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Settings</a></li>
         </ul>
-    </section>
-
-    {% if profile.profile_image %}
-    <div class="profile-section">
-        <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px">
-        <p>{{ user.get_full_name }}</p>
-        <p>{{ profile.specialty.name }}</p>
-        <a href="{% url 'specialist_profile' %}">Edit Profile</a>
     </div>
-    {% endif %}
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Specialist Dashboard</h2>
+        <p>Here you can manage your appointments, view patient details, and more.</p>
+        <!-- Add further dashboard details or sections here -->
+    </div>
 
     <section class="dashboard-stats">
         <div class="stat-item">
