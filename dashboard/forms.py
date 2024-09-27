@@ -5,7 +5,7 @@ from dashboard.models import SpecialistProfile
 class SpecialistProfileForm(forms.ModelForm):
     class Meta:
         model = SpecialistProfile
-        fields = ['specialty', 'bio', 'location']
+        fields = ['specialty', 'bio', 'location', 'profile_image']
 
 class PatientProfileForm(forms.ModelForm):
     class Meta:
