@@ -31,7 +31,7 @@ class PatientDashboardView(TemplateView):
         patient_id = profile.id + 24578  # Generate the patient ID dynamically
         context['profile'] = profile
         context['patient_id'] = patient_id
-        
+
         return context
 
 # Specialist Dashboard View
@@ -103,6 +103,8 @@ def request_account_deletion(request):
         if profile:
             profile.is_active = False  # Soft delete by deactivating the profile
             profile.save()
+            request.user.is_active = False
+            request.user.save()
             messages.success(request, 'Your account has been deactivated. An admin will review your request. You can log out now.')
             logout(request)
             return redirect('home')  # Redirect to the home page after deactivation

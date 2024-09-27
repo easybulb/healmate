@@ -1,5 +1,6 @@
-from allauth.account.forms import SignupForm
+from allauth.account.forms import SignupForm, LoginForm 
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=30, label='First Name', required=True)
@@ -25,3 +26,13 @@ class CustomSignupForm(SignupForm):
         user.patientprofile.gender = self.cleaned_data.get('gender')
         user.patientprofile.save()
         return user
+
+
+# Custom authentication form to prevent login for inactive users
+class CustomAuthenticationForm(LoginForm):
+    def confirm_login_allowed(self, user):
+        if not user.is_active:
+            raise forms.ValidationError(
+                "This account is inactive.",
+                code='inactive',
+            )

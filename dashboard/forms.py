@@ -1,5 +1,4 @@
 from django import forms
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import get_user_model
 from dashboard.models import PatientProfile
 from dashboard.models import SpecialistProfile
@@ -21,11 +20,3 @@ class PatientProfileForm(forms.ModelForm):
             'emergency_contact'
         ]
 
-# Custom authentication form to prevent login for inactive users
-class CustomAuthenticationForm(AuthenticationForm):
-    def confirm_login_allowed(self, user):
-        if not user.is_active:
-            raise forms.ValidationError(
-                "This account is inactive.",
-                code='inactive',
-            )

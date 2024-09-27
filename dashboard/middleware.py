@@ -1,6 +1,7 @@
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth import logout
 
 class InactiveUserMiddleware:
     def __init__(self, get_response):
