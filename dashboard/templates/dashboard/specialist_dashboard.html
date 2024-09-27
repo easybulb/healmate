@@ -1,5 +1,16 @@
 {% extends "core/base.html" %}
 {% block content %}
+
+<h1>Welcome, {{ user.username }}</h1>
 <h1>Specialist Dashboard</h1>
 <p>Manage your appointments and view patient details here.</p>
+
+<div>
+    <h2>Your Profile Image:</h2>
+    {% if profile.profile_image %}
+      <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px">
+    {% else %}
+      <p>You have not uploaded a profile image yet.</p>
+    {% endif %}
+  </div>
 {% endblock %}
