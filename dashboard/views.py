@@ -25,10 +25,12 @@ class PatientDashboardView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        profile = PatientProfile.objects.get(user=self.request.user)
-        patient_id = profile.id + 24578  # Generate the patient ID dynamically
-        context['profile'] = profile
-        context['patient_id'] = patient_id
+        # Fetch only active profiles
+        profile = PatientProfile.objects.get(user=self.request.user, is_active=True).first()
+        if profile:
+            patient_id = profile.id + 24578  # Generate the patient ID dynamically
+            context['profile'] = profile
+            context['patient_id'] = patient_id
         return context
 
 # Specialist Dashboard View
