@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -35,6 +36,7 @@ class SpecialistProfile(models.Model):
     specialty = models.ForeignKey(Specialty, on_delete=models.SET_NULL, null=True)
     bio = models.TextField()
     location = models.CharField(max_length=100)
+    profile_image = CloudinaryField('image', blank=True, null=True)
 
     def __str__(self):
         return f"{self.user.username} - {self.specialty.name}"
