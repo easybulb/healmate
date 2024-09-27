@@ -28,10 +28,11 @@
                     <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
                 {% elif user|has_group:"Specialist" %}
                     <li><a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a></li>
+                    <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
                 {% elif user|has_group:"Patient" %}
                     <li><a href="{% url 'patient_dashboard' %}">Patient Dashboard</a></li>
+                    <li><a href="{% url 'patient_profile' %}">Profile</a></li>
                 {% endif %}
-                <li><a href="{% url 'patient_profile' %}">Profile</a></li>
                 <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
