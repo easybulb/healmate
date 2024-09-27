@@ -4,6 +4,16 @@
   <h1>Your Specialist Profile</h1>
 
   <h2>Your Details</h2>
+
+  <div>
+    <h2>Your Profile Image:</h2>
+    {% if profile.profile_image %}
+      <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px">
+    {% else %}
+      <p>You have not uploaded a profile image yet.</p>
+    {% endif %}
+  </div>
+
   <ul>
     <li><strong>Username:</strong> {{ profile.user.username }}</li>
     <li><strong>Email:</strong> {{ profile.user.email }}</li>
