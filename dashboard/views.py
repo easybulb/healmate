@@ -8,7 +8,7 @@ from appointments.models import Appointment
 from dashboard.forms import SpecialistProfileForm, PatientProfileForm
 from django.contrib.auth import logout
 from django.utils.timezone import now
-from appointments.models import Availability
+from appointments.models import Availability, AvailabilityForm
 
 # Function to check if the user is a patient
 def is_patient(user):
