@@ -44,3 +44,24 @@ def specialist_appointments(request):
         specialist=specialist_profile
     ).order_by('date', 'time')
     return render(request, 'appointments/specialist_appointments.html', {'appointments': appointments})
+
+@login_required
+def set_availability(request):
+    specialist = request.user.specialistprofile
+    if request.method == 'POST':
+        form = AvailabilityForm(request.POST)
+        if form.is_valid():
+            availability = form.save(commit=False)
+            availability.specialist = specialist
+            availability.save()
+            return redirect('view_availability')
+    else:
+        form = AvailabilityForm()
+    return render(request, 'appointments/set_availability.html', {'form': form})
+
+@login_required
+def view_availability(request):
+    specialist = request.user.specialistprofile
+    availabilities = specialist.availability_set.all()
+    return render(request, 'appointments/view_availability.html', {'availabilities': availabilities})
+
