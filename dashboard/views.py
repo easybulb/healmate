@@ -58,23 +58,29 @@ class SpecialistDashboardView(TemplateView):
             specialist=profile,
             date__gte=now()
         ).order_by('date', 'time')[:3]  # Limit to next 3 upcoming appointments
-
-        if self.request.method == 'POST':
-            form = AvailabilityForm(self.request.POST)
-            if form.is_valid():
-                availability = form.save(commit=False)
-                availability.specialist = profile
-                availability.save()
-                return redirect('specialist_dashboard')  # Redirect back to dashboard after saving
-        else:
-            form = AvailabilityForm()
-
+        # Initialize AvailabilityForm
+        form = AvailabilityForm()
         context['availability_form'] = form
-
         # Fetch the specialist's availability and pass it to the context
         context['availabilities'] = Availability.objects.filter(specialist=profile)
 
         return context
+
+    # Handle POST request
+    def post(self, request, *args, **kwargs):
+        profile = SpecialistProfile.objects.get(user=self.request.user)
+        form = AvailabilityForm(request.POST)
+        if form.is_valid():
+            availability = form.save(commit=False)
+            availability.specialist = profile
+            availability.save()
+            messages.success(request, 'Availability successfully set!')
+        else:
+            messages.error(request, 'Error setting availability. Please check the form.')
+
+        return redirect('specialist_dashboard')  # Redirect back to dashboard after saving
+
+        
 
 # Admin Dashboard View
 @method_decorator([login_required, user_passes_test(is_admin)], name='dispatch')
