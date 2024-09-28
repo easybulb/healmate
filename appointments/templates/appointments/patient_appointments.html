@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Your Appointments</h1>
+{% if appointments %}
+    <ul>
+        {% for appointment in appointments %}
+            <li>
+                Appointment with {{ appointment.specialist.user.get_full_name }} on 
+                {{ appointment.date }} at {{ appointment.time }} - {{ appointment.status }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You don't have any appointments yet.</p>
+{% endif %}
+{% endblock %}
