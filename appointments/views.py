@@ -27,3 +27,19 @@ def appointment_confirmation(request):
     return render(request, 'appointments/appointment_confirmation.html')
 
 
+@login_required
+def patient_appointments(request):
+    # Fetch all appointments for the logged-in patient
+    appointments = Appointment.objects.filter(
+        patient=request.user.patientprofile
+    ).order_by('date', 'time')
+    return render(request, 'appointments/patient_appointments.html', {'appointments': appointments})
+
+@login_required
+def specialist_appointments(request):
+    # Fetch all appointments for the logged-in specialist
+    specialist_profile = get_object_or_404(SpecialistProfile, user=request.user)
+    appointments = Appointment.objects.filter(
+        specialist=specialist_profile
+    ).order_by('date', 'time')
+    return render(request, 'appointments/specialist_appointments.html', {'appointments': appointments})
