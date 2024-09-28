@@ -39,24 +39,30 @@
             <h3>Total Appointments</h3>
             <p>5</p> <!-- With time I will replace with dynamic data -->
         </div>
-        <div class="stat-item">
-            <h3>Upcoming Appointments</h3>
-            <p>2</p> <!-- With time I will replace with dynamic data -->
-        </div>
+        
         <div class="stat-item">
             <h3>Patients Today</h3>
             <p>3</p> <!-- With time I will replace with dynamic data -->
         </div>
     </section>
 
-    <!-- Appointments Section -->
-    <section class="appointments-section">
-        <h2>Your Appointments</h2>
-        <div class="appointments-list">
-            <p>No appointments available at the moment.</p> <!-- With time I will replace with dynamic data -->
-        </div>
-        <a href="#">View All Appointments</a>
-    </section>
+        <!-- Upcoming Appointments Section -->
+        <section class="appointments-section">
+            <h2>Upcoming Appointments</h2>
+            {% if upcoming_appointments %}
+                <ul>
+                    {% for appointment in upcoming_appointments %}
+                        <li>
+                            Appointment with {{ appointment.patient.user.get_full_name }} on 
+                            {{ appointment.date }} at {{ appointment.time }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No upcoming appointments.</p>
+            {% endif %}
+            <a href="{% url 'specialist_appointments' %}">View All Appointments</a>
+        </section>
 
     <!-- Notifications Section -->
     <section class="notifications">
