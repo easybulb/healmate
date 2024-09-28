@@ -8,6 +8,7 @@ from appointments.models import Appointment
 from dashboard.forms import SpecialistProfileForm, PatientProfileForm
 from django.contrib.auth import logout
 from django.utils.timezone import now
+from appointments.models import Availability
 
 # Function to check if the user is a patient
 def is_patient(user):
@@ -55,6 +56,22 @@ class SpecialistDashboardView(TemplateView):
             specialist=profile,
             date__gte=now()
         ).order_by('date', 'time')[:3]  # Limit to next 3 upcoming appointments
+
+        if self.request.method == 'POST':
+            form = AvailabilityForm(self.request.POST)
+            if form.is_valid():
+                availability = form.save(commit=False)
+                availability.specialist = profile
+                availability.save()
+                return redirect('specialist_dashboard')  # Redirect back to dashboard after saving
+        else:
+            form = AvailabilityForm()
+
+        context['availability_form'] = form
+
+        # Fetch the specialist's availability and pass it to the context
+        context['availabilities'] = Availability.objects.filter(specialist=profile)
+
         return context
 
 # Admin Dashboard View
