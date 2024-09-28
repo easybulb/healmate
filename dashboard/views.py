@@ -66,7 +66,7 @@ class SpecialistDashboardView(TemplateView):
 
         return context
 
-    # Handle POST request
+    # Handle POST request for availability form
     def post(self, request, *args, **kwargs):
         profile = SpecialistProfile.objects.get(user=self.request.user)
         form = AvailabilityForm(request.POST)
