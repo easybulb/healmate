@@ -81,7 +81,7 @@
         {% if availabilities %}
             <ul>
                 {% for availability in availabilities %}
-                    <li>{{ availability.date }}: {{ availability.time }} - {{ availability.end_time }}</li>
+                    <li>{{ availability.date }}: {{ availability.start_time }} - {{ availability.end_time }}</li>
                 {% endfor %}
             </ul>
         {% else %}
