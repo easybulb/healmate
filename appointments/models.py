@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.auth.models import User
 from dashboard.models import SpecialistProfile, PatientProfile
@@ -23,8 +24,8 @@ class Availability(models.Model):
     specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
-    start_time = models.TimeField()
-    end_time = models.TimeField()
+    start_time = models.TimeField(default=datetime.time(9, 0))
+    end_time = models.TimeField(default=datetime.time(17, 0))
 
     def __str__(self):
         return f"Availability for {self.specialist.user.username} on {self.date} from {self.start_time} to {self.end_time}"
