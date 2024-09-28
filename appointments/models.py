@@ -23,7 +23,9 @@ class Availability(models.Model):
     specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
+    start_time = models.TimeField()
+    end_time = models.TimeField()
 
     def __str__(self):
-        return f"Availability for {self.specialist.user.username} on {self.date} at {self.time}"
+        return f"Availability for {self.specialist.user.username} on {self.date} from {self.start_time} to {self.end_time}"
 
