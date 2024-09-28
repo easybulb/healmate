@@ -50,6 +50,11 @@ class SpecialistDashboardView(TemplateView):
         # Fetch the specialist's profile and pass it to the context
         profile = SpecialistProfile.objects.get(user=self.request.user)
         context['profile'] = profile
+        # Fetch upcoming appointments for the specialist
+        context['upcoming_appointments'] = Appointment.objects.filter(
+            specialist=profile,
+            date__gte=now()
+        ).order_by('date', 'time')[:3]  # Limit to next 3 upcoming appointments
         return context
 
 # Admin Dashboard View
