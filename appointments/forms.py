@@ -1,5 +1,6 @@
 from django import forms
 from .models import Appointment
+from .models import Availability
 
 class AppointmentForm(forms.ModelForm):
     class Meta:
