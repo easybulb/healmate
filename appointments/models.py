@@ -23,7 +23,6 @@ class Appointment(models.Model):
 class Availability(models.Model):
     specialist = models.ForeignKey(SpecialistProfile, on_delete=models.CASCADE)
     date = models.DateField()
-    time = models.TimeField()
     start_time = models.TimeField(default=datetime.time(9, 0))
     end_time = models.TimeField(default=datetime.time(17, 0))
 
