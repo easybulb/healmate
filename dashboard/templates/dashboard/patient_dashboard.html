@@ -34,13 +34,22 @@
             </div>
         </section>
 
-        <!-- Recent Appointments Section -->
+        <!-- Upcoming Appointments Section -->
         <section class="appointments-section">
-            <h2>Your Recent Appointments</h2>
-            <div class="appointments-list"></div>
-                <p>You don’t have any upcoming appointments.</p>
-                <!-- looking to populate this section with appointments -->
-            </div>
+            <h2>Your Upcoming Appointments</h2>
+            {% if upcoming_appointments %}
+                <ul>
+                    {% for appointment in upcoming_appointments %}
+                        <li>
+                            Appointment with {{ appointment.specialist.user.get_full_name }} on 
+                            {{ appointment.date }} at {{ appointment.time }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No upcoming appointments.</p>
+            {% endif %}
+            <a href="{% url 'patient_appointments' %}">View All Appointments</a>
         </section>
 
         <!-- Health Tips Section -->
