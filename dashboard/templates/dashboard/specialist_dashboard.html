@@ -1,5 +1,7 @@
 {% extends "core/base.html" %}
 {% load static %}
+
+
 {% block content %}
 
 <div class="specialist-dashboard-container">
@@ -31,7 +33,6 @@
     <div class="main-content">
         <h2>Specialist Dashboard</h2>
         <p>Here you can manage your appointments, view patient details, and more.</p>
-        <!-- Add further dashboard details or sections here -->
     </div>
 
     <section class="dashboard-stats">
@@ -62,7 +63,31 @@
                 <p>No upcoming appointments.</p>
             {% endif %}
             <a href="{% url 'specialist_appointments' %}">View All Appointments</a>
-        </section>
+    </section>
+
+         <!-- Set Availability -->
+    <section class="availability-section">
+        <h2>Set Your Availability</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ availability_form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- View Availability -->
+    <section class="view-availability-section">
+        <h2>Your Availability</h2>
+        {% if availabilities %}
+            <ul>
+                {% for availability in availabilities %}
+                    <li>{{ availability.date }}: {{ availability.time }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>You have not set any availability yet.</p>
+        {% endif %}
+    </section>
 
     <!-- Notifications Section -->
     <section class="notifications">
