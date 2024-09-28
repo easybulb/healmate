@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from dashboard.models import SpecialistProfile
 from .forms import AppointmentForm
+from django.contrib.auth.decorators import login_required
+from django.utils.timezone import now
 
 # Create your views here.
 
