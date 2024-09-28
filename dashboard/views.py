@@ -33,7 +33,11 @@ class PatientDashboardView(TemplateView):
         patient_id = profile.id + 24578  # Generate the patient ID dynamically
         context['profile'] = profile
         context['patient_id'] = patient_id
-
+        # Fetch upcoming appointments for the patient
+        context['upcoming_appointments'] = Appointment.objects.filter(
+            patient=profile,
+            date__gte=now()
+        ).order_by('date', 'time')[:3]  # Limit to next 3 upcoming appointments
         return context
 
 # Specialist Dashboard View
