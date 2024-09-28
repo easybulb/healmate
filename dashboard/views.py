@@ -4,8 +4,10 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.decorators import method_decorator
 from django.contrib import messages
 from dashboard.models import PatientProfile, SpecialistProfile
+from appointments.models import Appointment
 from dashboard.forms import SpecialistProfileForm, PatientProfileForm
 from django.contrib.auth import logout
+from django.utils.timezone import now
 
 # Function to check if the user is a patient
 def is_patient(user):

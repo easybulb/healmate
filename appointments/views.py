@@ -4,6 +4,7 @@ from .forms import AppointmentForm
 
 # Create your views here.
 
+# Book appointment view
 def book_appointment(request, specialist_id):
     specialist = get_object_or_404(SpecialistProfile, id=specialist_id)
     if request.method == 'POST':
