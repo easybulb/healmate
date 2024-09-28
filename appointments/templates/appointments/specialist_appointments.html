@@ -1,12 +1,12 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<h1>Your Appointments</h1>
+<h1>Appointments with Patients</h1>
 {% if appointments %}
     <ul>
         {% for appointment in appointments %}
             <li>
-                Appointment with {{ appointment.specialist.user.get_full_name }} on 
+                Appointment with {{ appointment.patient.user.get_full_name }} on 
                 {{ appointment.date }} at {{ appointment.time }} - {{ appointment.status }}
             </li>
         {% endfor %}
