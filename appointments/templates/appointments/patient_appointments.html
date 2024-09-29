@@ -2,16 +2,19 @@
 
 {% block content %}
 <h1>Your Appointments</h1>
-{% if appointments %}
-    <ul>
-        {% for appointment in appointments %}
-            <li>
-                Appointment with {{ appointment.specialist.user.get_full_name }} on 
-                {{ appointment.date }} at {{ appointment.time }} - {{ appointment.status }}
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>You don't have any appointments yet.</p>
+<ul>
+    {% for appointment in appointments %}
+        <li>
+            Appointment with {{ appointment.specialist.user.get_full_name }} on 
+            {{ appointment.date }} at {{ appointment.time }}{% if appointment.status != 'Cancelled' %}
+                <a href="{% url 'cancel_appointment' appointment.id %}" class="btn btn-danger">Cancel Appointment</a>
+            {% else %}
+                <span class="text-muted">(Cancelled)</span>
+            {% endif %}
+        </li>
+    {% empty %}
+        <p>No appointments found.</p>
+    {% endfor %}
+</ul>'t have any appointments yet.</p>
 {% endif %}
 {% endblock %}
