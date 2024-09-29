@@ -16,16 +16,26 @@
         <button type="submit">Search</button>
     </form>
 
-    <ul>
-        {% for specialist in specialists %}
-            <li>
+<!-- Search Results -->
+<ul id="specialist-list">
+    {% for specialist in specialists %}
+        <li class="specialist-item">
+            {% if specialist.profile_image %}
+                <img src="{{ specialist.profile_image.url }}" alt="{{ specialist.user.get_full_name }}" class="specialist-image">
+            {% else %}
+                <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" class="specialist-image">
+            {% endif %}
+            <div class="specialist-info">
                 <strong>{{ specialist.user.get_full_name }}</strong> - {{ specialist.specialty.name }}<br>
-                {{ specialist.bio }}<br>
-                <a href="{% url 'specialist_detail' specialist.id %}">View Profile</a> | 
-                <a href="{% url 'book_appointment' specialist.id %}">Book Now</a>
-            </li>
-        {% empty %}
-            <p>No specialists found matching your criteria.</p>
-        {% endfor %}
-    </ul>
+                Location: {{ specialist.location }}<br>
+                Bio: {{ specialist.bio|truncatewords:20 }}<br>
+                <a href="{% url 'specialist_detail' specialist.id %}" class="btn btn-info">View Profile</a> 
+                <a href="{% url 'book_appointment' specialist.id %}" class="btn btn-success">Book Now</a>
+            </div>
+        </li>
+    {% empty %}
+        <p>No specialists found matching your criteria.</p>
+    {% endfor %}
+</ul>
+
 {% endblock %}
