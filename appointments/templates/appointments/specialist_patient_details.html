@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Patient Details</h1>
+
+<div class="patient-info">
+    <h3>Patient Name: {{ patient.user.get_full_name }}</h3>
+    <p><strong>Contact Number:</strong> {{ patient.contact_number }}</p>
+    <p><strong>Address:</strong> {{ patient.address }}</p>
+    <p><strong>Date of Birth:</strong> {{ patient.date_of_birth }}</p>
+    <p><strong>Gender:</strong> {{ patient.get_gender_display }}</p>
+    <p><strong>Medical History:</strong> {{ patient.medical_history }}</p>
+    <p><strong>Emergency Contact:</strong> {{ patient.emergency_contact }}</p>
+</div>
+
+<a href="{% url 'specialist_appointments' %}" class="btn btn-primary">Back to Appointments</a>
+{% endblock %}
