@@ -16,7 +16,7 @@
         <button type="submit">Search</button>
     </form>
 
-    <!-- Display number of results -->
+    <!-- Display number of results found -->
     <p>{{ total_results }} specialists found.</p>
 
 <!-- Search Results -->
@@ -40,5 +40,26 @@
         <p>No specialists found matching your criteria.</p>
     {% endfor %}
 </ul>
+
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if specialists.has_previous %}
+                <a href="?q={{ query }}&specialty={{ specialty_filter }}&location=
+                {{ location_filter }}&page={{ specialists.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ specialists.number }} of {{ specialists.paginator.num_pages }}
+            </span>
+
+            {% if specialists.has_next %}
+                <a href="?q={{ query }}&specialty={{ specialty_filter }}&location=
+                {{ location_filter }}&page={{ specialists.next_page_number }}">Next</a>
+            {% endif %}
+        </span>
+    </div>
+
 
 {% endblock %}

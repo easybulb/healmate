@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from dashboard.models import SpecialistProfile, Specialty
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 
 # Create your views here.
