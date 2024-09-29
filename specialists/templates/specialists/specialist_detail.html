@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h1>{{ specialist.user.get_full_name }}</h1>
+
+    <div id="specialist-detail">
+        <!-- Specialist Image -->
+        {% if specialist.profile_image %}
+            <img src="{{ specialist.profile_image.url }}" alt="{{ specialist.user.get_full_name }}" class="specialist-image">
+        {% else %}
+            <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" class="specialist-image">
+        {% endif %}
+
+        <!-- Specialist Info -->
+        <div class="specialist-info">
+            <p><strong>Specialty:</strong> {{ specialist.specialty.name }}</p>
+            <p><strong>Location:</strong> {{ specialist.location }}</p>
+            <p><strong>Bio:</strong> {{ specialist.bio }}</p>
+        </div>
+    </div>
+
+    <!-- Availability Section -->
+    <h3>Availability</h3>
+    {% if availabilities %}
+        <ul class="availability-list">
+            {% for availability in availabilities %}
+                <li>{{ availability.date }}: {{ availability.start_time }} - {{ availability.end_time }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No availability set by this specialist.</p>
+    {% endif %}
+
+    <!-- Book Now Button -->
+    <a href="{% url 'book_appointment' specialist.id %}" class="btn btn-success">Book Now</a>
+{% endblock %}
