@@ -2,6 +2,7 @@ from django.shortcuts import render
 from dashboard.models import SpecialistProfile, Specialty
 from django.db.models import Q
 from django.core.paginator import Paginator
+from appointments.models import Availability
 
 
 # Create your views here.
@@ -38,5 +39,16 @@ def search_specialists(request):
         'specialty_filter': specialty_filter,
         'location_filter': location_filter,
         'total_results': specialists.count(),
+    })
+
+
+# Specialist Detail View
+def specialist_detail(request, specialist_id):
+    specialist = get_object_or_404(SpecialistProfile, id=specialist_id)
+    availabilities = Availability.objects.filter(specialist=specialist).order_by('date', 'start_time')
+
+    return render(request, 'specialists/specialist_detail.html', {
+        'specialist': specialist,
+        'availabilities': availabilities,
     })
 
