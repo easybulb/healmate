@@ -23,7 +23,19 @@ def search_specialists(request):
     if location_filter:
         specialists = specialists.filter(location__icontains=location_filter)
 
+        # Pagination: Limit to 5 specialists per page
+    paginator = Paginator(specialists, 5)
+    page_number = request.GET.get('page')
+    specialists_page = paginator.get_page(page_number)
+
     specialties = Specialty.objects.all()
 
-    return render(request, 'specialists/search_results.html', {'specialists': specialists, 'specialties': specialties})
+    return render(request, 'specialists/search_results.html', {
+        'specialists': specialists,
+        'specialties': specialties,
+        'query': query,
+        'specialty_filter': specialty_filter,
+        'location_filter': location_filter,
+        'total_results': specialists.count(),
+    })
 
