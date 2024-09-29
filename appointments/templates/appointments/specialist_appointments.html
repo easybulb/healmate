@@ -8,6 +8,8 @@
             Appointment with {{ appointment.patient.user.get_full_name }} on {{ appointment.date }} at {{ appointment.time }}
             {% if appointment.status != 'Cancelled' %}
                 <a href="{% url 'cancel_appointment' appointment.id %}" class="btn btn-danger">Cancel Appointment</a>
+            {% elif appointment.status == 'Cancelled' %}
+                <span class="text-muted">(Cancelled)</span>
             {% else %}
                 <span class="text-muted">(Cancelled)</span>
             {% endif %}
