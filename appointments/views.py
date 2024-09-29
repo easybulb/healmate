@@ -4,6 +4,7 @@ from .forms import AppointmentForm
 from .models import Appointment
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import now
+from django.contrib import messages
 
 # Create your views here.
 
