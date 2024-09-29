@@ -8,4 +8,5 @@ urlpatterns = [
     path('specialist/', views.specialist_appointments, name='specialist_appointments'),
     path('cancel/<int:appointment_id>/', views.cancel_appointment, name='cancel_appointment'),
     path('cancel/confirm/<int:appointment_id>/', views.confirm_cancel_appointment, name='confirm_cancel_appointment'),
+    path('patient/details/<int:patient_id>/', views.view_patient_details, name='view_patient_details'),
 ]
