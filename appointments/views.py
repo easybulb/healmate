@@ -101,3 +101,17 @@ def confirm_cancel_appointment(request, appointment_id):
     else:
         messages.error(request, 'You do not have permission to cancel this appointment.')
         return redirect('home')
+
+
+@login_required
+def view_patient_details(request, patient_id):
+    # Fetch the patient's profile based on the ID passed in the URL
+    patient = get_object_or_404(PatientProfile, id=patient_id)
+    
+    # Ensure that the current user is a specialist before allowing them to view the patient details
+    if not request.user.groups.filter(name='Specialist').exists():
+        messages.error(request, 'You do not have permission to view this page.')
+        return redirect('home')
+    
+    return render(request, 'appointments/specialist_patient_details.html', {'patient': patient})
+
