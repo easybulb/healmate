@@ -77,3 +77,27 @@ def cancel_appointment(request, appointment_id):
 
     # Render the confirmation page if it's not a POST request
     return render(request, 'appointments/confirm_cancellation.html', {'appointment': appointment})
+
+
+# Appointment Cancellation Confirmation View
+@login_required
+def confirm_cancel_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+
+    # Check if the user is either the patient or the specialist linked to the appointment
+    if request.user == appointment.patient.user or request.user == appointment.specialist.user:
+        if request.method == 'POST':  # User confirmed the cancellation
+            appointment.status = 'Cancelled'
+            appointment.save()
+            messages.success(request, 'The appointment has been successfully canceled.')
+            
+            # Redirect based on user type (patient or specialist)
+            if request.user.groups.filter(name='Patient').exists():
+                return redirect('patient_appointments')
+            elif request.user.groups.filter(name='Specialist').exists():
+                return redirect('specialist_appointments')
+        else:  # GET request, show confirmation page
+            return render(request, 'appointments/confirm_cancellation.html', {'appointment': appointment})
+    else:
+        messages.error(request, 'You do not have permission to cancel this appointment.')
+        return redirect('home')
