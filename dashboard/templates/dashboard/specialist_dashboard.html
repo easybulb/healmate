@@ -54,8 +54,11 @@
                 <ul>
                     {% for appointment in upcoming_appointments %}
                         <li>
-                            Appointment with {{ appointment.patient.user.get_full_name }} on 
-                            {{ appointment.date }} at {{ appointment.time }}
+                            Appointment with 
+                            <a href="{% url 'view_patient_details' appointment.patient.id %}">
+                                {{ appointment.patient.user.get_full_name }}
+                            </a> 
+                            on {{ appointment.date }} at {{ appointment.time }}
                         </li>
                     {% endfor %}
                 </ul>
