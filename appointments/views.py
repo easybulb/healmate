@@ -35,7 +35,10 @@ def patient_appointments(request):
     appointments = Appointment.objects.filter(
         patient=request.user.patientprofile
     ).order_by('date', 'time')
-    return render(request, 'appointments/patient_appointments.html', {'appointments': appointments})
+    return render(request, 'appointments/patient_appointments.html', {
+        'appointments': appointments,
+        'today': now().date(),  # Pass the current date to the template
+    })
 
 @login_required
 def specialist_appointments(request):
@@ -44,7 +47,10 @@ def specialist_appointments(request):
     appointments = Appointment.objects.filter(
         specialist=specialist_profile
     ).order_by('date', 'time')
-    return render(request, 'appointments/specialist_appointments.html', {'appointments': appointments})
+    return render(request, 'appointments/specialist_appointments.html', {
+        'appointments': appointments,
+        'today': now().date(),  # Pass the current date to the template
+    })
 
 
 # Appointment Cancellation View
