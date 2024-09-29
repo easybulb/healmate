@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+{% block content %}
+    <h1>Search Results</h1>
+    
+    <form method="GET" action="{% url 'search_specialists' %}">
+        <input type="text" name="q" placeholder="Search by name or bio" value="{{ request.GET.q }}">
+        <select name="specialty">
+            <option value="">All Specialties</option>
+            {% for specialty in specialties %}
+                <option value="{{ specialty.name }}" {% if request.GET.specialty == specialty.name %}selected{% endif %}>
+                    {{ specialty.name }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="text" name="location" placeholder="Location" value="{{ request.GET.location }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {% for specialist in specialists %}
+            <li>
+                <strong>{{ specialist.user.get_full_name }}</strong> - {{ specialist.specialty.name }}<br>
+                {{ specialist.bio }}<br>
+                <a href="{% url 'specialist_detail' specialist.id %}">View Profile</a> | 
+                <a href="{% url 'book_appointment' specialist.id %}">Book Now</a>
+            </li>
+        {% empty %}
+            <p>No specialists found matching your criteria.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}
