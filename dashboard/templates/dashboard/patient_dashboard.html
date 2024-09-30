@@ -41,7 +41,7 @@
                 <ul>
                     {% for appointment in upcoming_appointments %}
                         <li>
-                            Appointment with {{ appointment.specialist.user.get_full_name }} on 
+                            Appointment with Specialist, {{ appointment.specialist.user.get_full_name }} on 
                             {{ appointment.date }} at {{ appointment.time }}
                         </li>
                     {% endfor %}
