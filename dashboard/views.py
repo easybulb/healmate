@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.decorators import method_decorator
-from django.contrib import messages
+from django.contrib import Messages
 from dashboard.models import PatientProfile, SpecialistProfile
 from appointments.models import Appointment
 from dashboard.forms import SpecialistProfileForm, PatientProfileForm
@@ -156,7 +156,7 @@ def request_account_deletion(request):
 @login_required
 def inbox(request):
     # Get all messages where the current user is the receiver
-    received_messages = Message.objects.filter(receiver=request.user).order_by('-timestamp')
+    received_messages = Messages.objects.filter(receiver=request.user).order_by('-timestamp')
     return render(request, 'dashboard/inbox.html', {'received_messages': received_messages})
 
 # Send Message View
@@ -167,7 +167,7 @@ def send_message(request, user_id):
     if request.method == 'POST':
         content = request.POST.get('content')
         if content:
-            message = Message(sender=request.user, receiver=receiver, content=content)
+            message = Messages(sender=request.user, receiver=receiver, content=content)
             message.save()
             return redirect('inbox')  # Redirect to inbox after sending a message
     
