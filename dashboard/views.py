@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.decorators import method_decorator
@@ -10,6 +10,7 @@ from django.contrib.auth import logout
 from django.utils.timezone import now
 from appointments.models import Availability
 from appointments.forms import AvailabilityForm
+from django.contrib.auth.models import User
 
 
 # Function to check if the user is a patient
