@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.utils.decorators import method_decorator
 from django.contrib import messages
-from dashboard.models import PatientProfile, SpecialistProfile
+from dashboard.models import PatientProfile, SpecialistProfile, Message
 from appointments.models import Appointment
 from dashboard.forms import SpecialistProfileForm, PatientProfileForm
 from django.contrib.auth import logout
@@ -11,7 +11,6 @@ from django.utils.timezone import now
 from appointments.models import Availability
 from appointments.forms import AvailabilityForm
 from django.contrib.auth.models import User
-from dashboard.models import Message
 
 
 # Function to check if the user is a patient
@@ -163,27 +162,35 @@ def inbox(request):
 # Send Message View
 @login_required
 def send_message(request):
+    recipients = []
+    specialists = []
+    recipients = []
+
     if request.user.groups.filter(name='Specialist').exists():
         # Fetch patients the specialist has appointments with
         specialist = SpecialistProfile.objects.get(user=request.user)
-        recipients = PatientProfile.objects.filter(
+        patients = PatientProfile.objects.filter(
             dashboard_appointments__specialist=specialist
         ).distinct()
+        # Add patients to recipients with type info
+        recipients = [{'user': patient.user, 'type': 'Patient'} for patient in patients]
+
     elif request.user.groups.filter(name='Patient').exists():
         # Fetch specialists the patient has appointments with
         patient = PatientProfile.objects.get(user=request.user)
-        recipients = SpecialistProfile.objects.filter(
+        specialists = SpecialistProfile.objects.filter(
             dashboard_specialist_appointments__patient=patient
         ).distinct()
-    else:
-        recipients = []
+    # Add specialists to recipients with type info
+        recipients = [{'user': specialist.user, 'type': 'Specialist'} for specialist in specialists]
+        
     
     if request.method == 'POST':
         receiver_id = request.POST.get('receiver')
         receiver = get_object_or_404(User, id=receiver_id)
         content = request.POST.get('content')
         if content:
-            message = Messages(sender=request.user, receiver=receiver, content=content)
+            message = Message(sender=request.user, receiver=receiver, content=content)
             message.save()
             return redirect('inbox') # Redirect to the inbox after sending
 
