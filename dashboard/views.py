@@ -132,6 +132,8 @@ def patient_profile(request):
         'patient_id': patient_id # Pass the generated patient ID to the template
     })
 
+
+# Account soft delete view function
 @login_required
 def request_account_deletion(request):
     profile = PatientProfile.objects.filter(user=request.user).first()
@@ -156,3 +158,17 @@ def inbox(request):
     # Get all messages where the current user is the receiver
     received_messages = Message.objects.filter(receiver=request.user).order_by('-timestamp')
     return render(request, 'dashboard/inbox.html', {'received_messages': received_messages})
+
+# Send Message View
+@login_required
+def send_message(request, user_id):
+    receiver = get_object_or_404(User, id=user_id)
+    
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        if content:
+            message = Message(sender=request.user, receiver=receiver, content=content)
+            message.save()
+            return redirect('inbox')  # Redirect to inbox after sending a message
+    
+    return render(request, 'dashboard/send_message.html', {'receiver': receiver})
