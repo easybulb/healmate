@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from dashboard.models import Specialty
+from django.contrib.auth.models import Group
 
 def home(request):
     specialties = Specialty.objects.all()
