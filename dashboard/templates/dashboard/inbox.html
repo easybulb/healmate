@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    <h1>Inbox</h1>
+    <ul>
+        {% for message in received_messages %}
+            <li>
+                <strong>From:</strong> {{ message.sender.get_full_name }}<br>
+                <strong>Message:</strong> {{ message.content }}<br>
+                <strong>Received on:</strong> {{ message.timestamp }}
+            </li>
+        {% empty %}
+            <li>No messages found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
