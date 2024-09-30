@@ -34,6 +34,7 @@ Github repository, click <a href="https://github.com/easybulb/healmate" target="
 10. [Features](#features)
     - [User View - Registered/Unregistered](#user-view---registeredunregistered)
     - [Role-Based Dashboard Features](#role-based-dashboard-features)
+    - [Role-Based Navigation](#role-based-navigation)
     - [Soft Delete/Archiving for Patient Accounts](#soft-deletearchiving-for-patient-accounts)
     - [CRUD Functionality](#crud-functionality)
     - [Feature Showcase](#feature-showcase)
@@ -199,6 +200,19 @@ This registration flow was chosen to ensure role-based control and security. Pat
 - **Specialist Dashboard:** Specialists can manage their availability, view and approve appointments, and review patient profiles.
 
 - **Admin Dashboard:** Admins can manage users (patients, specialists) and vet specialist applications. They also have access to system-wide settings.
+
+### Role-Based Navigation
+(Not the same as Role-Based Dashboard Features)
+
+The navigation bar in HealMate adapts dynamically based on the user's role. This feature ensures that users see only the relevant options for their role, improving usability and reducing clutter in the interface.
+
+- **Specialists**: When logged in, specialists will only see links to their dashboard, profile, password change, and logout options. General site navigation like "Home," "About," or "Join Us" will be hidden.
+- **Patients**: Logged-in patients have access to their dashboard, profile, password change, and logout options, while still seeing general navigation links like "Home" and "About."
+- **Admins**: Admins will see their dedicated dashboard link and other relevant options.
+- **Non-Authenticated Users**: Users who are not logged in will only see options to log in or register on the platform.
+
+This role-based navigation provides a tailored experience for every user type, streamlining access to the most relevant pages.
+
 
 ### Soft Delete/Archiving for Patient Accounts
 HealMate includes a soft delete mechanism to ensure data integrity and prevent accidental loss of important user information. Instead of permanently deleting accounts, users can request a soft deletion, which deactivates their account while retaining their data in the system.
