@@ -162,14 +162,27 @@ def inbox(request):
 
 # Send Message View
 @login_required
-def send_message(request, user_id):
-    receiver = get_object_or_404(User, id=user_id)
+def send_message(request):
+    if request.user.groups.filter(name='Specialist').exists():
+        # Fetch patients the specialist has appointments with
+        specialist = SpecialistProfile.objects.get(user=request.user)
+        recipients = PatientProfile.objects.filter(
+            dashboard_appointments__specialist=specialist
+        ).distinct()
+    elif request.user.groups.filter(name='Patient').exists():
+        # Fetch specialists the patient has appointments with
+        patient = PatientProfile.objects.get(user=request.user)
+        recipients = SpecialistProfile.objects.filter(
+            dashboard_specialist_appointments__patient=patient
+        ).distinct()
     
     if request.method == 'POST':
+        receiver_id = request.POST.get('receiver')
+        receiver = get_object_or_404(User, id=receiver_id)
         content = request.POST.get('content')
         if content:
-            message = Message(sender=request.user, receiver=receiver, content=content)
+            message = Messages(sender=request.user, receiver=receiver, content=content)
             message.save()
-            return redirect('inbox')  # Redirect to inbox after sending a message
-    
-    return render(request, 'dashboard/send_message.html', {'receiver': receiver})
+            return redirect('inbox')
+
+    return render(request, 'dashboard/send_message.html', {'recipients': recipients})
