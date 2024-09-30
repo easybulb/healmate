@@ -3,7 +3,7 @@
     <h1>Search Results</h1>
     
     <form method="GET" action="{% url 'search_specialists' %}">
-        <input type="text" name="q" placeholder="Search by name or bio" value="{{ request.GET.q }}">
+        <input type="text" name="q" placeholder="Search by name or bio" value="{{ query }}">
         <select name="specialty">
             <option value="">All Specialties</option>
             {% for specialty in specialties %}
@@ -12,7 +12,7 @@
                 </option>
             {% endfor %}
         </select>
-        <input type="text" name="location" placeholder="Location" value="{{ request.GET.location }}">
+        <input type="text" name="location" placeholder="Location" value="{{ location_filter }}">
         <button type="submit">Search</button>
     </form>
 
