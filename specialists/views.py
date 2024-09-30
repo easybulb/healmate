@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from dashboard.models import SpecialistProfile, Specialty
 from django.db.models import Q
 from django.core.paginator import Paginator
@@ -25,7 +25,7 @@ def search_specialists(request):
     if location_filter:
         specialists = specialists.filter(location__icontains=location_filter)
 
-        # Pagination: Limit to 5 specialists per page
+    # Pagination: Limit to 5 specialists per page
     paginator = Paginator(specialists, 5)
     page_number = request.GET.get('page')
     specialists_page = paginator.get_page(page_number)
