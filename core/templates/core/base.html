@@ -16,25 +16,34 @@
     <!-- Navigation Bar -->
     <nav>
         <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'tools' %}">Tools</a></li>
-            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-            <li><a href="{% url 'join_us' %}">Join Us</a></li>
-            <li><a href="{% url 'faq' %}">FAQ</a></li>
-
             {% if user.is_authenticated %}
-                {% if user.is_superuser %}
-                    <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
-                {% elif user|has_group:"Specialist" %}
-                    <li><a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a></li>
+                {% if user.groups.filter(name='Specialist').exists %}
+                    <!-- Specialist-specific links -->
+                    <li><a href="{% url 'specialist_dashboard' %}">Dashboard</a></li>
                     <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
-                {% elif user|has_group:"Patient" %}
-                    <li><a href="{% url 'patient_dashboard' %}">Patient Dashboard</a></li>
-                    <li><a href="{% url 'patient_profile' %}">Profile</a></li>
+                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'tools' %}">Tools</a></li>
+                    <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                    <li><a href="{% url 'join_us' %}">Join Us</a></li>
+                    <li><a href="{% url 'faq' %}">FAQ</a></li>
+
+            
+                    {% if user.is_superuser %}
+                        <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+                    {% elif user|has_group:"Specialist" %}
+                        <li><a href="{% url 'specialist_dashboard' %}">Specialist Dashboard</a></li>
+                        <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
+                    {% elif user|has_group:"Patient" %}
+                        <li><a href="{% url 'patient_dashboard' %}">Patient Dashboard</a></li>
+                        <li><a href="{% url 'patient_profile' %}">Profile</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% endif %}
-                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'account_login' %}">Login</a></li>
                 <li><a href="{% url 'account_signup' %}">Register</a></li>
