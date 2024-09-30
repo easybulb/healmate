@@ -3,7 +3,16 @@
     <h1>Send Message to {{ receiver.get_full_name }}</h1>
     <form method="POST">
         {% csrf_token %}
+        <label for="receiver">Select Recipient:</label>
+        <select name="receiver" id="receiver">
+            {% for person in recipients %}
+                <option value="{{ person.id }}">{{ person.user.get_full_name }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="content">Message:</label>
         <textarea name="content" rows="5" placeholder="Type your message here..."></textarea>
+        
         <button type="submit">Send Message</button>
     </form>
 {% endblock %}
