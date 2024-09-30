@@ -1,5 +1,7 @@
 {% extends "core/base.html" %}
 {% block content %}
+
+{% load static %}
     <h1>Search Results</h1>
     
     <form method="GET" action="{% url 'search_specialists' %}">
