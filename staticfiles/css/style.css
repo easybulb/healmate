@@ -210,3 +210,12 @@ ul.messages li.error {
     background-color: #f8d7da;
     color: #721c24;
 }
+
+
+/* search results page */
+
+.specialist-image {
+    max-width: 150px; /* You can adjust the width as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Adds a little roundness to the image */
+}
