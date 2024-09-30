@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from dashboard.models import SpecialistProfile, Specialty
 from django.db.models import Q
 from django.core.paginator import Paginator
