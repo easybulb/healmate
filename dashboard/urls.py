@@ -15,4 +15,6 @@ urlpatterns = [
     path('specialist/profile/', specialist_profile, name='specialist_profile'),
     path('profile/', patient_profile, name='patient_profile'),
     path('request-account-deletion/', request_account_deletion, name='request_account_deletion'),
+    path('inbox/', views.inbox, name='inbox'),
+    path('send_message/<int:user_id>/', views.send_message, name='send_message'),
 ]
