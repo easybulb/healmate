@@ -3,14 +3,13 @@
     <h1>Send Message to {{ receiver.get_full_name }}</h1>
     <form method="POST">
         {% csrf_token %}
+
+        <!-- Dropdown for selecting recipient -->
         <label for="receiver">Select Recipient:</label>
         <select name="receiver" id="receiver">
-            {% for patient in patients %}
-            <option value="{{ patient.user.id }}">{{ patient.user.get_full_name }} (Patient)</option>
-        {% endfor %}
-        {% for specialist in specialists %}
-            <option value="{{ specialist.user.id }}">{{ specialist.user.get_full_name }} (Specialist)</option>
-        {% endfor %}
+            {% for recipient in recipients %}
+                <option value="{{ recipient.user.id }}">{{ recipient.user.get_full_name }} ({{ recipient.type }})</option>
+            {% endfor %}
         </select>
 
         <label for="content">Message:</label>
