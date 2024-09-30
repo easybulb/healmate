@@ -244,6 +244,13 @@ HealMate provides a secure messaging system for communication between patients a
 - **Real-Time Messaging**: The system is designed to support real-time messaging between users.
 
 
+### Profile Management
+Each user can manage their profile through the dashboard:
+- **Patient Profile**: Patients can view and update personal details such as contact information, medical history, and emergency contacts.
+- **Specialist Profile**: Specialists can view and update their bio, specialty, location, and upload profile images.
+- **Profile Images**: Specialists can upload and update their profile image, which appears on the search results and specialist details page.
+
+
 
 ### CRUD Functionality
 
