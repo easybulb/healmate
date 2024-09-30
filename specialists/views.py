@@ -3,6 +3,8 @@ from dashboard.models import SpecialistProfile, Specialty
 from django.db.models import Q
 from django.core.paginator import Paginator
 from appointments.models import Availability
+from django.contrib.auth.decorators import login_required
+from appointments.forms import AppointmentForm
 
 
 # Create your views here.
