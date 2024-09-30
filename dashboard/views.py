@@ -192,6 +192,8 @@ def send_message(request):
         if content:
             message = Message(sender=request.user, receiver=receiver, content=content)
             message.save()
+            # Add success message
+            messages.success(request, f'Your message has been sent to {receiver.get_full_name()}.')
             return redirect('inbox') # Redirect to the inbox after sending
 
     return render(request, 'dashboard/send_message.html', {'recipients': recipients})
