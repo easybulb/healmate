@@ -18,4 +18,5 @@ urlpatterns = [
     path('request-account-deletion/', request_account_deletion, name='request_account_deletion'),
     path('inbox/', views.inbox, name='inbox'),
     path('send_message/', views.send_message, name='send_message'),
+    path('redirect/', views.redirect_after_login, name='redirect_after_login'),
 ]
