@@ -250,7 +250,8 @@ Each user can manage their profile through the dashboard:
 - **Specialist Profile**: Specialists can view and update their bio, specialty, location, and upload profile images.
 - **Profile Images**: Specialists can upload and update their profile image, which appears on the search results and specialist details page.
 
-
+### Confirmation Messages
+- **User Feedback**: Confirmation messages are shown to users when important actions are performed, such as logging in, booking an appointment, or sending a message. These messages help ensure a smooth user experience by providing feedback on successful actions.
 
 ### CRUD Functionality
 
