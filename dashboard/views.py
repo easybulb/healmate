@@ -148,3 +148,11 @@ def request_account_deletion(request):
 
     return render(request, 'dashboard/request_account_deletion.html')
 
+
+# Views for messages
+# Inbox View
+@login_required
+def inbox(request):
+    # Get all messages where the current user is the receiver
+    received_messages = Message.objects.filter(receiver=request.user).order_by('-timestamp')
+    return render(request, 'dashboard/inbox.html', {'received_messages': received_messages})
