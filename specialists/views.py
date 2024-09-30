@@ -35,7 +35,7 @@ def search_specialists(request):
     specialties = Specialty.objects.all()
 
     return render(request, 'specialists/search_results.html', {
-        'specialists': specialists,
+        'specialists': specialists_page,
         'specialties': specialties,
         'query': query,
         'specialty_filter': specialty_filter,
