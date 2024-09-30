@@ -175,6 +175,8 @@ def send_message(request):
         recipients = SpecialistProfile.objects.filter(
             dashboard_specialist_appointments__patient=patient
         ).distinct()
+    else:
+        recipients = []
     
     if request.method == 'POST':
         receiver_id = request.POST.get('receiver')
@@ -183,6 +185,6 @@ def send_message(request):
         if content:
             message = Messages(sender=request.user, receiver=receiver, content=content)
             message.save()
-            return redirect('inbox')
+            return redirect('inbox') # Redirect to the inbox after sending
 
     return render(request, 'dashboard/send_message.html', {'recipients': recipients})
