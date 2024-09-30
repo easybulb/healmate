@@ -197,3 +197,13 @@ def send_message(request):
             return redirect('inbox') # Redirect to the inbox after sending
 
     return render(request, 'dashboard/send_message.html', {'recipients': recipients})
+
+
+
+
+# Redirect For Spcialist Login View
+@login_required
+def redirect_after_login(request):
+    if request.user.groups.filter(name='Specialist').exists():
+        return redirect('specialist_dashboard')
+    return redirect('home')
