@@ -227,6 +227,17 @@ HealMate includes a soft delete mechanism to ensure data integrity and prevent a
 - **User Flexibility:** Patients can choose to deactivate their account temporarily and return at a later date without losing their medical history or profile information.
 - **Security:** Only admins have the power to fully manage account reactivations, ensuring oversight and control over patient data.
 
+
+### **Appointment Booking System**
+HealMate allows patients to book appointments with specialists directly through the platform. The system includes:
+- **Specialist Search**: Patients can search for specialists based on name, specialty, or location.
+- **Book Appointment**: Patients can book an appointment directly from the specialist's profile page.
+- **Appointment Management**: Specialists and patients can view and manage upcoming appointments through their respective dashboards.
+- **Appointment Cancellation**: Patients and specialists have the ability to cancel appointments with a confirmation prompt.
+
+
+
+
 ### CRUD Functionality
 
 The following **CRUD** functionalities are implemented within HealMate:
