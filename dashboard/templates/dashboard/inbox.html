@@ -1,6 +1,14 @@
 {% extends "core/base.html" %}
 
 {% block content %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 <a href="{% url 'send_message' %}" class="btn btn-primary">Send New Message</a>
 <br>
 <br>
