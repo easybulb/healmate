@@ -26,6 +26,7 @@
             </div>
             <div id="accounts">
                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
                     <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
                     <li><a href="{% url 'account_login' %}">Login</a></li>
@@ -44,8 +45,6 @@
                     <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
                     <li><a href="{% url 'inbox' %}">Messages</a></li>
                     <li><a href="{% url 'specialist_appointments' %}">Appointments</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% elif user|has_group:"Patient" %}
                     <!-- Patient-specific links -->
                     <li><a href="{% url 'home' %}">Home</a></li>
@@ -54,13 +53,9 @@
                     <li><a href="{% url 'patient_profile' %}">Profile</a></li>
                     <li><a href="{% url 'inbox' %}">Messages</a></li>
                     <li><a href="{% url 'patient_appointments' %}">Appointments</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% elif user.is_superuser %}
                     <!-- Admin-specific links -->
                     <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
                     <!-- General navigation for other users -->
                     <li><a href="{% url 'home' %}">Home</a></li>
@@ -69,8 +64,6 @@
                     <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
                     <li><a href="{% url 'join_us' %}">Join Us</a></li>
                     <li><a href="{% url 'faq' %}">FAQ</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% endif %}
                 {% else %}
                     <!-- Links for non-authenticated users -->
@@ -80,8 +73,6 @@
                     <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
                     <li><a href="{% url 'join_us' %}">Join Us</a></li>
                     <li><a href="{% url 'faq' %}">FAQ</a></li>
-                    <li><a href="{% url 'account_login' %}">Login</a></li>
-                    <li><a href="{% url 'account_signup' %}">Register</a></li>
                 {% endif %}
             </ul>
         </nav>
