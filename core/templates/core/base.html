@@ -1,8 +1,10 @@
 {% load static %}
-{% load custom_tags %} <!-- Load the custom template tag -->
+{% load custom_tags %}
+<!-- Load the custom template tag -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,46 +16,46 @@
 </head>
 
 <body>
-    
-    <!-- Navigation Bar -->
-    <nav id="main-nav">
-        <ul class="nav-list">
-            {% if user.is_authenticated %}
+    <header>
+        <!-- Navigation Bar -->
+        <nav id="main-nav">
+            <ul class="nav-list">
+                {% if user.is_authenticated %}
                 {% if user|has_group:"Specialist" %}
-                    <!-- Specialist-specific links -->
-                    <li><a href="{% url 'specialist_dashboard' %}">Dashboard</a></li>
-                    <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
-                    <li><a href="{% url 'inbox' %}">Messages</a></li>
-                    <li><a href="{% url 'specialist_appointments' %}">Appointments</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- Specialist-specific links -->
+                <li><a href="{% url 'specialist_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
+                <li><a href="{% url 'inbox' %}">Messages</a></li>
+                <li><a href="{% url 'specialist_appointments' %}">Appointments</a></li>
+                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% elif user|has_group:"Patient" %}
-                    <!-- Patient-specific links -->
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-                    <li><a href="{% url 'patient_dashboard' %}">Dashboard</a></li>
-                    <li><a href="{% url 'patient_profile' %}">Profile</a></li>
-                    <li><a href="{% url 'inbox' %}">Messages</a></li>
-                    <li><a href="{% url 'patient_appointments' %}">Appointments</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- Patient-specific links -->
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                <li><a href="{% url 'patient_dashboard' %}">Dashboard</a></li>
+                <li><a href="{% url 'patient_profile' %}">Profile</a></li>
+                <li><a href="{% url 'inbox' %}">Messages</a></li>
+                <li><a href="{% url 'patient_appointments' %}">Appointments</a></li>
+                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% elif user.is_superuser %}
-                    <!-- Admin-specific links -->
-                    <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- Admin-specific links -->
+                <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% else %}
-                    <!-- General navigation for other users -->
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'tools' %}">Tools</a></li>
-                    <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-                    <li><a href="{% url 'join_us' %}">Join Us</a></li>
-                    <li><a href="{% url 'faq' %}">FAQ</a></li>
-                    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                <!-- General navigation for other users -->
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'tools' %}">Tools</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                <li><a href="{% url 'join_us' %}">Join Us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% endif %}
-            {% else %}
+                {% else %}
                 <!-- Links for non-authenticated users -->
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
@@ -63,16 +65,17 @@
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="{% url 'account_login' %}">Login</a></li>
                 <li><a href="{% url 'account_signup' %}">Register</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
 
 
     {% if messages %}
     <ul id="messages-list">
         {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
     </ul>
     {% endif %}
 
@@ -87,7 +90,7 @@
     <footer id="main-footer">
         <p>&copy; 2024 HealMate. All rights reserved.</p>
         <p>
-            <a href="#">Privacy Policy</a> | 
+            <a href="#">Privacy Policy</a> |
             <a href="#">Terms of Service</a>
         </p>
     </footer>
@@ -95,4 +98,5 @@
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/f40ce1e09e.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
