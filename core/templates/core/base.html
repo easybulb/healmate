@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
+
 <body>
-    <!-- Navigation Bar -->
+    
 <!-- Navigation Bar -->
-<nav>
-    <ul>
+<nav id="main-nav">
+    <ul class="nav-list">
         {% if user.is_authenticated %}
             {% if user|has_group:"Specialist" %}
                 <!-- Specialist-specific links -->
@@ -68,7 +69,7 @@
 
 
     {% if messages %}
-    <ul class="messages">
+    <ul id="messages-list">
         {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
         {% endfor %}
@@ -77,13 +78,13 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div id="content-container">
         {% block content %}
         {% endblock %}
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer id="main-footer">
         <p>&copy; 2024 HealMate. All rights reserved.</p>
         <p>
             <a href="#">Privacy Policy</a> | 
