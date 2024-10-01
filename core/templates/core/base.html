@@ -26,10 +26,11 @@
             </div>
             <div id="accounts">
                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
                     <li><a href="{% url 'account_login' %}">Login</a></li>
                     <li><a href="{% url 'account_signup' %}">Register</a></li>
-                {% else %}
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% endif %}
             </div>
         </div>
 
