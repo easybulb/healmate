@@ -70,7 +70,7 @@
         </nav>
     </header>
 
-
+    <!-- Confirmation message function -->
     {% if messages %}
     <ul id="messages-list">
         {% for message in messages %}
@@ -79,12 +79,13 @@
     </ul>
     {% endif %}
 
-
-    <!-- Page Content -->
-    <div id="content-container">
-        {% block content %}
-        {% endblock %}
-    </div>
+    <main>
+        <!-- Page Content -->
+        <div id="content-container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer id="main-footer">
