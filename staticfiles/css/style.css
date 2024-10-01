@@ -1,16 +1,25 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Playfair+Display:wght@400;700&display=swap");
+
+/* Universal selector */
+* {
     margin: 0;
     padding: 0;
-    background-color: #17A2B8;
+    box-sizing: border-box;
+}
+
+/* body */
+body {
+    font-family: Catamaran, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Page Container to accommodate content and footer */
-.container {
+#content-container {
     flex: 1;
     padding: 2rem;
 }
