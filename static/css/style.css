@@ -81,7 +81,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
 }
 
 
@@ -98,7 +98,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #0e6875;
 }
 
 /* Footer Styles */
