@@ -25,6 +25,11 @@ main {
     flex-direction: column; /* Controls padding for the whole mobile site*/
 }
 
+/* General header */
+h1, h2, h3, h4 {
+    font-family: "Lora", sans-serif;
+}
+
 /* ---- Header section - chose to not add burger style for better accessibility ---- */
 header {
     background-color: #f8f9fa;
@@ -35,6 +40,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    margin-top: 10px;
 }
 
 #logo-accouunts-container a {
@@ -54,7 +60,6 @@ header {
 }
 
 #accounts {
-    margin-top: 10px;
     flex: 1;
     text-align: right;
     list-style-type: none;
@@ -178,14 +183,21 @@ footer a:hover {
     padding: 0 20px;
 }
 
+#search-container form {
+    background-color: #132B67;
+}
+
+#search-container h2 {
+    font-size: 1.1rem;
+}
+
 #hero-banner img {
     width: 100%;
-    /* max-width: 400px; */
     height: auto;
     margin-top: 20px;
 }
 
-/* Form Styles */
+/* General Form Styles */
 form {
     max-width: 600px;
     margin: 0 auto;
