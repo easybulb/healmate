@@ -175,6 +175,7 @@ footer a:hover {
 
 #hero-banner {
     margin-top: 20px;
+    background-color: #f8f9fa;
 }
 
 #hero-banner h1, 
@@ -183,18 +184,39 @@ footer a:hover {
     padding: 0 20px;
 }
 
+#search-container {
+    margin: 20px 10px;
+    max-width: 600px;
+    background-color: #132B67;
+    border-radius: 6px;
+}
+
+#hero-banner h1{
+    color: #132B67;
+    font-size: 2rem;
+}
+
+#hero-banner p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 #search-container form {
     background-color: #132B67;
 }
 
 #search-container h2 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 #hero-banner img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: block;
 }
 
 /* General Form Styles */
