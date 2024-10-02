@@ -37,7 +37,7 @@ header {
 #logo {
     flex: 1;
     font-family: "Playfair Display", sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 #logo-link {
@@ -47,6 +47,7 @@ header {
 }
 
 #accounts {
+    margin-top: 10px;
     flex: 1;
     text-align: right;
     list-style-type: none;
