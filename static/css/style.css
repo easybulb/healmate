@@ -250,14 +250,14 @@ footer a:hover {
 
 /* How It Works Section */
 #how-it-works {
-    background-color: #f8f9fa;
+    background-color: #6f17da;
     padding: 30px 20px;
     text-align: center;
 }
 
 #how-it-works h2 {
     font-size: 1.8rem;
-    color: #132B67;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -278,6 +278,54 @@ footer a:hover {
     font-size: 1.2rem;
     color: #17A2B8;
     margin-bottom: 10px;
+}
+
+/* Featured Specialists Section */
+#featured-specialists {
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#featured-specialists h2 {
+    font-size: 1.8rem;
+    color: #132B67;
+    margin-bottom: 20px;
+}
+
+.specialists-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.specialist-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+}
+
+.specialist-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.specialist-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #132B67;
+}
+
+.specialist-card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* General Form Styles */
