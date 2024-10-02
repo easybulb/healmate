@@ -364,6 +364,14 @@ footer a:hover {
     padding: 30px 20px;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
 #call-to-action h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;

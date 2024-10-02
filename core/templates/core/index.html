@@ -24,7 +24,8 @@
         </form>
     </section>
 
-    <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png" alt="welcome image">
+    <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png"
+        alt="welcome image">
 </div>
 
 <!-- How It Works Section -->
@@ -50,24 +51,28 @@
 <section id="featured-specialists">
     <h2>Featured Specialists</h2>
     <div class="specialists-list">
-        
+
         <div class="specialist-card">
-            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428809/izb7us5ffedp82pnazse.png" alt="Specialist Image">
+            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428809/izb7us5ffedp82pnazse.png"
+                alt="Specialist Image">
             <h3>Dr. Anna Lemon</h3>
             <p>Dermatologist - Available in Manchester</p>
         </div>
         <div class="specialist-card">
-            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_4_wbzino.png" alt="Specialist Image">
+            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_4_wbzino.png"
+                alt="Specialist Image">
             <h3>Dr. Helen Grapes</h3>
             <p>Psychologist - Available in London</p>
         </div>
         <div class="specialist-card">
-            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_2_lxuffr.png" alt="Specialist Image">
+            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_2_lxuffr.png"
+                alt="Specialist Image">
             <h3>Dr. Alex Kiwi</h3>
             <p>Endocrinologists - Available in Glasgow</p>
         </div>
         <div class="specialist-card">
-            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428841/vtktxamzakpcolqlonpq.png" alt="Specialist Image">
+            <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428841/vtktxamzakpcolqlonpq.png"
+                alt="Specialist Image">
             <h3>Dr. John Orange</h3>
             <p>General Practitioners - Available in Newcastle</p>
         </div>
@@ -89,9 +94,13 @@
 
 <!-- Call to Action Section -->
 <section id="call-to-action">
-    <h2>Join Us Today</h2>
-    <p>Whether you're a patient looking for expert care or a specialist wanting to expand your reach, HealMate is the perfect platform for you. Join us and start connecting today!</p>
-    <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign up</a>
+    <div class="overlay"></div>
+    <div class="content">
+        <h2>Join Us Today</h2>
+        <p>Whether you're a patient looking for expert care or a specialist wanting to expand your reach, HealMate is
+            the perfect platform for you. Join us and start connecting today!</p>
+        <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign up</a>
+    </div>
 </section>
 
 {% endblock %}
