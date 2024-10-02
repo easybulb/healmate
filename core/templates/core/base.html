@@ -29,7 +29,7 @@
                 {% if user|has_group:"Specialist" %}
                 <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
                 {% elif user|has_group:"Patient" %}
-                <li><a href="{% url 'patient_profile' %}">Profile</a></li>
+                <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}">Profile</a></li>
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% endif %}
 
