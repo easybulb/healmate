@@ -175,10 +175,10 @@ footer a:hover {
 /* ------------------------ Core - Index.html --------------------- */
 
 #hero-banner {
-    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png");
+    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727898235/senior-on-laptop-500_gvoqub.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: center;
     height: 90vh;
     background-color: #f8f9fa;
 }
@@ -201,7 +201,7 @@ footer a:hover {
 }
 
 #search-container {
-    margin: 20px 10px;
+    margin: 10px 10px;
     max-width: 600px;
     background-color: #132B67;
     border-radius: 6px;
