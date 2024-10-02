@@ -42,7 +42,7 @@ header {
 
 #logo-link {
     font-size: 1.5rem;
-    color: #17A2B8;
+    color: #1e90ff;
     text-decoration: none;
 }
 
@@ -70,7 +70,7 @@ main {
 /* Navigation Styling */
 #main-nav {
     margin-top: 10px;
-    background-color: #17A2B8;
+    background-color: #1e90ff;
     padding: 10px 0;
     justify-content: space-evenly;
 }
@@ -105,12 +105,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #0e6875;
+    background-color: #0d4986;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #17A2B8;
+    background-color: #1e90ff;
     color: white;
     text-align: center;
     padding: 10px 0;
