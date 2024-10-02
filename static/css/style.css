@@ -353,6 +353,41 @@ footer a:hover {
     font-weight: bold;
 }
 
+/* Call to Action Section */
+#call-to-action {
+    background-color: #17A2B8;
+    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#call-to-action h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#call-to-action p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#call-to-action a.btn {
+    background-color: #fff;
+    color: #17A2B8;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#call-to-action a.btn:hover {
+    background-color: #f0f0f0;
+    color: #138496;
+}
+
 /* General Form Styles */
 form {
     max-width: 600px;
