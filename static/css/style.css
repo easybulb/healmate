@@ -355,36 +355,44 @@ footer a:hover {
 
 /* Call to Action Section */
 #call-to-action {
-    position: relative;
     background-color: #17A2B8;
-    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
     padding: 30px 20px;
-    overflow: hidden;
 }
 
-.overlay {
+#call-to-action .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#call-to-action .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+#call-to-action .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
   }
+
+#call-to-action .content {
+    padding: 15px 0;
+}
 
 #call-to-action h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    z-index: 1;
 }
 
 #call-to-action p {
     font-size: 1.1rem;
     margin-bottom: 20px;
-    z-index: 1;
 }
 
 #call-to-action a.btn {
