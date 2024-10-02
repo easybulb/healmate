@@ -9,9 +9,45 @@
 
 /* body */
 body {
-    font-family: Catamaran, sans-serif;
+    font-family: "Catamaran", sans-serif;
     line-height: 1.6;
     font-size: 1.1rem;
+    background-color: #fff;
+}
+
+header {
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+#logo-accouunts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    flex: 1;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.5rem;
+}
+
+#logo-link {
+    font-size: 1.5rem;
+    color: #17A2B8;
+    text-decoration: none;
+}
+
+#accounts {
+    flex: 1;
+    text-align: right;
+    list-style-type: none;
+}
+
+#accounts a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
 }
 
 /* Page Container to accommodate content and footer */
