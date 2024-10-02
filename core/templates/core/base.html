@@ -26,12 +26,11 @@
             </div>
             <div id="accounts">
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% if user|has_group:"Specialist" %}
                 <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
                 {% elif user|has_group:"Patient" %}
                 <li><a href="{% url 'patient_profile' %}">Profile</a></li>
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
                 {% endif %}
 
                 {% else %}
