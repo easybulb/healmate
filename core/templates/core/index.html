@@ -5,27 +5,27 @@
 {% block content %}
 <!-- Main search section and bannar -->
 <div id="hero-banner">
+    <section>
+        <br>
+        <br>
     <h1>Your Health, Our Priority</h1>
     <p>Find trusted medical specialists and book appointments easily. Start your journey to better health today.</p>
-
-    <section id="search-container">
-        <h2>Search for Specialists</h2>
-        <form method="GET" action="{% url 'search_specialists' %}">
-            <input type="text" name="q" placeholder="Search specialists (e.g., Dermatologist, Psychologist)">
-            <input type="text" name="location" placeholder="Location">
-            <select name="specialty">
-                <option value="">All Specialties</option>
-                {% for specialty in specialties %}
-                <option value="{{ specialty.name }}">{{ specialty.name }}</option>
-                {% endfor %}
-            </select>
-            <input type="date" name="available_date"><br>
-            <button type="submit">Search</button>
-        </form>
+        <div id="search-container">
+            <h2>Search for Specialists</h2>
+            <form method="GET" action="{% url 'search_specialists' %}">
+                <input type="text" name="q" placeholder="Search specialists (e.g., Dermatologist, Psychologist)">
+                <input type="text" name="location" placeholder="Location">
+                <select name="specialty">
+                    <option value="">All Specialties</option>
+                    {% for specialty in specialties %}
+                    <option value="{{ specialty.name }}">{{ specialty.name }}</option>
+                    {% endfor %}
+                </select>
+                <input type="date" name="available_date"><br>
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </section>
-
-    <!-- <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png"
-        alt="welcome image"> -->
 </div>
 
 <!-- How It Works Section -->

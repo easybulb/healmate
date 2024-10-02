@@ -190,18 +190,19 @@ footer a:hover {
 }
 
 #hero-banner h1{
-    color: #132B67;
+    color: #000;
     font-size: 2rem;
 }
 
 #hero-banner p {
     font-size: 1.2rem;
-    color: #333;
+    font-weight: 500;
+    color: #000;
     margin-bottom: 20px;
 }
 
 #search-container {
-    margin: 10px 10px;
+    margin: 50px 10px;
     max-width: 600px;
     background-color: #132B67;
     border-radius: 6px;
