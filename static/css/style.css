@@ -26,10 +26,14 @@ header {
     align-items: center;
 }
 
+#logo-accouunts-container a {
+    text-decoration: none;
+}
+
 #logo {
     flex: 1;
     font-family: "Playfair Display", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 #logo-link {
