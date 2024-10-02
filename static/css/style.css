@@ -64,25 +64,32 @@ header {
 /* Navigation Styling */
 #main-nav {
     margin-top: 10px;
+    background-color: #17A2B8;
+    padding: 10px 0;
+    justify-content: space-evenly;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0, 20px;
 }
 
 .nav-list {
+    list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    list-style-type: none;
+    gap: 30px;
 }
+
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
-}
-
-nav ul li {
-    padding: 14px 20px;
 }
 
 nav ul li a {
