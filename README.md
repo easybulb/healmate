@@ -90,7 +90,7 @@ In line with the healthcare theme, I chose a neutral, clean palette:
 This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
 
 ### Font
-- For the logo and headers, I will be using **Playfair Display**.
+- For the logo and headers, I will be using **Lora**.
 - The rest of the body text and interactive elements will use **Catamaran** for its readability and clean look.
 
 ## Project Planning

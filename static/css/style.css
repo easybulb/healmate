@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lora:wght@400;700&display=swap");
 
 /* Universal selector */
 * {
@@ -44,9 +44,9 @@ header {
 
 #logo {
     flex: 1;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Lora", sans-serif;
     font-size: 2rem;
-    font-weight: 800;
+    /* font-weight: 300; */
 }
 
 #logo-link {
