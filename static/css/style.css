@@ -172,7 +172,7 @@ footer a:hover {
     padding: 5px;
 }
 
-/* Core - Index.html */
+/* ------------------------ Core - Index.html --------------------- */
 
 #hero-banner {
     margin-top: 20px;
@@ -326,6 +326,31 @@ footer a:hover {
 .specialist-card p {
     font-size: 1rem;
     color: #555;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #132B67;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    color: #17A2B8;
+    font-weight: bold;
 }
 
 /* General Form Styles */
