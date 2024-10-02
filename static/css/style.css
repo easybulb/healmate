@@ -15,6 +15,7 @@ body {
     background-color: #fff;
 }
 
+/* ---- Header section - chose to not add burger style for better accessibility ---- */
 header {
     padding: 10px;
     background-color: #f8f9fa;
@@ -61,11 +62,23 @@ header {
 }
 
 /* Navigation Styling */
+#main-nav {
+    margin-top: 10px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
     background-color: #333;
 }
 
