@@ -175,7 +175,11 @@ footer a:hover {
 /* ------------------------ Core - Index.html --------------------- */
 
 #hero-banner {
-    margin-top: 20px;
+    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 90vh;
     background-color: #f8f9fa;
 }
 
