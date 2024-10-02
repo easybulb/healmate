@@ -22,8 +22,7 @@ body {
 main {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    flex-direction: column; /* Controls padding for the whole mobile site*/
 }
 
 /* ---- Header section - chose to not add burger style for better accessibility ---- */
@@ -46,7 +45,6 @@ header {
     flex: 1;
     font-family: "Lora", sans-serif;
     font-size: 2rem;
-    /* font-weight: 300; */
 }
 
 #logo-link {
@@ -169,13 +167,20 @@ footer a:hover {
 }
 
 /* Core - Index.html */
+
 #hero-banner {
-    padding: 20px;
+    margin-top: 20px;
 }
 
-#hero-banner image {
-    width: 90%;
-    max-width: 400px;
+#hero-banner h1, 
+#hero-banner p,
+#search-container {
+    padding: 0 20px;
+}
+
+#hero-banner img {
+    width: 100%;
+    /* max-width: 400px; */
     height: auto;
     margin-top: 20px;
 }
