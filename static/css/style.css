@@ -10,12 +10,8 @@
 /* body */
 body {
     font-family: Catamaran, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 /* Page Container to accommodate content and footer */
