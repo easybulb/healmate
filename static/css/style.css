@@ -46,6 +46,7 @@ header {
     flex: 1;
     font-family: "Playfair Display", sans-serif;
     font-size: 2rem;
+    font-weight: 800;
 }
 
 #logo-link {
@@ -154,33 +155,20 @@ footer a:hover {
     color: #1871cb;
 }
 
-/* Alerts and Messages */
-.alert {
-    padding: 10px;
-    margin: 10px 0;
+/* Confirmation Messages */
+#confirmation-message {
+    list-style-type: none;
+    margin-left: 10px;
+    color: #1871cb;
+    background-color: #e4f2fe;
     border-radius: 4px;
-    width: 100%;
-    max-width: 600px;
+    max-width: 350px;
+    padding: 5px;
 }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.alert-info {
-    background-color: #d1ecf1;
-    color: #0c5460;
-}
-
-.alert-warning {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
+/* Core - Index.html */
+#search-container {
+    background-image: url("../media/home-page/search-background.png");
 }
 
 /* Form Styles */

@@ -83,7 +83,7 @@
 
     <!-- Confirmation message function -->
     {% if messages %}
-    <ul id="messages-list">
+    <ul id="confirmation-message">
         {% for message in messages %}
         <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
             {% endfor %}
