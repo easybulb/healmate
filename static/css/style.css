@@ -61,6 +61,7 @@ header {
 
 #accounts {
     flex: 1;
+    flex-direction: row;
     text-align: right;
     list-style-type: none;
 }
