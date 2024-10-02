@@ -170,9 +170,14 @@ footer a:hover {
 
 /* Core - Index.html */
 #hero-banner {
-    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding: 20px;
+}
+
+#hero-banner image {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
 }
 
 /* Form Styles */
