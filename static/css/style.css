@@ -226,6 +226,7 @@ footer a:hover {
 #search-container button {
     width: 50%;
     padding: 12px;
+    margin: 12px 0;
     background-color: #17A2B8;
     color: #fff;
     border: none;
