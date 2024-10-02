@@ -167,8 +167,10 @@ footer a:hover {
 }
 
 /* Core - Index.html */
-#search-container {
-    background-image: url("../media/home-page/search-background.png");
+#hero-banner {
+    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Form Styles */
