@@ -184,13 +184,6 @@ footer a:hover {
     padding: 0 20px;
 }
 
-#search-container {
-    margin: 20px 10px;
-    max-width: 600px;
-    background-color: #132B67;
-    border-radius: 6px;
-}
-
 #hero-banner h1{
     color: #132B67;
     font-size: 2rem;
@@ -202,6 +195,14 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
+#search-container {
+    margin: 20px 10px;
+    max-width: 600px;
+    background-color: #132B67;
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 #search-container form {
     background-color: #132B67;
 }
@@ -209,6 +210,16 @@ footer a:hover {
 #search-container h2 {
     font-size: 1.5rem;
     color: #fff;
+}
+
+#search-container input,
+#search-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 #hero-banner img {
