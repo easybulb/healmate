@@ -28,7 +28,6 @@ main {
 
 /* ---- Header section - chose to not add burger style for better accessibility ---- */
 header {
-    /* padding: 10px; */
     background-color: #f8f9fa;
 }
 
@@ -74,7 +73,7 @@ header {
 #main-nav {
     margin-top: 10px;
     background-color: #1e90ff;
-    padding: 10px 0;
+    padding: 15px 0;
     justify-content: space-evenly;
     width: 100%;
 }
@@ -91,7 +90,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
     font-weight: 500;
 }
 
