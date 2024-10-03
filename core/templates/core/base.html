@@ -64,7 +64,7 @@
         </div>
 
         <!-- Navigation Bar -->
-        <nav id="main-nav">
+        <nav id="main-nav" role="navigation" aria-label="Main Navigation">
             <div id="nav-container">
                 <ul class="nav-list">
                     {% if user.is_authenticated %}
@@ -160,7 +160,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="main-footer">
+    <footer id="main-footer" role="contentinfo" aria-label="Footer Section">
         <ul id="socials">
             <li><a href="http://facebook.com" target="_blank" rel="noopener"
                     aria-label="Visit our Facebook page (Opens Facebook website on a new browser)"><i
@@ -180,8 +180,8 @@
         </ul>
         <p>&copy; 2024 HealMate. All rights reserved.</p>
         <p>
-            <a href="#">Privacy Policy</a> |
-            <a href="#">Terms of Service</a>
+            <a href="#" aria-label="Privacy Policy (Opens Privacy Policy page)">Privacy Policy</a> |
+            <a href="#" aria-label="Terms of Service (Opens Terms of Service page)">Terms of Service</a>
         </p>
     </footer>
 
