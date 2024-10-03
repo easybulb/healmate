@@ -708,7 +708,6 @@ footer a:hover {
 
     /* Welcome Area Styles */
     #welcome-area,
-    #featured-specialists,
     #testimonials {
         max-width: 70%;
         margin: 50px auto;
@@ -738,6 +737,15 @@ footer a:hover {
 
     #how-it-works .steps {
         padding: 0 90px;
+    }
+
+    /* Featured specialists section */
+    #featured-specialists {
+        padding: 60px 80px;
+    }
+
+    #featured-specialists h2{
+        font-size: 2.5rem;
     }
 
     #call-to-action {
