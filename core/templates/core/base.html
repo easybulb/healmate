@@ -1,6 +1,7 @@
 {% load static %}
-{% load custom_tags %}
+
 <!-- Load the custom template tag -->
+{% load custom_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}HealMate{% endblock %}</title>
+    <meta name="description" content="HealMate connects patients with trusted healthcare specialists for easy and accessible online consultations.">
+    <meta name="keywords" content="healthcare, specialists, doctors, consultations, online appointments">
+    <meta name="author" content="HealMate">
+    <meta name="robots" content="index, follow">
+    <title>{% block title %}HealMate - Your Trusted Healthcare Platform{% endblock %}</title>
 
     <!-- Link to main CSS file -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
