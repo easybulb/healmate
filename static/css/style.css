@@ -1039,6 +1039,28 @@ footer a:hover {
         width: 22%;
     }
 
+    /* ------------------------------- Join Us for tablets and larger screens -------------------------- */
+    #join-us-section {
+        margin: 60px;
+    }
+    #join-us-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #join-us-section p {
+        font-size: 1.4rem;
+        max-width: 800px;
+        padding-bottom: 40px;
+    }
+
+    #specialist-list li {
+        font-size: 1.1rem;
+    }
+
+    #cta-join-buttons .btn {
+        padding: 15px 30px;
+    }
+
     /*--- Footer ---*/
     #socials {
         justify-content: left;
