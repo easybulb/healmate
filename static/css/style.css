@@ -593,8 +593,14 @@ footer a:hover {
         font-size: 1.2rem;
     }
 
+    .nav-list a {
+        display: block;
+        padding: 10px;
+    }
+
     #main-nav {
         margin-top: 10px;
+        padding: 0;
         background-color: #1696a9;
         justify-content: space-evenly;
         width: 100%;
@@ -621,7 +627,7 @@ footer a:hover {
 
     /* Main search section and bannar */
     #hero-banner {
-        background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727948238/banner-larger-screen_b9wu2g.webp");
+        background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727946292/Henry_21_esngzm.png");
         background-position: unset;
         height: 100vh;
     }
@@ -633,7 +639,7 @@ footer a:hover {
     }
 
     #hero-banner p {
-        color: #fff;
+        color: #333;
         font-size: 1.5rem;
         font-weight: 500;
         width: 600px;
