@@ -94,7 +94,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 13px;
     font-weight: 500;
 }
 
