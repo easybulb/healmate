@@ -723,17 +723,63 @@ footer a:hover {
     background-color: #138496;
 }
 
-/* Google Map Embed */
-#map-container {
+/* -------------------------------------- Join Us Page Styling -------------------------------------*/
+#join-us-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    margin-top: 40px;
 }
 
-#map-container iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 8px;
+#join-us-section h1 {
+    font-size: 2rem;
+    color: #132B67;
+    margin-bottom: 20px;
+}
+
+#join-us-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#specialist-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#specialist-list li {
+    background-color: #17A2B8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#cta-join-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#cta-join-buttons .btn {
+    padding: 10px 25px;
+    background-color: #17A2B8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#cta-join-buttons .btn:hover {
+    background-color: #138496;
 }
 
 
