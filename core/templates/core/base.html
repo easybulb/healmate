@@ -34,7 +34,7 @@
                     {% endif %}
 
                 {% else %}
-                    <li><a href="{% url 'account_login' %}" class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}">Login</a></li>
+                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="{% url 'account_login' %}" class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}">Login</a></li>
                     <li><a href="{% url 'account_signup' %}" class="{% if request.resolver_match.url_name == 'account_signup' %}current{% endif %}">Register</a></li>
                 {% endif %}
             </div>
