@@ -3,45 +3,110 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-<div class="about-us-container">
-    <h1>About HealMate</h1>
-    <p>At HealMate, we believe in making quality healthcare accessible to everyone. We connect patients with experienced healthcare specialists, making online consultations easy and efficient. Whether you are looking for a specialist for a specific health concern or need general medical advice, HealMate is here to help.</p>
-    
-    <!-- Vision & Mission Section -->
-    <div class="vision-mission">
-        <h2>Our Vision</h2>
-        <p>Our vision is to bridge the gap between patients and healthcare specialists, bringing personalized healthcare services to the comfort of your home.</p>
+    <!-- Hero Section -->
+    <section id="hero-banner-about">
+        <h1>About HealMate</h1>
+        <p>At HealMate, we believe in making quality healthcare accessible to everyone. We connect patients with experienced healthcare specialists, making online consultations easy and efficient. Whether you are looking for a specialist for a specific health concern or need general medical advice, HealMate is here to help.</p>
+    </section>
 
+    <!-- Mission & Vision Section -->
+    <section id="about-content">
         <h2>Our Mission</h2>
-        <p>Our mission is to empower individuals by providing them with access to trusted healthcare professionals, ensuring timely and affordable medical consultations online.</p>
-    </div>
+        <p>
+            At HealMate, our mission is to make healthcare accessible and easy for everyone. We connect you with trusted medical specialists who provide expert care, treatment, and advice. Whether you’re looking for a consultation or treatment, HealMate is here to simplify your healthcare journey.
+        </p>
 
-    <!-- Our Team Section -->
-    <div class="team-section">
-        <h2>Meet Our Team</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="#" alt="Henry Ofodieze" />
-                <h3>Henry Ofodieze</h3>
-                <p>Founder & Cardiologist</p>
+        <h2>Our Vision</h2>
+        <p>
+            We envision a future where everyone has access to high-quality healthcare from the comfort of their home. We strive to create a seamless healthcare experience by bridging the gap between patients and specialists.
+        </p>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="our-services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Specialist Search</h3>
+                <p>Quickly find the best specialists by location, specialty, and availability.</p>
             </div>
-            <!-- I intend adding more team members here -->
+            <div class="service-item">
+                <h3>Online Consultations</h3>
+                <p>Consult with medical specialists from the comfort of your home via video calls.</p>
+            </div>
+            <div class="service-item">
+                <h3>Easy Appointment Booking</h3>
+                <p>Book appointments with your preferred specialists in just a few clicks.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Core Values Section -->
-    <div class="core-values">
-        <h2>Our Core Values</h2>
+    <!-- How We Work Section -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1</h3>
+                <p>Search for a specialist by name, specialty, or location.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2</h3>
+                <p>View profiles, check availability, and book appointments.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3</h3>
+                <p>Consult with your specialist online or in person.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose HealMate Section -->
+    <section id="why-choose">
+        <h2>Why Choose HealMate?</h2>
         <ul>
-            <li><strong>Compassion:</strong> We believe in providing healthcare with a personal touch.</li>
-            <li><strong>Accessibility:</strong> Our platform ensures that everyone has access to quality healthcare, no matter where they are.</li>
-            <li><strong>Innovation:</strong> We utilize the latest technology to connect patients and healthcare providers efficiently.</li>
+            <li>
+                <h3>Trusted Specialists</h3>
+                <p>We verify all specialists to ensure you receive high-quality care from trusted professionals.</p>
+            </li>
+            <li>
+                <h3>Secure & Confidential</h3>
+                <p>Our platform prioritizes your privacy with secure communication and data protection.</p>
+            </li>
+            <li>
+                <h3>Convenient Appointments</h3>
+                <p>Book and manage your healthcare appointments effortlessly through our platform.</p>
+            </li>
         </ul>
-    </div>
+    </section>
 
-    <div class="about-images">
-        <img src="#" alt="Online Consultation" />
-        <img src="#" alt="Healthcare Services" />
-    </div>
-</div>
+    <!-- Meet the Team Section,-->
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727989963/IMG_5960_tvzlhz.jpg" alt="Mr Henry Ofodieze, Founder & CEO">
+                <h3>Mr Henry Ofodieze</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727919548/Henry_500_x_768_px_8_wmnogc.png" alt="Emma Lettuce, CTO & Co-Founder">
+                <h3>Emma Lettuce</h3>
+                <p>CTO & Co-Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727919545/Henry_500_x_768_px_5_wxm2ua.png" alt="Emma Taylor, Head of Operations">
+                <h3>George Carrot</h3>
+                <p>Head of Operations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="call-to-action">
+        <div class="content">
+            <h2>Join Us Today</h2>
+            <p>Whether you're a patient looking for expert care or a specialist wanting to expand your reach, HealMate is the perfect platform for you. Join us and start connecting today!</p>
+            <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign up</a>
+        </div>
+    </section>
 {% endblock %}
