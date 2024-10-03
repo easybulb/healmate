@@ -485,6 +485,23 @@ footer a:hover {
     font-size: 1.2rem;
 }
 
+/* About Content */
+#about-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
 
 /* -------- Media query for tablets --------- */
 @media (min-width: 768px) {
