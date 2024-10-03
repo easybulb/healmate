@@ -621,62 +621,85 @@ footer a:hover {
 
     /* Main search section and bannar */
     #hero-banner {
-        background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727946292/Henry_21_esngzm.png");
-        background-position:unset;
+        background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727948238/banner-larger-screen_b9wu2g.webp");
+        background-position: unset;
         height: 100vh;
     }
 
     #hero-banner h1 {
-        color: #000;
+        color: #132B67;
         font-size: 3rem;
         margin-top: -50px;
     }
-    
+
     #hero-banner p {
+        color: #fff;
         font-size: 1.5rem;
         font-weight: 500;
         width: 600px;
     }
-    
+
     #search-container {
         margin: 50px 20px;
         max-width: 600px;
         width: 42%;
     }
-    
+
     #search-container form {
         margin-left: 20px;
         padding-bottom: 20px;
     }
-    
+
     #search-container h2 {
         margin-left: 30px;
     }
-    
+
     #search-container input,
     #search-container select {
         width: 80%;
     }
-    
+
     #search-container button {
         width: 35%;
         font-size: 1.2rem;
     }
-    
+
     #search-container button:hover {
         background-color: #138496;
     }
 
+    /* Welcome Area Styles */
     #welcome-area,
-    #how-it-works,
     #featured-specialists,
     #testimonials {
         max-width: 70%;
-        margin: 0 auto;
+        margin: 50px auto;
     }
 
-    #search-container {
-        max-width: 60%;
+    #welcome-area h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #welcome-area p {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+     #cta-buttons {
+        flex-direction: column;
+    }
+
+    /* How it works section */
+    
+    #how-it-works {
+        height: 50vh;
+    }
+
+    #how-it-works .steps {
+        padding: 0 90px;
     }
 
     #call-to-action {
