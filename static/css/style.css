@@ -597,6 +597,19 @@ footer a:hover {
         text-align: left;
     }
 
+        /*--- Footer ---*/
+        #socials {
+            justify-content: left;
+            margin-left: 40px;
+            gap: 1.5rem;
+        }
+    
+        footer p {
+            text-align: left;
+            margin-left: 2.5rem;
+            font-size: 1rem;
+        }
+
 }
 
 /* -------- Media query for screens larger than 1024px--------- */
@@ -733,6 +746,12 @@ footer a:hover {
 
     #call-to-action .content h2 {
         font-size: 2rem;
+    }
+    
+    footer p {
+        text-align: left;
+        margin-left: 2.5rem;
+        font-size: 1rem;
     }
 }
 
