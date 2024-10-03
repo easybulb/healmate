@@ -441,6 +441,75 @@ footer a:hover {
     color: #138496;
 }
 
+
+/* -------- Media query for tablets --------- */
+@media (min-width: 768px) {
+    /* Grid for hero banner and search */
+    #hero-banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #hero-banner section {
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* General Form Styles */
 form {
     max-width: 600px;
