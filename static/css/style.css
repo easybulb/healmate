@@ -710,6 +710,7 @@ footer a:hover {
 
 #contact-form button {
     padding: 12px;
+    width: 50%;
     background-color: #17A2B8;
     color: white;
     border: none;
@@ -956,6 +957,40 @@ footer a:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+    }
+
+    /* ------------------------------- Contact Us for tablets and larger screens -------------------------- */
+    #contact-section {
+        margin-top: 80px;
+    }
+    
+    #contact-header p {
+        padding: 0 200px;
+    }
+
+    #contact-info,
+    #contact-form-container {
+        max-width: 70%;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+
+    #contact-info {
+        text-align: left;
+    }
+
+    #contact-form {
+        max-width: 80%;
+        margin-left: -5px;
+        margin-top: 10px;
+    }
+
+    #map-container iframe {
+        height: 400px;
+    }
+
+    #contact-form button {
+        width: 22%;
     }
 
     /*--- Footer ---*/
