@@ -537,6 +537,44 @@ footer a:hover {
     font-size: 1rem;
 }
 
+/* Why Choose HealMate Section */
+#why-choose {
+    background-color: #e6f7ff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#why-choose h2 {
+    padding-bottom: 20px;
+}
+
+#why-choose ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#why-choose li {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#why-choose li h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+#why-choose li p {
+    font-size: 1rem;
+    color: #555;
+}
+
 
 
 
