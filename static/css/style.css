@@ -461,6 +461,30 @@ footer a:hover {
     color: #138496;
 }
 
+/* -------------------------------------------------- ABOUT PAGE ------------------------------------------------- */
+/* Hero Section */
+#hero-banner-about {
+    background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727841475/search-background_ntx5qt.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+#hero-banner-about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#hero-banner-about p {
+    font-size: 1.2rem;
+}
+
 
 /* -------- Media query for tablets --------- */
 @media (min-width: 768px) {
