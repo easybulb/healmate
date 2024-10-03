@@ -6,11 +6,12 @@
 
 {% block content %}
 <!-- Main search section and bannar -->
-<div id="hero-banner">
-    <section>
-    <h1>Your Health, Our Priority</h1>
-    <p>Find trusted medical specialists and book appointments easily. Start your journey to better health today.</p>
-        <div id="search-container" role="banner" aria-label="Main promotional section">
+<div id="hero-banner" role="banner" aria-label="Main promotional section">
+    <section aria-labelledby="hero-title">
+        <h1>Your Health, Our Priority</h1>
+        <p>Find trusted medical specialists and book appointments easily. Start your journey to better health today.</p>
+
+        <div id="search-container" role="search" aria-label="Search specialists form">
             <h2>Search for Specialists</h2>
             <form method="GET" action="{% url 'search_specialists' %}">
                 <input type="text" name="q" placeholder="Search specialists (e.g., Dermatologist, Psychologist)">
@@ -29,33 +30,33 @@
 </div>
 
 <!-- Welcome Area -->
-<section id="welcome-area">
+<section id="welcome-area" role="region" aria-labelledby="welcome-heading">
     <h2>Welcome to HealMate</h2>
     <p>
-        HealMate simplifies finding and connecting with specialists online. Our platform offers a seamless experience, 
-        allowing you to quickly search for trusted professionals and book consultations for expert advice, treatment, 
+        HealMate simplifies finding and connecting with specialists online. Our platform offers a seamless experience,
+        allowing you to quickly search for trusted professionals and book consultations for expert advice, treatment,
         and ongoing care—all from the comfort of your home.
     </p>
 
     <div id="cta-buttons">
-        <a href="{% url 'account_signup' %}" class="btn">Sign Up</a>
-        <a href="{% url 'about' %}" class="btn">Learn More</a>
+        <a href="{% url 'account_signup' %}" class="btn" aria-label="Sign up for HealMate">Sign Up</a>
+        <a href="{% url 'about' %}" class="btn" aria-label="Learn more about HealMate">Learn More</a>
     </div>
 </section>
 
 <!-- How It Works Section -->
-<section id="how-it-works">
+<section id="how-it-works" role="region" aria-labelledby="how-it-works-heading">
     <h2>How It Works</h2>
     <div class="steps">
-        <div class="step">
+        <div class="step" role="article" aria-labelledby="step1-title">
             <h3>Step 1</h3>
             <p>Search for a specialist by name, specialty, or location.</p>
         </div>
-        <div class="step">
+        <div class="step" role="article" aria-labelledby="step2-title">
             <h3>Step 2</h3>
             <p>View profiles, check availability, and book appointments.</p>
         </div>
-        <div class="step">
+        <div class="step" role="article" aria-labelledby="step3-title">
             <h3>Step 3</h3>
             <p>Consult with your specialist online or in person.</p>
         </div>
@@ -63,31 +64,31 @@
 </section>
 
 <!-- Featured Specialists Section -->
-<section id="featured-specialists">
+<section id="featured-specialists" role="region" aria-labelledby="featured-specialists-heading">
     <h2>Featured Specialists</h2>
     <div class="specialists-list">
 
-        <div class="specialist-card">
+        <div class="specialist-card" role="article" aria-labelledby="specialist1-name">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428809/izb7us5ffedp82pnazse.png"
-                alt="Specialist Image">
+                alt="Photo of Dr. Anna Lemon, Dermatologist">
             <h3>Dr. Anna Lemon</h3>
             <p>Dermatologist - Manchester</p>
         </div>
-        <div class="specialist-card">
+        <div class="specialist-card" role="article" aria-labelledby="specialist2-name">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_4_wbzino.png"
                 alt="Specialist Image">
             <h3>Dr. Helen Grapes</h3>
             <p>Psychologist - London</p>
         </div>
-        <div class="specialist-card">
+        <div class="specialist-card" role="article" aria-labelledby="specialist3-name">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_2_lxuffr.png"
-                alt="Specialist Image">
+                alt="Photo of Dr. Alex Kiwi, Endocrinologist">
             <h3>Dr. Alex Kiwi</h3>
             <p>Endocrinologists - Glasgow</p>
         </div>
-        <div class="specialist-card">
+        <div class="specialist-card" role="article" aria-labelledby="specialist4-name">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428841/vtktxamzakpcolqlonpq.png"
-                alt="Specialist Image">
+                alt="Photo of Dr. John Orange, General Practitioner">
             <h3>Dr. John Orange</h3>
             <p>General Practitioners - Newcastle</p>
         </div>
@@ -95,28 +96,28 @@
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials">
+<section id="testimonials" role="region" aria-labelledby="testimonials-heading">
     <h2>What Our Patients Say</h2>
-    <div class="testimonial">
+    <div class="testimonial" role="article">
         <p>"HealMate made it so easy for me to find the right specialist and book an appointment. Highly recommend!"</p>
         <span>- Michael C.</span>
     </div>
-    <div class="testimonial">
+    <div class="testimonial" role="article">
         <p>"Great service! I was able to consult with my doctor online without any hassle."</p>
         <span>- Yennife R.</span>
     </div>
 </section>
 
 <!-- Call to Action Section -->
-<section id="call-to-action">
+<section id="call-to-action" role="region" aria-labelledby="cta-heading">
     <div class="image-container">
-        <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png" alt="welcome image">
+        <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png" alt="Join HealMate today">
     </div>
     <div class="content">
         <h2>Join Us Today</h2>
         <p>Whether you're a patient looking for expert care or a specialist wanting to expand your reach, HealMate is
             the perfect platform for you. Join us and start connecting today!</p>
-        <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign up</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-primary" aria-label="Sign up for HealMate">Sign up</a>
     </div>
 </section>
 
