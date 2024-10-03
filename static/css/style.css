@@ -103,8 +103,16 @@ header {
 }
 
 .nav-list a {
-    padding: 12px 0;
+    padding: 12px 5px;
 }
+
+/* Style for the active navigation link */
+#main-nav ul a.active {
+    font-weight: bold;
+    background-color: #132B67;
+    color: #f0f0f0;  /* Optional: Change the color for active link */
+}
+
 
 
 
