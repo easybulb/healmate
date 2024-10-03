@@ -110,12 +110,12 @@ header {
 #main-nav ul a.active {
     font-weight: bold;
     background-color: #132B67;
-    color: #f0f0f0;  
+    color: #f0f0f0;
 }
 
 #accounts a.current {
     text-decoration: underline;
-    color: #333; 
+    color: #333;
 }
 
 
@@ -783,18 +783,102 @@ footer a:hover {
         text-align: left;
     }
 
-        /*--- Footer ---*/
-        #socials {
-            justify-content: left;
-            margin-left: 40px;
-            gap: 1.5rem;
-        }
-    
-        footer p {
-            text-align: left;
-            margin-left: 2.5rem;
-            font-size: 1rem;
-        }
+    /* Hero Section */
+    #hero-banner-about {
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+    }
+
+    #hero-banner-about h1 {
+        font-size: 3rem;
+    }
+
+    #hero-banner-about p {
+        font-size: 1.5rem;
+    }
+
+    /* About Content */
+    #about-content {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    #about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-content p {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    /* Services Section */
+    #our-services {
+        padding: 50px 20px;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+
+    /* How It Works Section */
+    #how-it-works {
+        padding: 50px 20px;
+    }
+
+    #how-it-works .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #how-it-works h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Why Choose HealMate Section */
+    #why-choose {
+        padding: 50px 20px;
+    }
+
+    #why-choose ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Team Section */
+    #team {
+        padding: 50px 20px;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /*--- Footer ---*/
+    #socials {
+        justify-content: left;
+        margin-left: 40px;
+        gap: 1.5rem;
+    }
+
+    footer p {
+        text-align: left;
+        margin-left: 2.5rem;
+        font-size: 1rem;
+    }
 
 }
 
@@ -911,12 +995,12 @@ footer a:hover {
         color: #333;
     }
 
-     #cta-buttons {
+    #cta-buttons {
         flex-direction: column;
     }
 
     /* How it works section */
-    
+
     #how-it-works {
         height: 50vh;
     }
@@ -930,7 +1014,7 @@ footer a:hover {
         padding: 60px 80px;
     }
 
-    #featured-specialists h2{
+    #featured-specialists h2 {
         font-size: 2.5rem;
     }
 
@@ -941,7 +1025,7 @@ footer a:hover {
     #call-to-action .content h2 {
         font-size: 2rem;
     }
-    
+
     footer p {
         text-align: left;
         margin-left: 2.5rem;
