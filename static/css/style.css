@@ -485,7 +485,7 @@ footer a:hover {
     font-size: 1.2rem;
 }
 
-/* About Content */
+/* Mission and Vision*/
 #about-content {
     padding: 40px 20px;
     text-align: center;
@@ -501,6 +501,43 @@ footer a:hover {
     color: #555;
     margin-bottom: 30px;
 }
+
+/* Our Services Section */
+#our-services {
+    background-color: #17A2B8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#our-services h2 {
+    padding-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
+
+
 
 
 /* -------- Media query for tablets --------- */
