@@ -483,6 +483,21 @@ footer a:hover {
         max-width: 180px;
     }
 
+    /* How it works section */
+    #how-it-works .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* Featured specialists */
+    .specialists-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+
 }
 
 
