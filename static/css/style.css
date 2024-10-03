@@ -1336,6 +1336,23 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
+    
+    /* -------------------------------Join Us page for larger screens ---------------- */
+    #join-us-section h1 {
+        font-size: 3rem;
+        margin: 0 60px;
+        padding-bottom: 30px;
+    }
+
+    #join-us-section p {
+        font-size: 1.3rem;
+    }
+
+    #cta-join-buttons .btn {
+        font-size: 1.2rem;
+        padding: 15px 35px;
+    }
+
     footer p {
         text-align: left;
         margin-left: 2.5rem;
