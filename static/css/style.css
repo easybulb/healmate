@@ -636,19 +636,21 @@ footer a:hover {
         color: #132B67;
         font-size: 3rem;
         margin-top: -50px;
+        margin-left: 20px;
     }
 
     #hero-banner p {
         color: #333;
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         width: 600px;
+        margin-left: 20px;
     }
 
     #search-container {
-        margin: 50px 20px;
+        margin: 50px 35px;
         max-width: 600px;
-        width: 42%;
+        width: 35%;
     }
 
     #search-container form {
@@ -662,7 +664,7 @@ footer a:hover {
 
     #search-container input,
     #search-container select {
-        width: 80%;
+        width: 95%;
     }
 
     #search-container button {
