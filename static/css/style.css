@@ -110,7 +110,12 @@ header {
 #main-nav ul a.active {
     font-weight: bold;
     background-color: #132B67;
-    color: #f0f0f0;  /* Optional: Change the color for active link */
+    color: #f0f0f0;  
+}
+
+#accounts a.current {
+    text-decoration: underline;
+    color: #333; 
 }
 
 

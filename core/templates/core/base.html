@@ -26,16 +26,16 @@
             </div>
             <div id="accounts">
                 {% if user.is_authenticated %}
-                {% if user|has_group:"Specialist" %}
-                <li><a href="{% url 'specialist_profile' %}">Profile</a></li>
-                {% elif user|has_group:"Patient" %}
-                <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}">Profile</a></li>
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
-                {% endif %}
+                    {% if user|has_group:"Specialist" %}
+                        <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}" class="{% if request.resolver_match.url_name == 'specialist_profile' %}current{% endif %}">Profile</a></li>
+                    {% elif user|has_group:"Patient" %}
+                        <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}" class="{% if request.resolver_match.url_name == 'patient_profile' %}current{% endif %}">Profile</a></li>
+                        <li><a href="{% url 'account_logout' %}" class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}">Logout</a></li>
+                    {% endif %}
 
                 {% else %}
-                <li><a href="{% url 'account_login' %}">Login</a></li>
-                <li><a href="{% url 'account_signup' %}">Register</a></li>
+                    <li><a href="{% url 'account_login' %}" class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}" class="{% if request.resolver_match.url_name == 'account_signup' %}current{% endif %}">Register</a></li>
                 {% endif %}
             </div>
         </div>
