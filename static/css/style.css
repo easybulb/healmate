@@ -799,7 +799,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 
-    /* About Content */
+    /* ------------------------------- About Content for tablets -------------------------- */
     #about-content {
         max-width: 80%;
         margin: 0 auto;
@@ -1024,6 +1024,122 @@ footer a:hover {
 
     #call-to-action .content h2 {
         font-size: 2rem;
+    }
+    /* -------------------------------About page for larger screens ---------------- */
+    /* Hero Section */
+    #hero-banner-about {
+        height: 95vh;
+        padding: 80px 40px;
+    }
+
+    #hero-banner-about h1 {
+        font-size: 3rem;
+    }
+
+    #hero-banner-about p {
+        font-size: 1.5rem;
+    }
+
+    /* About Content */
+    #about-content {
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+
+    #about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    #about-content p {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+    /* Services Section */
+    #our-services {
+        padding: 60px 40px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .service-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .service-item p {
+        font-size: 1.2rem;
+    }
+
+    /* How It Works Section */
+    #how-it-works {
+        padding: 60px 40px;
+    }
+
+    #how-it-works h2 {
+        font-size: 3rem;
+    }
+
+    #how-it-works h3 {
+        font-size: 2rem;
+    }
+
+    #how-it-works p {
+        font-size: 1.5rem;
+    }
+
+    /* Why Choose HealMate Section */
+    #why-choose {
+        padding: 60px;
+    }
+
+    #why-choose ul {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding-left: 90px;
+    }
+
+    #why-choose li h3 {
+        font-size: 1.8rem;
+    }
+
+    #why-choose li p {
+        font-size: 1.2rem;
+    }
+
+    /* Team Section */
+    #team {
+        padding: 60px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding-left: 300px;
+    }
+
+    .team-member h3 {
+        font-size: 1.5rem;
+    }
+
+    .team-member p {
+        font-size: 1.2rem;
+    }
+
+    /* Call to Action Section */
+    #call-to-action {
+        padding: 4rem 10rem;
+    }
+
+    #call-to-action h2 {
+        font-size: 1.5rem;
+    }
+
+    #call-to-action p {
+        font-size: 1.5rem;
     }
 
     footer p {
