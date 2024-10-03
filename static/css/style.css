@@ -329,7 +329,7 @@ footer a:hover {
 }
 
 #featured-specialists h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #132B67;
     margin-bottom: 20px;
 }
@@ -352,8 +352,8 @@ footer a:hover {
 
 .specialist-card img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     margin-bottom: 10px;
 }
