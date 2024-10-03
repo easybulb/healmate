@@ -208,6 +208,7 @@ footer a:hover {
     color: #000;
     font-size: 1.5rem;
     padding-top: 52px;
+    padding-left: 15px;
 }
 
 #hero-banner p {
@@ -215,6 +216,7 @@ footer a:hover {
     font-weight: 500;
     color: #000;
     margin-bottom: 20px;
+    padding-left: 15px;
 }
 
 #search-container {
@@ -227,17 +229,19 @@ footer a:hover {
 
 #search-container form {
     background-color: #132B67;
+    padding-left: 18px;
 }
 
 #search-container h2 {
     padding-top: 15px;
+    padding-left: 18px;
     font-size: 1.5rem;
     color: #fff;
 }
 
 #search-container input,
 #search-container select {
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
