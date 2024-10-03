@@ -579,7 +579,28 @@ footer a:hover {
 
 /* -------- Media query for screens larger than 1024px--------- */
 
+@media (min-width: 1024px) {
+    #hero-banner {
+        height: 75vh;
+    }
 
+    #welcome-area, #how-it-works, #featured-specialists, #testimonials {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    #search-container {
+        max-width: 60%;
+    }
+
+    #call-to-action {
+        padding: 50px 0;
+    }
+
+    #call-to-action .content h2 {
+        font-size: 2rem;
+    }
+}
 
 
 
