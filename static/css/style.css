@@ -575,6 +575,45 @@ footer a:hover {
     color: #555;
 }
 
+/* Team Section */
+#team {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#team h2 {
+    padding-bottom: 20px;
+}
+
+.team-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 200px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
 
 
 
