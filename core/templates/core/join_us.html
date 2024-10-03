@@ -3,6 +3,34 @@
 {% block title %}Join Us{% endblock %}
 
 {% block content %}
-    <h1>Join HealMate and offer your services</h1>
-    <p>Are you a specialist the needed field? Join us today!</p>
+<section id="join-us-section">
+    <h1>Join HealMate and offer your expertise to patients worldwide</h1>
+    <p>
+        Are you a licensed medical specialist looking to provide expert care and consultations online? HealMate is a platform where you can connect with patients, manage appointments, and offer care directly from the comfort of your office or home. If you are qualified in one of the following specialties, we welcome you to join us:
+    </p>
+
+    <ul id="specialist-list">
+        <li>General Practitioners</li>
+        <li>Dermatologists</li>
+        <li>Psychologists</li>
+        <li>Endocrinologists</li>
+        <li>Pediatricians</li>
+        <li>Cardiologists</li>
+        <li>Neurologists</li>
+        <li>Social Workers</li>
+        <li>Nutritionists</li>
+        <li>Optometrists</li>
+        <li>Pharmacists</li>
+    </ul>
+
+    <p>
+        At HealMate, you’ll have the flexibility to manage your consultations, provide treatments, and offer ongoing care to patients from anywhere. 
+        Whether you specialize in chronic condition management, mental health, or preventative care, HealMate is the perfect platform to expand your reach.
+    </p>
+
+    <div id="cta-join-buttons">
+        <a href="{% url 'account_signup' %}" class="btn">Apply Now</a>
+        <a href="{% url 'about' %}" class="btn">Learn More</a>
+    </div>
+</section>
 {% endblock %}
