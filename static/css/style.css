@@ -498,6 +498,24 @@ footer a:hover {
         justify-content: center;
     }
 
+    /* Call-to-action section - image and content side by side */
+    #call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    #call-to-action .image-container {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    #call-to-action .content {
+        flex: 1;
+        text-align: left;
+    }
+
 }
 
 
