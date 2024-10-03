@@ -8,11 +8,9 @@
 <!-- Main search section and bannar -->
 <div id="hero-banner">
     <section>
-        <br>
-        <br>
     <h1>Your Health, Our Priority</h1>
     <p>Find trusted medical specialists and book appointments easily. Start your journey to better health today.</p>
-        <div id="search-container">
+        <div id="search-container" role="banner" aria-label="Main promotional section">
             <h2>Search for Specialists</h2>
             <form method="GET" action="{% url 'search_specialists' %}">
                 <input type="text" name="q" placeholder="Search specialists (e.g., Dermatologist, Psychologist)">
