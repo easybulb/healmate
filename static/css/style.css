@@ -484,6 +484,14 @@ footer a:hover {
         padding: 20px;
     }
 
+    #hero-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero-banner p {
+        font-size: 1.5rem;
+    }
+
     #hero-banner img {
         max-width: 100%;
         height: auto;
@@ -502,6 +510,16 @@ footer a:hover {
         padding: 40px 0;
     }
 
+    #welcome-area h2 {
+        font-size: 2.5rem;
+    }
+
+    #welcome-area p {
+        font-size: 1.3rem;
+    }
+
+    /* Call to action section */
+
     #cta-buttons {
         flex-direction: row;
         justify-content: flex-start;
@@ -517,6 +535,18 @@ footer a:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+    }
+
+    #how-it-works h2 {
+        font-size: 2.5rem;
+    }
+
+    #how-it-works h3 {
+        font-size: 2rem;
+    }
+
+    #how-it-works p {
+        font-size: 1.4rem;
     }
 
     /* Featured specialists */
