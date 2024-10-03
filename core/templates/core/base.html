@@ -9,9 +9,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HealMate connects patients with trusted healthcare specialists for easy and accessible online consultations.">
-    <meta name="keywords" content="healthcare, specialists, doctors, consultations, online appointments">
-    <meta name="author" content="HealMate">
+    <meta name="description"
+        content="HealMate connects patients with trusted healthcare specialists for easy and accessible online consultations.">
+    <meta name="keywords"
+        content="healthcare, specialists, doctors, consultations, online appointments, healmate, medical specialists">
+    <meta name="author" content="Henry Ofodieze">
     <meta name="robots" content="index, follow">
     <title>{% block title %}HealMate - Your Trusted Healthcare Platform{% endblock %}</title>
 
@@ -37,16 +39,26 @@
             </div>
             <div id="accounts">
                 {% if user.is_authenticated %}
-                    {% if user|has_group:"Specialist" %}
-                        <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}" class="{% if request.resolver_match.url_name == 'specialist_profile' %}current{% endif %}">Profile</a></li>
-                    {% elif user|has_group:"Patient" %}
-                        <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}" class="{% if request.resolver_match.url_name == 'patient_profile' %}current{% endif %}">Profile</a></li>
-                        <li><a href="{% url 'account_logout' %}" class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}">Logout</a></li>
-                    {% endif %}
+                {% if user|has_group:"Specialist" %}
+                <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}"
+                        class="{% if request.resolver_match.url_name == 'specialist_profile' %}current{% endif %}"
+                        aria-label="Menu Specialist Profile link (Opens Specialist Profile page)">Profile</a></li>
+                {% elif user|has_group:"Patient" %}
+                <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}"
+                        class="{% if request.resolver_match.url_name == 'patient_profile' %}current{% endif %}"
+                        aria-label="Menu Patient Profile link (Opens Patient Profile page)">Profile</a></li>
+                <li><a href="{% url 'account_logout' %}"
+                        class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}"
+                        aria-label="Menu Logout link (Logs you out)">Logout</a></li>
+                {% endif %}
 
                 {% else %}
-                    <li><i class="fa-solid fa-right-to-bracket"></i><a href="{% url 'account_login' %}" class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}">Login</a></li>
-                    <li><a href="{% url 'account_signup' %}" class="{% if request.resolver_match.url_name == 'account_signup' %}current{% endif %}">Register</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="{% url 'account_login' %}"
+                        class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}"
+                        aria-label="Menu Login link (Opens the Login page)">Login</a></li>
+                <li><a href="{% url 'account_signup' %}"
+                        class="{% if request.resolver_match.url_name == 'account_signup' %}current{% endif %}"
+                        aria-label="Menu Register link (Opens the Register page)">Register</a></li>
                 {% endif %}
             </div>
         </div>
@@ -58,34 +70,72 @@
                     {% if user.is_authenticated %}
                     {% if user|has_group:"Specialist" %}
                     <!-- Specialist-specific links -->
-                    <li><a href="{% url 'specialist_dashboard' %}" class="{% if request.resolver_match.url_name == 'specialist_dashboard' %}active{% endif %}">Dashboard</a></li>
-                    <li><a href="{% url 'inbox' %}" class="{% if request.resolver_match.url_name == 'inbox' %}active{% endif %}">Messages</a></li>
-                    <li><a href="{% url 'specialist_appointments' %}" class="{% if request.resolver_match.url_name == 'specialist_appointments' %}active{% endif %}">Appointments</a></li>
+                    <li><a href="{% url 'specialist_dashboard' %}"
+                            class="{% if request.resolver_match.url_name == 'specialist_dashboard' %}active{% endif %}"
+                            aria-label="Menu Dashboard link (Opens Specialist Dashboard)">Dashboard</a></li>
+                    <li><a href="{% url 'inbox' %}"
+                            class="{% if request.resolver_match.url_name == 'inbox' %}active{% endif %}"
+                            aria-label="Menu Messages link (Opens Specialist Messages)">Messages</a></li>
+                    <li><a href="{% url 'specialist_appointments' %}"
+                            class="{% if request.resolver_match.url_name == 'specialist_appointments' %}active{% endif %}"
+                            aria-label="Menu Appointments link (Opens Specialist Appointments)">Appointments</a></li>
                     {% elif user|has_group:"Patient" %}
                     <!-- Patient-specific links -->
-                    <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
-                    <li><a href="{% url 'patient_dashboard' %}" class="{% if request.resolver_match.url_name == 'patient_dashboard' %}active{% endif %}">Dashboard</a></li>
-                    <li><a href="{% url 'inbox' %}" class="{% if request.resolver_match.url_name == 'inbox' %}active{% endif %}">Messages</a></li>
-                    <li><a href="{% url 'patient_appointments' %}" class="{% if request.resolver_match.url_name == 'patient_appointments' %}active{% endif %}">Appointments</a></li>
+                    <li><a href="{% url 'home' %}"
+                            class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                            aria-label="Menu Home link (Opens the Home page)">Home</a></li>
+                    <li><a href="{% url 'patient_dashboard' %}"
+                            class="{% if request.resolver_match.url_name == 'patient_dashboard' %}active{% endif %}"
+                            aria-label="Menu Dashboard link (Opens Patient Dashboard)">Dashboard</a></li>
+                    <li><a href="{% url 'inbox' %}"
+                            class="{% if request.resolver_match.url_name == 'inbox' %}active{% endif %}"
+                            aria-label="Menu Messages link (Opens Patient Messages)">Messages</a></li>
+                    <li><a href="{% url 'patient_appointments' %}"
+                            class="{% if request.resolver_match.url_name == 'patient_appointments' %}active{% endif %}"
+                            aria-label="Menu Appointments link (Opens Patient Appointments)">Appointments</a></li>
                     {% elif user.is_superuser %}
                     <!-- Admin-specific links -->
-                    <li><a href="{% url 'admin_dashboard' %}" class="{% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}">Admin Dashboard</a></li>
+                    <li><a href="{% url 'admin_dashboard' %}"
+                            class="{% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}"
+                            aria-label="Menu Admin Dashboard link (Opens Admin Dashboard)">Admin Dashboard</a></li>
                     {% else %}
                     <!-- General navigation for other users -->
-                    <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
-                    <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
-                    <li><a href="{% url 'tools' %}" class="{% if request.resolver_match.url_name == 'tools' %}active{% endif %}">Tools</a></li>
-                    <li><a href="{% url 'contact_us' %}" class="{% if request.resolver_match.url_name == 'contact_us' %}active{% endif %}">Contact Us</a></li>
-                    <li><a href="{% url 'join_us' %}" class="{% if request.resolver_match.url_name == 'join_us' %}active{% endif %}">Join Us</a></li>
-                    <li><a href="{% url 'faq' %}" class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a></li>
+                    <li><a href="{% url 'home' %}"
+                            class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                            aria-label="Menu Home link (Opens the Home page)">Home</a></li>
+                    <li><a href="{% url 'about' %}"
+                            class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                            aria-label="Menu About link (Opens the About page)">About</a></li>
+                    <li><a href="{% url 'tools' %}"
+                            class="{% if request.resolver_match.url_name == 'tools' %}active{% endif %}"
+                            aria-label="Menu Tools link (Opens the Tools page)">Tools</a></li>
+                    <li><a href="{% url 'contact_us' %}"
+                            class="{% if request.resolver_match.url_name == 'contact_us' %}active{% endif %}"
+                            aria-label="Menu Contact Us link (Opens the Contact Us page)">Contact Us</a></li>
+                    <li><a href="{% url 'join_us' %}"
+                            class="{% if request.resolver_match.url_name == 'join_us' %}active{% endif %}"
+                            aria-label="Menu Join Us link (Opens the Join Us page)">Join Us</a></li>
+                    <li><a href="{% url 'faq' %}"
+                            class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}"
+                            aria-label="Menu FAQ link (Opens the FAQ page)">FAQ</a></li>
                     {% endif %}
                     {% else %}
                     <!-- Links for non-authenticated users -->
-                    <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
-                    <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
-                    <li><a href="{% url 'contact_us' %}" class="{% if request.resolver_match.url_name == 'contact_us' %}active{% endif %}">Contact Us</a></li>
-                    <li><a href="{% url 'join_us' %}" class="{% if request.resolver_match.url_name == 'join_us' %}active{% endif %}">Join Us</a></li>
-                    <li><a href="{% url 'faq' %}" class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a></li>
+                    <li><a href="{% url 'home' %}"
+                            class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                            aria-label="Menu Home link (Opens the Home page)">Home</a></li>
+                    <li><a href="{% url 'about' %}"
+                            class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                            aria-label="Menu About link (Opens the About page)">About</a></li>
+                    <li><a href="{% url 'contact_us' %}"
+                            class="{% if request.resolver_match.url_name == 'contact_us' %}active{% endif %}"
+                            aria-label="Menu Contact Us link (Opens the Contact Us page)">Contact Us</a></li>
+                    <li><a href="{% url 'join_us' %}"
+                            class="{% if request.resolver_match.url_name == 'join_us' %}active{% endif %}"
+                            aria-label="Menu Join Us link (Opens the Join Us page)">Join Us</a></li>
+                    <li><a href="{% url 'faq' %}"
+                            class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}"
+                            aria-label="Menu FAQ link (Opens the FAQ page)">FAQ</a></li>
                     {% endif %}
                 </ul>
             </div>
