@@ -22,11 +22,15 @@ body {
 main {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Controls padding for the whole mobile site*/
+    flex-direction: column;
+    /* Controls padding for the whole mobile site*/
 }
 
 /* General header */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: "Lora", sans-serif;
 }
 
@@ -76,7 +80,7 @@ header {
 /* Navigation Styling */
 #main-nav {
     margin-top: 10px;
-    background-color: #132B67;
+    background-color: #1696a9;
     padding: 15px 0;
     justify-content: space-evenly;
     width: 100%;
@@ -95,7 +99,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 13px;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 
@@ -183,13 +187,13 @@ footer a:hover {
     background-color: #f8f9fa;
 }
 
-#hero-banner h1, 
+#hero-banner h1,
 #hero-banner p,
 #search-container {
     padding: 0 20px;
 }
 
-#hero-banner h1{
+#hero-banner h1 {
     color: #000;
     font-size: 1.5rem;
 }
@@ -441,6 +445,259 @@ footer a:hover {
     color: #138496;
 }
 
+
+/* -------- Media query for tablets --------- */
+@media (min-width: 768px) {
+
+    /* Header */
+    #logo-accouunts-container {
+        padding: 20px 15px;
+    }
+
+    #logo {
+        flex: 1;
+        font-family: "Lora", sans-serif;
+    }
+
+    #logo-link {
+        margin-left: 20px;
+        font-size: 2.5rem;
+        color: #132B67;
+        text-decoration: none;
+    }
+
+    #accounts a {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .nav-list {
+        gap: 60px;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    /* Main search section and bannar */
+
+    #hero-banner {
+        display: grid;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #hero-banner section {
+        padding: 20px;
+    }
+
+    #hero-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero-banner p {
+        font-size: 1.5rem;
+    }
+
+    #hero-banner img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    #search-container {
+        max-width: 80%;
+    }
+
+    /* Welcome area */
+    #welcome-area {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        padding: 40px 0;
+    }
+
+    #welcome-area h2 {
+        font-size: 2.5rem;
+    }
+
+    #welcome-area p {
+        font-size: 1.3rem;
+    }
+
+    /* Call to action section */
+
+    #cta-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    #cta-buttons a {
+        max-width: 180px;
+    }
+
+    /* How it works section */
+    #how-it-works .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    #how-it-works h2 {
+        font-size: 2.5rem;
+    }
+
+    #how-it-works h3 {
+        font-size: 2rem;
+    }
+
+    #how-it-works p {
+        font-size: 1.4rem;
+    }
+
+    /* Featured specialists */
+    .specialists-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Call-to-action section */
+    #call-to-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+
+    #call-to-action .image-container {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    #call-to-action .content {
+        flex: 1;
+        text-align: left;
+    }
+
+}
+
+/* -------- Media query for screens larger than 1024px--------- */
+
+@media (min-width: 1024px) {
+
+    /* Header */
+    .nav-list {
+        gap: 60px;
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+
+    #main-nav {
+        margin-top: 10px;
+        background-color: #1696a9;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #logo-accouunts-container {
+        padding: 10px 60px 0 60px;
+    }
+
+    #logo {
+        flex: 1;
+        font-family: "Lora", sans-serif;
+    }
+
+    #logo-link {
+        font-size: 2rem;
+        color: #132B67;
+        text-decoration: none;
+    }
+
+    #accounts a {
+        font-size: 1.1rem;
+    }
+
+    /* Main search section and bannar */
+    #hero-banner {
+        background-image: url("https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727898236/senior-on-laptop-full_tlimzp.png");
+        height: 95vh;
+    }
+
+    #welcome-area,
+    #how-it-works,
+    #featured-specialists,
+    #testimonials {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    #search-container {
+        max-width: 60%;
+    }
+
+    #call-to-action {
+        padding: 50px 0;
+    }
+
+    #call-to-action .content h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* General Form Styles */
 form {
     max-width: 600px;
@@ -562,7 +819,9 @@ ul.messages li.error {
 /* search results page */
 
 .specialist-image {
-    max-width: 150px; /* You can adjust the width as needed */
+    max-width: 150px;
+    /* You can adjust the width as needed */
     height: auto;
-    border-radius: 8px; /* Optional: Adds a little roundness to the image */
+    border-radius: 8px;
+    /* Optional: Adds a little roundness to the image */
 }
