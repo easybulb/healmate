@@ -472,7 +472,7 @@ footer a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     text-align: center;
 }
 
@@ -517,7 +517,7 @@ footer a:hover {
 }
 
 .service-item {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -558,7 +558,7 @@ footer a:hover {
 }
 
 #why-choose li {
-    background-color: white;
+    background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
@@ -611,6 +611,38 @@ footer a:hover {
 .team-member p {
     font-size: 1rem;
     color: #555;
+}
+
+/* Call to Action Section */
+#call-to-action {
+    background-color: #138496;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#call-to-action h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#call-to-action p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#call-to-action a.btn {
+    background-color: #fff;
+    color: #132B67;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#call-to-action a.btn:hover {
+    background-color: #f0f0f0;
+    color: #132B67;
 }
 
 
