@@ -3,6 +3,40 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
-    <h1>Contact HealMate</h1>
-    <p>Contact us today to find medical specialists...</p>
+<section id="contact-section">
+    <div id="contact-header">
+        <h1>Contact HealMate</h1>
+        <p>If you have any questions or need assistance, feel free to get in touch with us through the form below or via
+            any of the provided contact details.</p>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div id="contact-info">
+        <h2>Our Contact Information</h2>
+        <p>We are here to help you with any inquiries.</p>
+        <ul>
+            <li><i class="fa-solid fa-phone"></i> Phone: +44 123 456</li>
+            <li><i class="fa-solid fa-envelope"></i> Email: support@healmate.com</li>
+            <li><i class="fa-solid fa-location-dot"></i> Address: 123 Health St., Medical City, London</li>
+        </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact-form-container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form" method="POST" action="{% url 'contact_us' %}">
+            {% csrf_token %}
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 {% endblock %}
