@@ -444,7 +444,36 @@ footer a:hover {
 
 /* -------- Media query for tablets --------- */
 @media (min-width: 768px) {
-    /* Grid for hero banner and search */
+    /* Header */
+    .nav-list {
+        gap: 60px;
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    #logo-accouunts-container {
+        padding: 20px 15px;
+    }
+
+    #logo {
+        flex: 1;
+        font-family: "Lora", sans-serif;
+    }
+    
+    #logo-link {
+        margin-left: 20px;
+        font-size: 2.5rem;
+        color: #132B67;
+        text-decoration: none;
+    }
+    
+    #accounts a{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    /* Main search section and bannar */
+
     #hero-banner {
         display: grid;
         align-items: center;
@@ -498,7 +527,7 @@ footer a:hover {
         justify-content: center;
     }
 
-    /* Call-to-action section - image and content side by side */
+    /* Call-to-action section */
     #call-to-action {
         display: flex;
         align-items: center;
@@ -517,6 +546,8 @@ footer a:hover {
     }
 
 }
+
+/* -------- Media query for screens larger than 1024px--------- */
 
 
 
