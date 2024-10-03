@@ -461,6 +461,28 @@ footer a:hover {
         margin-top: 0;
     }
 
+    #search-container {
+        max-width: 80%;
+    }
+
+    /* Welcome area */
+    #welcome-area {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        padding: 40px 0;
+    }
+
+    #cta-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    #cta-buttons a {
+        max-width: 180px;
+    }
+
 }
 
 
