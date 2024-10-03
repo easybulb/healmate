@@ -191,7 +191,7 @@ footer a:hover {
 
 #hero-banner h1{
     color: #000;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #hero-banner p {
@@ -245,13 +245,45 @@ footer a:hover {
     background-color: #138496;
 }
 
-#hero-banner img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    margin: 20px auto 0;
-    display: block;
+
+/* Welcome Area Styles */
+#welcome-area {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
 }
+
+#welcome-area h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #132B67;
+}
+
+#welcome-area p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cta-buttons a {
+    padding: 10px 20px;
+    background-color: #17A2B8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#cta-buttons a:hover {
+    background-color: #138496;
+}
+
 
 /* How It Works Section */
 #how-it-works {
