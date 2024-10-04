@@ -1,0 +1,182 @@
+/* Container for entire dashboard */
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #132B67;
+    margin-bottom: 20px;
+}
+
+/* General text */
+.dashboard-container p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Quick Links Section */
+.quick-links {
+    margin: 30px 0;
+}
+
+.quick-links h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #17A2B8;
+    margin-bottom: 15px;
+}
+
+/* Quick links grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+}
+
+.link-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: #132B67;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-item a i {
+    font-size: 2.5rem;
+    color: #17A2B8;
+    margin-bottom: 10px;
+}
+
+.link-item a:hover {
+    color: #17A2B8;
+}
+
+
+/* Upcoming Appointments Section */
+.appointments-section {
+    margin: 30px 0;
+}
+
+.appointments-section h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #17A2B8;
+    margin-bottom: 15px;
+}
+
+.appointments-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.appointments-section li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.appointments-section a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #17A2B8;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.appointments-section a:hover {
+    color: #138496;
+}
+
+/* Health Tips Section */
+.health-tips {
+    margin: 30px 0;
+}
+
+.health-tips h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #17A2B8;
+    margin-bottom: 15px;
+}
+
+.health-tips ul {
+    list-style: disc;
+    margin: 0 20px;
+    padding: 0;
+    color: #555;
+}
+
+/* Notifications Section */
+.notifications {
+    margin: 30px 0;
+}
+
+.notifications h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #17A2B8;
+    margin-bottom: 15px;
+}
+
+.notification-message {
+    background-color: #e4f2fe;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    color: #555;
+}
+
+/* Responsive Styling */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .dashboard-container {
+        padding: 40px;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+    .dashboard-container {
+        max-width: 1000px;
+    }
+
+    .appointments-section ul {
+        display: flex;
+        flex-direction: column;
+    }
+}

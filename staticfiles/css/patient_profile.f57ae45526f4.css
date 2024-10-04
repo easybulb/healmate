@@ -1,0 +1,90 @@
+/* Container styling */
+#profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Page Title */
+.page-title {
+    font-size: 2rem;
+    color: #132B67;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Headings */
+h2 {
+    color: #17A2B8;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Form Field Styling */
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Messages */
+.messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #d9534f;
+}
+
+/* Save Button */
+.btn-save {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #17A2B8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #138496;
+}
+
+/* Responsive Styling */
+
+/* Tablets */
+@media (min-width: 768px) {
+    #profile-container {
+        padding: 40px;
+    }
+    .btn-save {
+        width: auto;
+        padding: 12px 24px;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+    #profile-container {
+        max-width: 600px;
+        padding: 50px;
+    }
+}
