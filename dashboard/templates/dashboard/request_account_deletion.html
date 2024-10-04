@@ -1,11 +1,19 @@
 {% extends 'core/base.html' %}
 
-{% block content %}
-    <h1>Request Account Deletion</h1>
-    <p>Are you sure you want to deactivate your account? You will no longer have access to your dashboard or appointments.</p>
+{% load static %}
 
-    <form method="POST">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/request_deletion.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="deletion-container">
+    <h1 class="deletion-page-title">Request Account Deletion</h1>
+    <p class="warning-text">Are you sure you want to deactivate your account? You will no longer have access to your dashboard or appointments.</p>
+
+    <form method="POST" id="deletion-form">
         {% csrf_token %}
-        <button type="submit">Confirm Deactivation</button>
+        <button type="submit" class="btn-confirm">Confirm Deactivation</button>
     </form>
+</div>
 {% endblock %}
