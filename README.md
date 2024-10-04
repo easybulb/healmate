@@ -2,6 +2,8 @@
 
 **HealMate** is an online platform designed to bridge the gap between patients and medical specialists. It allows users to easily find, book, and consult with professionals from various medical fields such as dermatology, psychology, and optometry. The project is part of the Code Institute's Full-Stack Developer course and focuses on Django framework, database manipulation, and CRUD functionality.
 
+![HealMate Homepage](docs/project-images/homepage.png)
+
 Live site: <a href="https://healmate-378e458234ec.herokuapp.com/" target="_blank">HealMate</a>
 
 For **Admin access** with relevant sign-in information, click <a href="https://healmate-378e458234ec.herokuapp.com/admin/login/?next=/admin/" target="_blank">here</a>.
