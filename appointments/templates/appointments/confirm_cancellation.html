@@ -8,11 +8,15 @@
 
 {% block content %}
 
-<h2>Confirm Cancellation</h2>
-<p>Are you sure you want to cancel the appointment with {{ appointment.specialist.user.get_full_name }} on {{ appointment.date }} at {{ appointment.time }}?</p>
-<form method="POST">
+<div class="confirmation-container">
+<h2 class="confirmation-title">Confirm Cancellation</h2>
+<p class="confirmation-text">Are you sure you want to cancel the appointment with {{ appointment.specialist.user.get_full_name }} on {{ appointment.date }} at {{ appointment.time }}?</p>
+
+<form method="POST" class="confirmation-form">
     {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Confirm Cancellation</button>
-    <a href="{% url 'specialist_appointments' %}" class="btn btn-secondary">Go Back</a>
+    <button type="submit" class="btn-confirm">Confirm Cancellation</button>
+    <a href="{% url 'specialist_appointments' %}" class="btn-back">Go Back</a>
 </form>
+</div>
+
 {% endblock %}
