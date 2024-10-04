@@ -1,6 +1,10 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% load i18n %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
+{% endblock %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock head_title %}
 

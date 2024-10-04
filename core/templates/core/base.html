@@ -20,6 +20,9 @@
     <!-- Link to main CSS file -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Block for additional CSS -->
+    {% block extra_css %}{% endblock %}
+
     <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">

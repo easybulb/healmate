@@ -241,7 +241,7 @@ footer a:hover {
 
 #search-container input,
 #search-container select {
-    width: 97%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
@@ -1227,7 +1227,7 @@ footer a:hover {
 
     #search-container input,
     #search-container select {
-        width: 95%;
+        width: 92%;
     }
 
     #search-container button {
