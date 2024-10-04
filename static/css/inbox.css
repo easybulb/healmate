@@ -1,0 +1,137 @@
+.inbox-header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.inbox-title {
+    font-size: 2rem;
+    color: #132B67;
+    margin: 20px 0;
+}
+
+/* Message Alert Styling */
+.alert-messages {
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto 20px;
+    max-width: 600px;
+}
+
+.alert-messages li {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-messages .success {
+    background-color: #28a745;
+}
+
+.alert-messages .error {
+    background-color: #dc3545;
+}
+
+.alert-messages .info {
+    background-color: #17a2b8;
+}
+
+/* Inbox Content Layout */
+.inbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.message-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-item {
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.message-item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-details strong {
+    color: #132B67;
+    font-weight: bold;
+}
+
+.no-messages {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Button Styling */
+.send-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #132B67;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.send-primary:hover {
+    background-color: #138496;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .alert-messages, .inbox-content {
+        max-width: 90%;
+    }
+
+    .message-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .message-item {
+        padding: 20px;
+    }
+
+    .inbox-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .send-primary {
+        margin-right: 1000px;
+    }
+
+    .alert-messages, .inbox-content {
+        max-width: 70%;
+    }
+
+    .message-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .message-item {
+        padding: 25px;
+    }
+
+    .inbox-title {
+        font-size: 3rem;
+    }
+}
