@@ -70,6 +70,10 @@ header {
     list-style-type: none;
 }
 
+.accounts-list {
+    list-style-type: none;
+}
+
 #accounts a {
     margin-left: 10px;
     text-decoration: none;

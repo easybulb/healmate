@@ -41,6 +41,7 @@
                 </a>
             </div>
             <div id="accounts">
+                <ul class="accounts-list">
                 {% if user.is_authenticated %}
                 {% if user|has_group:"Specialist" %}
                 <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}"
@@ -72,6 +73,7 @@
                         aria-label="Menu Register link (Opens the Register page)">Register</a>
                 </li>
                 {% endif %}
+                </ul>
             </div>
         </div>
 
