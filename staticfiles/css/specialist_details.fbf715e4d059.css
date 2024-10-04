@@ -1,0 +1,119 @@
+#specialist-details-title {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+
+
+#specialist-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.specialist-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.specialist-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.specialist-info p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Availability List */
+#availability-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.availability-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.availability-list li {
+    padding: 10px;
+    background-color: #e9ecef;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Book Now Button */
+.spec-book-now {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 130px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.spec-book-now:hover {
+    background-color: #218838;
+}
+
+/* -------- Media query for tablets --------- */
+@media (min-width: 768px) {
+    #specialist-detail {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .specialist-image {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+    }
+
+    .specialist-info {
+        max-width: 600px;
+        margin-left: 20px;
+    }
+
+    .availability-list li {
+        text-align: left;
+    }
+
+    .spec-book-now {
+        width: 200px;
+        margin-left: 250px;
+    }
+}
+
+/* -------- Media query for larger screens --------- */
+@media (min-width: 1024px) {
+    #specialist-detail {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .spec-book-now {
+        width: auto;
+        margin-left: 650px;
+    }
+}
