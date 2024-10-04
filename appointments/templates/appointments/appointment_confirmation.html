@@ -1,6 +1,13 @@
 {% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/appointment_confirmation.css' %}">
+{% endblock %}
 
 {% block content %}
-<h1>Your appointment has been successfully booked!</h1>
-<p>Thank you for booking an appointment.</p>
+<div class="confirmation-container">
+    <h1 class="confirmation-title">Your appointment has been successfully booked!</h1>
+    <p class="confirmation-message">Thank you for booking an appointment.</p>
+</div>
 {% endblock %}
