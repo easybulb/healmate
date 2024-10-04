@@ -1,0 +1,83 @@
+/* Container for overall styling */
+.appointment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.appointment-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #132B67;
+}
+
+/* Form styling */
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form fields styling */
+.form-fields p {
+    margin-bottom: 15px;
+}
+
+.form-fields label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-fields input,
+.form-fields select,
+.form-fields textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Submit button styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #17A2B8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #138496;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .appointment-container {
+        padding: 30px 40px;
+    }
+    
+    .appointment-title {
+        font-size: 2.5rem;
+    }
+    
+    .submit-btn {
+        width: auto;
+        align-self: center;
+        max-width: 250px;
+    }
+}
