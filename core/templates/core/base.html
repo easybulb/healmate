@@ -46,6 +46,9 @@
                 <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}"
                         class="{% if request.resolver_match.url_name == 'specialist_profile' %}current{% endif %}"
                         aria-label="Menu Specialist Profile link (Opens Specialist Profile page)">Profile</a></li>
+                <li><a href="{% url 'account_logout' %}"
+                        class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}"
+                        aria-label="Menu Logout link (Logs you out)">Logout</a></li>
                 {% elif user|has_group:"Patient" %}
                 <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}"
                         class="{% if request.resolver_match.url_name == 'patient_profile' %}current{% endif %}"
