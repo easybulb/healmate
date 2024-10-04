@@ -1,5 +1,11 @@
 {% extends "core/base.html" %}
 
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/confirm_cancellation.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <h2>Confirm Cancellation</h2>
