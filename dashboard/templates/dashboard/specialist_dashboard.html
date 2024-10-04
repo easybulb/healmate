@@ -4,7 +4,7 @@
 {% block title %}Specialist Dashboard{% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/specialist_dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'css/specialist_dashboard.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -15,9 +15,9 @@
     <!-- Profile Section -->
     <div id="profile-section">
         {% if profile.profile_image %}
-            <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px" class="profile-img">
+        <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px" class="profile-img">
         {% else %}
-            <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" width="150px" class="profile-img">
+        <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" width="150px" class="profile-img">
         {% endif %}
         <p class="profile-name">Welcome, {{ user.get_full_name }}</p>
         <a href="{% url 'specialist_profile' %}" class="profile-link">See your profile</a>
@@ -44,35 +44,35 @@
             <h3>Total Appointments</h3>
             <p class="stat-number">5</p> <!-- With time I will replace with dynamic data -->
         </div>
-        
+
         <div class="stat-item">
             <h3>Patients Today</h3>
             <p class="stat-number">3</p> <!-- With time I will replace with dynamic data -->
         </div>
     </section>
 
-        <!-- Upcoming Appointments Section -->
-        <section id="appointments-section">
-            <h2 class="section-heading">Upcoming Appointments</h2>
-            {% if upcoming_appointments %}
-                <ul class="appointments-list">
-                    {% for appointment in upcoming_appointments %}
-                        <li class="appointment-item">
-                            Appointment with 
-                            <a href="{% url 'view_patient_details' appointment.patient.id %}" class="appointment-link">
-                                {{ appointment.patient.user.get_full_name }}
-                            </a> 
-                            on {{ appointment.date }} at {{ appointment.time }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p class="no-appointments">No upcoming appointments.</p>
-            {% endif %}
-            <a href="{% url 'specialist_appointments' %}" class="view-all-link">View All Appointments</a>
+    <!-- Upcoming Appointments Section -->
+    <section id="appointments-section">
+        <h2 class="section-heading">Upcoming Appointments</h2>
+        {% if upcoming_appointments %}
+        <ul class="appointments-list">
+            {% for appointment in upcoming_appointments %}
+            <li class="appointment-item">
+                Appointment with
+                <a href="{% url 'view_patient_details' appointment.patient.id %}" class="appointment-link">
+                    {{ appointment.patient.user.get_full_name }}
+                </a>
+                on {{ appointment.date }} at {{ appointment.time }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-appointments">No upcoming appointments.</p>
+        {% endif %}
+        <a href="{% url 'specialist_appointments' %}" class="view-all-link">View All Appointments</a>
     </section>
 
-         <!-- Set Availability section -->
+    <!-- Set Availability section -->
     <section id="availability-section">
         <h2 class="section-heading">Set Your Availability</h2>
         <form method="POST" class="availability-form">
@@ -86,13 +86,14 @@
     <section id="view-availability-section">
         <h2 class="section-heading">Your Availability</h2>
         {% if availabilities %}
-            <ul class="availability-list">
-                {% for availability in availabilities %}
-                    <li class="availability-item">{{ availability.date }}: {{ availability.start_time }} - {{ availability.end_time }}</li>
-                {% endfor %}
-            </ul>
+        <ul class="availability-list">
+            {% for availability in availabilities %}
+            <li class="availability-item">{{ availability.date }}: {{ availability.start_time }} -
+                {{ availability.end_time }}</li>
+            {% endfor %}
+        </ul>
         {% else %}
-            <p class="no-availability">You have not set any availability yet.</p>
+        <p class="no-availability">You have not set any availability yet.</p>
         {% endif %}
     </section>
 </div>

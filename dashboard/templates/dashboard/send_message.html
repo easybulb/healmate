@@ -16,7 +16,8 @@
             <label for="receiver" class="form-label">Select Recipient:</label>
             <select name="receiver" id="receiver" class="form-input">
                 {% for recipient in recipients %}
-                    <option value="{{ recipient.user.id }}">{{ recipient.user.get_full_name }} ({{ recipient.type }})</option>
+                <option value="{{ recipient.user.id }}">{{ recipient.user.get_full_name }} ({{ recipient.type }})
+                </option>
                 {% endfor %}
             </select>
         </div>
@@ -29,7 +30,7 @@
 
         <div class="form-group"></div>
         <button type="submit" class="btn-message-submit">Send Message</button>
-        </div>
-    </form>
+</div>
+</form>
 </div>
 {% endblock %}
