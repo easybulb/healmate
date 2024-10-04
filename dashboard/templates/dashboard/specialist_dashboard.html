@@ -9,24 +9,24 @@
 
 {% block content %}
 
-<div class="specialist-dashboard-container">
-    <h1>Welcome, {{ user.first_name }}</h1>
+<div id="specialist-dashboard-container">
+    <h1 id="dashboard-heading">Welcome, {{ user.first_name }}</h1>
 
     <!-- Profile Section -->
-    <div class="profile-section">
+    <div id="profile-section">
         {% if profile.profile_image %}
             <img src="{{ profile.profile_image.url }}" alt="Profile Image" width="150px" class="profile-img">
         {% else %}
             <img src="{% static 'img/default-profile.png' %}" alt="Default Profile Image" width="150px" class="profile-img">
         {% endif %}
-        <p>Welcome, {{ user.get_full_name }}</p>
-        <a href="{% url 'specialist_profile' %}">See your profile</a>
+        <p class="profile-name">Welcome, {{ user.get_full_name }}</p>
+        <a href="{% url 'specialist_profile' %}" class="profile-link">See your profile</a>
     </div>
 
     <!-- Quick Links Section -->
-    <div class="quick-links">
-        <h2>Quick Links</h2>
-        <ul>
+    <div id="quick-links">
+        <h2 class="section-heading">Quick Links</h2>
+        <ul class="quick-links-list">
             <li><a href="{% url 'specialist_appointments' %}">Manage Appointments</a></li>
             <li><a href="{% url 'inbox' %}">Messages</a></li>
             <li><a href="#">Settings</a></li>
@@ -34,32 +34,32 @@
     </div>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <h2>Specialist Dashboard</h2>
-        <p>Here you can manage your appointments, view patient details, and more.</p>
+    <div id="main-content">
+        <h2 class="section-heading">Specialist Dashboard</h2>
+        <p class="dashboard-info">Here you can manage your appointments, view patient details, and more.</p>
     </div>
 
     <section class="dashboard-stats">
         <div class="stat-item">
             <h3>Total Appointments</h3>
-            <p>5</p> <!-- With time I will replace with dynamic data -->
+            <p class="stat-number">5</p> <!-- With time I will replace with dynamic data -->
         </div>
         
         <div class="stat-item">
             <h3>Patients Today</h3>
-            <p>3</p> <!-- With time I will replace with dynamic data -->
+            <p class="stat-number">3</p> <!-- With time I will replace with dynamic data -->
         </div>
     </section>
 
         <!-- Upcoming Appointments Section -->
-        <section class="appointments-section">
-            <h2>Upcoming Appointments</h2>
+        <section id="appointments-section">
+            <h2 class="section-heading">Upcoming Appointments</h2>
             {% if upcoming_appointments %}
-                <ul>
+                <ul class="appointments-list">
                     {% for appointment in upcoming_appointments %}
-                        <li>
+                        <li class="appointment-item">
                             Appointment with 
-                            <a href="{% url 'view_patient_details' appointment.patient.id %}">
+                            <a href="{% url 'view_patient_details' appointment.patient.id %}" class="appointment-link">
                                 {{ appointment.patient.user.get_full_name }}
                             </a> 
                             on {{ appointment.date }} at {{ appointment.time }}
@@ -67,41 +67,33 @@
                     {% endfor %}
                 </ul>
             {% else %}
-                <p>No upcoming appointments.</p>
+                <p class="no-appointments">No upcoming appointments.</p>
             {% endif %}
-            <a href="{% url 'specialist_appointments' %}">View All Appointments</a>
+            <a href="{% url 'specialist_appointments' %}" class="view-all-link">View All Appointments</a>
     </section>
 
-         <!-- Set Availability -->
-    <section class="availability-section">
-        <h2>Set Your Availability</h2>
-        <form method="POST">
+         <!-- Set Availability section -->
+    <section id="availability-section">
+        <h2 class="section-heading">Set Your Availability</h2>
+        <form method="POST" class="availability-form">
             {% csrf_token %}
             {{ availability_form.as_p }}
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn-av-submit">Submit</button>
         </form>
     </section>
 
-    <!-- View Availability -->
-    <section class="view-availability-section">
-        <h2>Your Availability</h2>
+    <!-- View Availability section -->
+    <section id="view-availability-section">
+        <h2 class="section-heading">Your Availability</h2>
         {% if availabilities %}
-            <ul>
+            <ul class="availability-list">
                 {% for availability in availabilities %}
-                    <li>{{ availability.date }}: {{ availability.start_time }} - {{ availability.end_time }}</li>
+                    <li class="availability-item">{{ availability.date }}: {{ availability.start_time }} - {{ availability.end_time }}</li>
                 {% endfor %}
             </ul>
         {% else %}
-            <p>You have not set any availability yet.</p>
+            <p class="no-availability">You have not set any availability yet.</p>
         {% endif %}
-    </section>
-
-    <!-- Notifications Section -->
-    <section class="notifications">
-        <h2>Notifications</h2>
-        <div class="notification-item">
-            <p>You have no new notifications.</p> <!-- With time I will replace with dynamic data -->
-        </div>
     </section>
 </div>
 
