@@ -8,27 +8,31 @@
 
 {% block content %}
 {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+<ul class="alert-messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
         {% endfor %}
-    </ul>
+</ul>
 {% endif %}
 
-<a href="{% url 'send_message' %}" class="btn btn-primary">Send New Message</a>
-<br>
-<br>
+<div class="inbox-header">
+    <a href="{% url 'send_message' %}" class="btn btn-primary">Send New Message</a>
+    <h1 class="inbox-title">Inbox</h1>
+</div>
 
-    <h1>Inbox</h1>
-    <ul>
-        {% for message in received_messages %}
-            <li>
-                <strong>From:</strong> {{ message.sender.get_full_name }}<br>
-                <strong>Message:</strong> {{ message.content }}<br>
-                <strong>Received on:</strong> {{ message.timestamp }}
-            </li>
-        {% empty %}
-            <li>No messages found.</li>
-        {% endfor %}
-    </ul>
+<div class="inbox-content">
+<ul class="message-list">
+    {% for message in received_messages %}
+    <li class="message-item">
+        <div class="message-details">
+        <strong>From:</strong> {{ message.sender.get_full_name }}<br>
+        <strong>Message:</strong> {{ message.content }}<br>
+        <strong>Received on:</strong> {{ message.timestamp }}
+    </div>
+    </li>
+    {% empty %}
+    <li class="no-messages">No messages found.</li>
+    {% endfor %}
+</ul>
+</div>
 {% endblock %}

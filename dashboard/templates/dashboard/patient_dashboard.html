@@ -6,66 +6,66 @@
 {% endblock %}
 
 {% block content %}
-    <div class="dashboard-container">
-        <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
-        <p><strong>Patient ID:</strong> {{ patient_id }}</p>
-        <p>Manage your profile, appointments, and access health tools from here.</p>
+<div class="dashboard-container">
+    <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
+    <p><strong>Patient ID:</strong> {{ patient_id }}</p>
+    <p>Manage your profile, appointments, and access health tools from here.</p>
 
-        <!-- Quick Links Section -->
-        <section class="quick-links">
-            <h2>Quick Links</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="{% url 'patient_profile' %}"><i class="fa fa-user-circle"></i> View & Update Your Profile</a>
-                </div>
-                <div class="link-item">
-                    <a href="{% url 'patient_appointments' %}"><i class="fa fa-calendar"></i> Manage Your Appointments</a>
-                </div>
-                <div class="link-item">
-                    <a href="{% url 'inbox' %}"><i class="fa fa-envelope"></i> Messages</a>
-                </div>
-                <!-- Request Account Deletion -->
-                <div class="link-item">
-                    <a href="{% url 'request_account_deletion' %}"><i class="fa fa-trash"></i> Request Account Deletion</a>
-                </div>
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <h2>Quick Links</h2>
+        <div class="links-grid">
+            <div class="link-item">
+                <a href="{% url 'patient_profile' %}"><i class="fa fa-user-circle"></i> View & Update Your Profile</a>
             </div>
-        </section>
-
-        <!-- Upcoming Appointments Section -->
-        <section class="appointments-section">
-            <h2>Your Upcoming Appointments</h2>
-            {% if upcoming_appointments %}
-                <ul>
-                    {% for appointment in upcoming_appointments %}
-                        <li>
-                            Appointment with Specialist, {{ appointment.specialist.user.get_full_name }} on 
-                            {{ appointment.date }} at {{ appointment.time }}
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>No upcoming appointments.</p>
-            {% endif %}
-            <a href="{% url 'patient_appointments' %}">View All Appointments</a>
-        </section>
-
-        <!-- Health Tips Section -->
-        <section class="health-tips">
-            <h2>Health Tips</h2>
-            <ul>
-                <li>Stay hydrated and drink at least 8 glasses of water a day.</li>
-                <li>Exercise for at least 30 minutes a day to maintain a healthy lifestyle.</li>
-                <li>Schedule regular check-ups with your doctor for preventive care.</li>
-            </ul>
-        </section>
-
-        <!-- Notifications Section -->
-        <section class="notifications">
-            <h2>Notifications</h2>
-            <div class="notification-message">
-                <p>No new notifications at the moment.</p> 
-                <!-- This can be dynamically populated with notifications -->
+            <div class="link-item">
+                <a href="{% url 'patient_appointments' %}"><i class="fa fa-calendar"></i> Manage Your Appointments</a>
             </div>
-        </section>
-    </div>
+            <div class="link-item">
+                <a href="{% url 'inbox' %}"><i class="fa fa-envelope"></i> Messages</a>
+            </div>
+            <!-- Request Account Deletion -->
+            <div class="link-item">
+                <a href="{% url 'request_account_deletion' %}"><i class="fa fa-trash"></i> Request Account Deletion</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Appointments Section -->
+    <section class="appointments-section">
+        <h2>Your Upcoming Appointments</h2>
+        {% if upcoming_appointments %}
+        <ul>
+            {% for appointment in upcoming_appointments %}
+            <li>
+                Appointment with Specialist, {{ appointment.specialist.user.get_full_name }} on
+                {{ appointment.date }} at {{ appointment.time }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No upcoming appointments.</p>
+        {% endif %}
+        <a href="{% url 'patient_appointments' %}">View All Appointments</a>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section class="health-tips">
+        <h2>Health Tips</h2>
+        <ul>
+            <li>Stay hydrated and drink at least 8 glasses of water a day.</li>
+            <li>Exercise for at least 30 minutes a day to maintain a healthy lifestyle.</li>
+            <li>Schedule regular check-ups with your doctor for preventive care.</li>
+        </ul>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="notifications">
+        <h2>Notifications</h2>
+        <div class="notification-message">
+            <p>No new notifications at the moment.</p>
+            <!-- This can be dynamically populated with notifications -->
+        </div>
+    </section>
+</div>
 {% endblock %}
