@@ -37,6 +37,11 @@
 }
 
 /* Availability List */
+#availability-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .availability-list {
     list-style: none;
     padding-left: 0;
@@ -53,7 +58,7 @@
 }
 
 /* Book Now Button */
-.btn-success {
+.spec-book-now {
     display: inline-block;
     background-color: #28a745;
     color: white;
@@ -62,9 +67,12 @@
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
+    margin-left: 130px;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
 
-.btn-success:hover {
+.spec-book-now:hover {
     background-color: #218838;
 }
 
@@ -91,7 +99,7 @@
         text-align: left;
     }
 
-    .btn-success {
+    .spec-book-now {
         width: 200px;
     }
 }
@@ -103,7 +111,7 @@
         margin: 0 auto;
     }
 
-    .btn-success {
+    .spec-book-now {
         width: auto;
     }
 }

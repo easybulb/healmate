@@ -29,7 +29,7 @@
     </div>
 
     <!-- Availability Section -->
-    <h3>Availability</h3>
+    <h3 id="availability-heading">Availability</h3>
     {% if availabilities %}
         <ul class="availability-list">
             {% for availability in availabilities %}
@@ -41,5 +41,5 @@
     {% endif %}
 
     <!-- Book Now Button -->
-    <a href="{% url 'book_appointment' specialist.id %}" class="btn btn-success">Book Now</a>
+    <a href="{% url 'book_appointment' specialist.id %}" class="btn btn-success, spec-book-now">Book Now</a>
 {% endblock %}
