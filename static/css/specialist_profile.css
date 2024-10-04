@@ -1,8 +1,9 @@
 #profile-heading {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #132B67;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 #profile-details {
@@ -11,6 +12,10 @@
     border-radius: 8px;
     max-width: 800px;
     margin: 0 auto 30px;
+}
+
+#profile-details h2 {
+    text-align: center;
 }
 
 .section-heading {
