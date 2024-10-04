@@ -308,7 +308,9 @@ All code has been validated through:
 - **CSS**: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 - **Python**: PEP8 validation to ensure code quality.
 
-*(I will add validation and other tests when site is ready)*
+![HTML validator test](docs/project-images/Screenshot%202024-10-04%20164347.png)
+
+![CSS validator test](docs/project-images/Screenshot%202024-10-04%20164642.png)
 
 ### **User Testing**
 
