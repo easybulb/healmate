@@ -6,12 +6,12 @@
 
 {% block content %}
 <!-- Main search section and bannar -->
-<div id="hero-banner" role="banner" aria-label="Main promotional section">
-    <section aria-labelledby="hero-title">
+<div id="hero-banner">
+    <section>
         <h1>Your Health, Our Priority</h1>
         <p>Find trusted medical specialists and book appointments easily. Start your journey to better health today.</p>
 
-        <div id="search-container" role="search" aria-label="Search specialists form">
+        <div id="search-container">
             <h2>Search for Specialists</h2>
             <form method="GET" action="{% url 'search_specialists' %}">
                 <input type="text" name="q" placeholder="Search specialists (e.g., Dermatologist, Psychologist)">
@@ -30,7 +30,7 @@
 </div>
 
 <!-- Welcome Area -->
-<section id="welcome-area" role="region" aria-labelledby="welcome-heading">
+<section id="welcome-area">
     <h2>Welcome to HealMate</h2>
     <p>
         HealMate simplifies finding and connecting with specialists online. Our platform offers a seamless experience,
@@ -47,18 +47,18 @@
 </section>
 
 <!-- How It Works Section -->
-<section id="how-it-works" role="region" aria-labelledby="how-it-works-heading">
+<section id="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
-        <div class="step" role="article" aria-labelledby="step1-title">
+        <div class="step">
             <h3>Step 1</h3>
             <p>Search for a specialist by name, specialty, or location.</p>
         </div>
-        <div class="step" role="article" aria-labelledby="step2-title">
+        <div class="step">
             <h3>Step 2</h3>
             <p>View profiles, check availability, and book appointments.</p>
         </div>
-        <div class="step" role="article" aria-labelledby="step3-title">
+        <div class="step">
             <h3>Step 3</h3>
             <p>Consult with your specialist online or in person.</p>
         </div>
@@ -66,11 +66,11 @@
 </section>
 
 <!-- Featured Specialists Section -->
-<section id="featured-specialists" role="region" aria-labelledby="featured-specialists-heading">
+<section id="featured-specialists">
     <h2>Featured Specialists</h2>
     <div class="specialists-list">
 
-        <div class="specialist-card" role="article" aria-labelledby="specialist1-name">
+        <div class="specialist-card">
             <a href="{% url 'specialist_detail' specialist_id=5 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428809/izb7us5ffedp82pnazse.png"
                 alt="Photo of Dr. Anna Lemon, Dermatologist">
@@ -78,7 +78,7 @@
             <p>Dermatologist - Manchester</p>
             </a>
         </div>
-        <div class="specialist-card" role="article" aria-labelledby="specialist2-name">
+        <div class="specialist-card">
             <a href="{% url 'specialist_detail' specialist_id=6 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_4_wbzino.png"
                 alt="Specialist Image">
@@ -86,7 +86,7 @@
             <p>Psychologist - London</p>
             </a>
         </div>
-        <div class="specialist-card" role="article" aria-labelledby="specialist3-name">
+        <div class="specialist-card">
             <a href="{% url 'specialist_detail' specialist_id=7 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_2_lxuffr.png"
                 alt="Photo of Dr. Alex Kiwi, Endocrinologist">
@@ -94,7 +94,7 @@
             <p>Endocrinologists - Glasgow</p>
             </a>
         </div>
-        <div class="specialist-card" role="article" aria-labelledby="specialist4-name">
+        <div class="specialist-card">
             <a href="{% url 'specialist_detail' specialist_id=4 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428841/vtktxamzakpcolqlonpq.png"
                 alt="Photo of Dr. John Orange, General Practitioner">
@@ -106,20 +106,20 @@
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials" role="region" aria-labelledby="testimonials-heading">
+<section id="testimonials">
     <h2>What Our Patients Say</h2>
-    <div class="testimonial" role="article">
+    <div class="testimonial">
         <p>"HealMate made it so easy for me to find the right specialist and book an appointment. Highly recommend!"</p>
         <span>- Michael C.</span>
     </div>
-    <div class="testimonial" role="article">
+    <div class="testimonial">
         <p>"Great service! I was able to consult with my doctor online without any hassle."</p>
         <span>- Yennife R.</span>
     </div>
 </section>
 
 <!-- Call to Action Section -->
-<section id="call-to-action" role="region" aria-labelledby="cta-heading">
+<section id="call-to-action">
     <div class="image-container">
         <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png"
             alt="Join HealMate today">
