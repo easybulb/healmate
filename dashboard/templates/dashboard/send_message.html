@@ -1,20 +1,37 @@
 {% extends "core/base.html" %}
 {% block content %}
-    <h1>Send Message to {{ receiver.get_full_name }}</h1>
-    <form method="POST">
+
+{% load static %}
+
+{% block title %}Send Message{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/send_message.css' %}">
+{% endblock %}
+<div id="message-container">
+    <h1 class="page-title">Send Message to {{ receiver.get_full_name }}</h1>
+    <form method="POST" id="message-form">
         {% csrf_token %}
 
         <!-- Dropdown for selecting recipient -->
-        <label for="receiver">Select Recipient:</label>
-        <select name="receiver" id="receiver">
-            {% for recipient in recipients %}
-                <option value="{{ recipient.user.id }}">{{ recipient.user.get_full_name }} ({{ recipient.type }})</option>
-            {% endfor %}
-        </select>
+        <div class="form-group">
+            <label for="receiver" class="form-label">Select Recipient:</label>
+            <select name="receiver" id="receiver" class="form-input">
+                {% for recipient in recipients %}
+                    <option value="{{ recipient.user.id }}">{{ recipient.user.get_full_name }} ({{ recipient.type }})</option>
+                {% endfor %}
+            </select>
+        </div>
 
-        <label for="content">Message:</label>
-        <textarea name="content" rows="5" placeholder="Type your message here..."></textarea>
+        <!-- Message Textarea -->
+        <div class="form-group">
+            <label for="content" class="form-label">Message:</label>
+            <textarea name="content" rows="5" class="form-input" placeholder="Type your message here..."></textarea>
+        </div>
 
-        <button type="submit">Send Message</button>
+        <div class="form-group"></div>
+        <button type="submit" class="btn-message-submit">Send Message</button>
+        </div>
     </form>
+</div>
 {% endblock %}
