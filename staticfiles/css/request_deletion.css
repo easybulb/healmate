@@ -1,0 +1,62 @@
+/* Container for the deletion page */
+#deletion-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Page Title */
+.deletion-page-title {
+    font-size: 2rem;
+    color: #132B67;
+    margin-bottom: 20px;
+}
+
+/* Warning Text */
+.warning-text {
+    font-size: 1.2rem;
+    color: #ff4f4f;
+    margin-bottom: 30px;
+}
+
+/* Confirmation Button */
+.btn-confirm {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff4f4f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover {
+    background-color: #d94444;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (min-width: 768px) {
+    #deletion-container {
+        padding: 50px;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+    #deletion-container {
+        padding: 60px 80px;
+    }
+
+    .btn-confirm {
+        font-size: 1.2rem;
+    }
+}

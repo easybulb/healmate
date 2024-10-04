@@ -1,0 +1,84 @@
+/* Container */
+#message-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #132B67;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Form Label */
+.form-label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Form Input */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Textarea */
+#content {
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn-message-submit {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #17A2B8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-message-submit:hover {
+    background-color: #138496;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (min-width: 768px) {
+    #message-container {
+        padding: 40px;
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1024px) {
+    #message-container {
+        padding: 50px 60px;
+    }
+
+    .btn-message-submit {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+}
