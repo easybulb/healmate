@@ -16,25 +16,17 @@
             <h2>Quick Links</h2>
             <div class="links-grid">
                 <div class="link-item">
-                    <i class="fa fa-user-circle"></i>
-                    <a href="{% url 'patient_profile' %}">View & Update Your Profile</a>
+                    <a href="{% url 'patient_profile' %}"><i class="fa fa-user-circle"></i> View & Update Your Profile</a>
                 </div>
                 <div class="link-item">
-                    <i class="fa fa-calendar"></i>
-                    <a href="{% url 'patient_appointments' %}">Manage Your Appointments</a>
+                    <a href="{% url 'patient_appointments' %}"><i class="fa fa-calendar"></i> Manage Your Appointments</a>
                 </div>
                 <div class="link-item">
-                    <i class="fa fa-heartbeat"></i>
-                    <a href="#">Health Tools</a>
-                </div>
-                <div class="link-item">
-                    <i class="fa fa-envelope"></i>
-                    <a href="{% url 'inbox' %}"">Messages</a>
+                    <a href="{% url 'inbox' %}"><i class="fa fa-envelope"></i> Messages</a>
                 </div>
                 <!-- Request Account Deletion -->
                 <div class="link-item">
-                    <i class="fa fa-trash"></i>
-                    <a href="{% url 'request_account_deletion' %}">Request Account Deletion</a>
+                    <a href="{% url 'request_account_deletion' %}"><i class="fa fa-trash"></i> Request Account Deletion</a>
                 </div>
             </div>
         </section>
