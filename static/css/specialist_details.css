@@ -101,6 +101,7 @@
 
     .spec-book-now {
         width: 200px;
+        margin-left: 250px;
     }
 }
 
@@ -113,5 +114,6 @@
 
     .spec-book-now {
         width: auto;
+        margin-left: 650px;
     }
 }
