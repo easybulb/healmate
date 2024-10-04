@@ -7,21 +7,33 @@
 {% endblock %}
 
 {% block content %}
-<h1>Your Appointments</h1>
-<ul>
-    {% for appointment in appointments %}
+
+<h1 class="appointments-title">Your Appointments</h1>
+
+<div class="appointments-list">
+    <ul>
+        {% for appointment in appointments %}
         <li>
-            Appointment with Specialist, {{ appointment.specialist.user.get_full_name }} on 
-            {{ appointment.date }} at {{ appointment.time }}{% if appointment.status != 'Cancelled' and appointment.date >= today %}
-                <a href="{% url 'confirm_cancel_appointment' appointment.id %}" class="btn btn-danger">Cancel Appointment</a>
-            {% elif appointment.status == 'Cancelled' %}
-                <span class="text-muted">(Cancelled)</span>
-            {% else %}
-                <span class="text-muted">(Past Appointment)</span>
-            {% endif %}
+            <p>
+                Appointment with Specialist, <strong>{{ appointment.specialist.user.get_full_name }}</strong> on
+                <span class="appointment-date">{{ appointment.date }}</span> at
+                <span class="appointment-time">{{ appointment.time }}</span>
+            </p>
+
+            <div class="appointment-actions">
+                {% if appointment.status != 'Cancelled' and appointment.date >= today %}
+                <a href="{% url 'confirm_cancel_appointment' appointment.id %}" class="btn-cancel">Cancel
+                    Appointment</a>
+                {% elif appointment.status == 'Cancelled' %}
+                <span class="status-text cancelled">(Cancelled)</span>
+                {% else %}
+                <span class="status-text past">(Past Appointment)</span>
+                {% endif %}
+            </div>
         </li>
-    {% empty %}
-        <p>No appointments found.</p>
-    {% endfor %}
-</ul>
+        {% empty %}
+        <p class="no-appointments">No appointments found.</p>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
