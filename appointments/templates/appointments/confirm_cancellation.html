@@ -16,8 +16,7 @@
     <form method="POST" class="confirmation-form">
         {% csrf_token %}
         <button type="submit" class="btn-confirm">Confirm Cancellation</button>
-        <a href="{% if user.groups.filter(name='Patient').exists %}{% url 'patient_appointments' %}{% else %}{% url 'specialist_appointments' %}{% endif %}"
-            class="btn-back">Go Back</a>
+        <a href="{% url is_patient|yesno:'patient_appointments,specialist_appointments' %}" class="btn-back">Go Back</a>
     </form>
 </div>
 

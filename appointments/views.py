@@ -97,7 +97,11 @@ def confirm_cancel_appointment(request, appointment_id):
             elif request.user.groups.filter(name='Specialist').exists():
                 return redirect('specialist_appointments')
         else:  # GET request, show confirmation page
-            return render(request, 'appointments/confirm_cancellation.html', {'appointment': appointment})
+            is_patient = request.user.groups.filter(name='Patient').exists()
+            return render(request, 'appointments/confirm_cancellation.html', {
+                'appointment': appointment,
+                'is_patient': is_patient,
+            })
     else:
         messages.error(request, 'You do not have permission to cancel this appointment.')
         return redirect('home')
