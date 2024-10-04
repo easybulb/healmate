@@ -1,6 +1,6 @@
 form {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 20px 10px;
     padding: 20px;
     background-color: #132B67;
     border-radius: 10px;
@@ -10,8 +10,9 @@ form {
 form label {
     display: block;
     font-weight: bold;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
     color: #fff;
+    text-align: left;
 }
 
 form input, form select {
@@ -132,4 +133,10 @@ a:hover {
 
 .logout-page button:hover {
     background-color: #c9302c;
+}
+
+@media (min-width: 768px) {
+    form {
+        margin: 20px auto;
+    }
 }
