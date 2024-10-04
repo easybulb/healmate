@@ -6,10 +6,14 @@
 {% endblock %}
 
 {% block content %}
-<h1>Book an Appointment with {{ specialist.user.username }}</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book Appointment</button>
-</form>
+<div class="appointment-container">
+    <h1 class="appointment-title">Book an Appointment with {{ specialist.user.username }}</h1>
+    <form method="POST" class="appointment-form">
+        {% csrf_token %}
+        <div class="form-fields">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="submit-btn">Book Appointment</button>
+    </form>
+</div>
 {% endblock %}
