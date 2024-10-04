@@ -361,6 +361,10 @@ footer a:hover {
     flex-wrap: wrap;
 }
 
+.specialist-card a {
+    text-decoration: none;
+}
+
 .specialist-card {
     background-color: #fff;
     padding: 20px;

@@ -71,28 +71,36 @@
     <div class="specialists-list">
 
         <div class="specialist-card" role="article" aria-labelledby="specialist1-name">
+            <a href="{% url 'specialist_detail' specialist_id=5 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428809/izb7us5ffedp82pnazse.png"
                 alt="Photo of Dr. Anna Lemon, Dermatologist">
             <h3>Dr. Anna Lemon</h3>
             <p>Dermatologist - Manchester</p>
+            </a>
         </div>
         <div class="specialist-card" role="article" aria-labelledby="specialist2-name">
+            <a href="{% url 'specialist_detail' specialist_id=6 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_4_wbzino.png"
                 alt="Specialist Image">
             <h3>Dr. Helen Grapes</h3>
             <p>Psychologist - London</p>
+            </a>
         </div>
         <div class="specialist-card" role="article" aria-labelledby="specialist3-name">
+            <a href="{% url 'specialist_detail' specialist_id=7 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727891379/Henry_1000_x_1200_px_2_lxuffr.png"
                 alt="Photo of Dr. Alex Kiwi, Endocrinologist">
             <h3>Dr. Alex Kiwi</h3>
             <p>Endocrinologists - Glasgow</p>
+            </a>
         </div>
         <div class="specialist-card" role="article" aria-labelledby="specialist4-name">
+            <a href="{% url 'specialist_detail' specialist_id=4 %}">
             <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727428841/vtktxamzakpcolqlonpq.png"
                 alt="Photo of Dr. John Orange, General Practitioner">
             <h3>Dr. John Orange</h3>
             <p>General Practitioner - Newcastle</p>
+            </a>
         </div>
     </div>
 </section>
@@ -113,7 +121,8 @@
 <!-- Call to Action Section -->
 <section id="call-to-action" role="region" aria-labelledby="cta-heading">
     <div class="image-container">
-        <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png" alt="Join HealMate today">
+        <img src="https://res.cloudinary.com/dkqpb7vwr/image/upload/v1727893554/Henry_5_ftm6gy.png"
+            alt="Join HealMate today">
     </div>
     <div class="content">
         <h2>Join Us Today</h2>
