@@ -45,26 +45,32 @@
                 {% if user|has_group:"Specialist" %}
                 <li><i class="fa-solid fa-user"></i><a href="{% url 'specialist_profile' %}"
                         class="{% if request.resolver_match.url_name == 'specialist_profile' %}current{% endif %}"
-                        aria-label="Menu Specialist Profile link (Opens Specialist Profile page)">Profile</a></li>
+                        aria-label="Menu Specialist Profile link (Opens Specialist Profile page)">Profile</a>
+                </li>
                 <li><a href="{% url 'account_logout' %}"
                         class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}"
-                        aria-label="Menu Logout link (Logs you out)">Logout</a></li>
+                        aria-label="Menu Logout link (Logs you out)">Logout</a>
+                </li>
                 {% elif user|has_group:"Patient" %}
                 <li><i class="fa-solid fa-user"></i><a href="{% url 'patient_profile' %}"
                         class="{% if request.resolver_match.url_name == 'patient_profile' %}current{% endif %}"
-                        aria-label="Menu Patient Profile link (Opens Patient Profile page)">Profile</a></li>
+                        aria-label="Menu Patient Profile link (Opens Patient Profile page)">Profile</a>
+                </li>
                 <li><a href="{% url 'account_logout' %}"
                         class="{% if request.resolver_match.url_name == 'account_logout' %}current{% endif %}"
-                        aria-label="Menu Logout link (Logs you out)">Logout</a></li>
+                        aria-label="Menu Logout link (Logs you out)">Logout</a>
+                </li>
                 {% endif %}
 
                 {% else %}
                 <li><i class="fa-solid fa-right-to-bracket"></i><a href="{% url 'account_login' %}"
                         class="{% if request.resolver_match.url_name == 'account_login' %}current{% endif %}"
-                        aria-label="Menu Login link (Opens the Login page)">Login</a></li>
+                        aria-label="Menu Login link (Opens the Login page)">Login</a>
+                </li>
                 <li><a href="{% url 'account_signup' %}"
                         class="{% if request.resolver_match.url_name == 'account_signup' %}current{% endif %}"
-                        aria-label="Menu Register link (Opens the Register page)">Register</a></li>
+                        aria-label="Menu Register link (Opens the Register page)">Register</a>
+                </li>
                 {% endif %}
             </div>
         </div>

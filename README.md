@@ -85,10 +85,10 @@ My inspiration for HealMate came from a personal experience during a routine vis
 
 ### Colour Scheme
 In line with the healthcare theme, I chose a neutral, clean palette:
-- **Primary Color:** #6C757D (Muted Blue-Grey)
-- **Secondary Color:** #28A745 (Hospital Green)
-- **Accent Color:** #17A2B8 (Light Teal)
-- **Background:** #FFFFFF (White)
+- **Primary Color:** #17A2B8 (Navy Blue-Grey)
+- **Secondary Color:** #132B67 (Hospital Blue)
+- **Accent Color:** #333 (grey)
+- **Background:** #fff (White)
 This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
 
 ### Font
@@ -553,7 +553,11 @@ Since this is an educational project, the privacy and data handling policies may
 ### Code
 - **Django Documentation**: The official docs were invaluable in setting up the project structure and solving specific issues.
 - **Django Crispy Forms Documentation**: Used to streamline form rendering.
-(more credits to come)
+- **Chatgpt AI**: For images and some coding ideas
+- **Favicon.io**: For Favicon generation.
+- **Google Fonts**: For typography.
+- **Mark Brisco** - Code Institute: For general guidance.
+- **Amy Richardson** - Code Institute: General guidance.
 
 ### Media
 - Icons and images sourced from **Canva** and **ChatGPT**.
@@ -563,5 +567,22 @@ Since this is an educational project, the privacy and data handling policies may
 - **Django for Beginners** by William S. Vincent.
 
 ## Acknowledgements
-- A special thanks to.... to complete soon.
+
+I would like to extend my heartfelt gratitude to the following individuals and organizations whose support, guidance, and inspiration have been invaluable in the development of this project.
+
+### Mentors and Advisors
+- **Amy Richardson** – Sincere gratitude to Amy, our tutor and facilitator, whose unwavering guidance and expertise were pivotal throughout this journey. Her mentorship provided the clarity and support needed to navigate challenges, ultimately elevating the quality of this project. Her dedication and encouragement made a profound impact on my progress and learning.
+
+- **Mark Briscoe** – A heartfelt thank you to Mark, our dedicated tutor, whose unwavering support, insightful feedback, and constructive criticism were instrumental in guiding this project to completion. His depth of knowledge and encouragement not only enhanced my understanding but also inspired me to consistently improve my work. This project would not have been the same without his invaluable mentorship.
+
+
+### Supportive Friends and Family
+- My friends and family, especially, for their encouragement and patience during this project. Your belief in me kept me motivated and focused.
+
+### Academic Institutions
+- **Code Institute** – Thank you for providing the learning environment and resources that made this project possible. I am especially grateful to the professors and staff at Code Institute for their valuable insights.
+
+### Final Note
+This project would not have been possible without the support, advice, and inspiration of each individual and organization mentioned. Thank you for being a part of this journey.
+
 
