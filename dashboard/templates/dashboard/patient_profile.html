@@ -1,22 +1,33 @@
 {% extends 'core/base.html' %}
 
-{% block content %}
-  <h1>Your Profile</h1>
+{% load static %}
 
-  <h2>Change Password</h2>
-  <a href="{% url 'account_change_password' %}">Change your password</a>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/patient_profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="profile-container">
+  <h1 class="page-title">Your Profile</h1>
+
+  <!-- Password Change Section -->
+  <div class="section password-section">
+    <h2>Change Password</h2>
+    <a href="{% url 'account_change_password' %}">Change your password</a>
+  </div>
 
   <h1>Your Profile</h1>
 
   {% if messages %}
-    <ul class="messages">
-      {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+  <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
       {% endfor %}
-    </ul>
+  </ul>
   {% endif %}
 
-    <!-- User Details Section -->
+  <!-- User Details Section -->
+  <div class="section details-section">
     <h2>Your Details</h2>
     <ul>
       <li><strong>Patient ID:</strong> {{ patient_id }}</li>
@@ -25,51 +36,53 @@
       <li><strong>Email:</strong> {{ profile.user.email }}</li>
       <li><strong>Contact Number:</strong> {{ profile.contact_number }}</li>
     </ul>
+  </div>
 
   <!-- Profile Update Form -->
-  <h2>Update Your Profile</h2>
-  <form method="POST">
-    {% csrf_token %}
-    {{ form.non_field_errors }}
+  <div class="section form-section">
+    <h2>Update Your Profile</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
 
-    <!-- Contact Number -->
-    <div>
-    <label for="contact_number">Contact Number:</label>
-    {{ form.contact_number }}
-    </div>
+      <!-- Contact Number -->
+      <div class="form-field">
+        <label for="contact_number">Contact Number:</label>
+        {{ form.contact_number }}
+      </div>
 
-    <!-- Address -->
-    <div>
+      <!-- Address -->
+      <div class="form-field">
         <label for="address">Address:</label>
         {{ form.address }}
-    </div>
+      </div>
 
-    <!-- Date of Birth -->
-    <div>
+      <!-- Date of Birth -->
+      <div class="form-field">
         <label for="date_of_birth">Date of Birth:</label>
         {{ form.date_of_birth }}
-    </div>
+      </div>
 
-    <!-- Gender -->
-    <div>
+      <!-- Gender -->
+      <div class="form-field">
         <label for="gender">Gender:</label>
         {{ form.gender }}
-    </div>
+      </div>
 
-    <!-- Medical History -->
-    <div>
+      <!-- Medical History -->
+      <div class="form-field">
         <label for="medical_history">Medical History:</label>
         {{ form.medical_history }}
-    </div>
+      </div>
 
-    <!-- Emergency Contact -->
-    <div>
+      <!-- Emergency Contact -->
+      <div class="form-field">
         <label for="emergency_contact">Emergency Contact:</label>
         {{ form.emergency_contact }}
-    </div>
+      </div>
 
-    <button type="submit">Save Changes</button>
-  </form>
-
-  
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>
 {% endblock %}
