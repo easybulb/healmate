@@ -1,0 +1,154 @@
+/* Search Results Styling */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #132B67;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+form input, form select, form button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input {
+    width: 100%;
+    max-width: 400px;
+}
+
+form button {
+    background-color: #17A2B8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #138496;
+}
+
+/* Results List */
+#specialist-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.specialist-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.specialist-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.specialist-info {
+    flex: 1;
+}
+
+.specialist-info strong {
+    font-size: 1.3rem;
+    color: #132B67;
+}
+
+.specialist-info a.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.specialist-info .btn-info {
+    background-color: #17A2B8;
+    color: white;
+}
+
+.specialist-info .btn-info:hover {
+    background-color: #138496;
+}
+
+.specialist-info .btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.specialist-info .btn-success:hover {
+    background-color: #218838;
+}
+
+/* No results message */
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Pagination Styling */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination .step-links a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #17A2B8;
+    color: white;
+}
+
+.pagination .step-links a:hover {
+    background-color: #138496;
+}
+
+.pagination .current {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* -------- Media query for tablets and larger screens --------- */
+@media (min-width: 768px) {
+    #specialist-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .specialist-item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    form {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    form input, form select, form button {
+        width: auto;
+        margin: 0;
+    }
+}

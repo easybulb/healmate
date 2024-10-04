@@ -1,7 +1,12 @@
 {% extends "core/base.html" %}
-{% block content %}
-
 {% load static %}
+
+
+{% block content %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+
     <h1>Search Results</h1>
     
     <form method="GET" action="{% url 'search_specialists' %}">
