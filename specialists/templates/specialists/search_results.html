@@ -9,7 +9,7 @@
 
     <h1>Search Results</h1>
     
-    <form method="GET" action="{% url 'search_specialists' %}">
+    <form method="GET" action="{% url 'search_specialists' %}" class="search-form">
         <input type="text" name="q" placeholder="Search by name or bio" value="{{ query }}">
         <select name="specialty">
             <option value="">All Specialties</option>
@@ -20,6 +20,7 @@
             {% endfor %}
         </select>
         <input type="text" name="location" placeholder="Location" value="{{ location_filter }}">
+        <input type="date" name="available_date"><br>
         <button type="submit">Search</button>
     </form>
 
@@ -27,7 +28,7 @@
     <p>{{ total_results }} specialists found.</p>
 
 <!-- Search Results -->
-<ul id="specialist-list">
+<ul id="specialist-search-list">
     {% for specialist in specialists %}
         <li class="specialist-item">
             {% if specialist.profile_image %}
