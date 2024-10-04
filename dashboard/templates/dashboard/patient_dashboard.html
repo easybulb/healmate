@@ -1,5 +1,10 @@
 {% extends "core/base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/patient_dashboard.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="dashboard-container">
         <h1>Welcome to Your Patient Dashboard, {{ user.get_full_name }}</h1>
